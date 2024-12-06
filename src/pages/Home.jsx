@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Prizes } from "../components/Prizes";
 import { ProblemStatements } from "../components/ProblemStatements";
+import { Rules } from "../components/Rules";
 
 export const Home = () => {
   return (
@@ -10,6 +11,9 @@ export const Home = () => {
       <Header />
 
       <main>
+      <div className="pt-16 pb-16">
+          <Rules />
+        </div>
         <div className="pt-16 pb-16">
           <Mentors />
         </div>
