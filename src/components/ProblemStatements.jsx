@@ -70,7 +70,7 @@ export const ProblemStatements = () => {
         </div>
       </div>
       <div className="register-button mt-8 mx-auto">
-        <Button label="View all" />
+        <Button label="VIEW ALL" />
       </div>
     </div>
   );
