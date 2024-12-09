@@ -45,7 +45,7 @@ export const Mentors = () => {
                 style={{ transform: `rotate(${rotateValue})` }}
                 className="w-full md:w-auto object-cover h-[250px] md:h-[401.65px] bg-mentorBackground rounded-[14px]"
               />
-              <div className="absolute bottom-[-6px] bg-textLight bg-opacity-10 p-4">
+              <div className="absolute md:left-0 bottom-[20px] md:bottom-[-50px] bg-textLight bg-opacity-10 p-4">
                 <div className="font-bold text-[18px] md:text-[28px] leading-[26px] md:leading-[36px] text-textDark">
                   {name.split(" ").map((word, index) => (
                     <p key={index}>{word}</p>
