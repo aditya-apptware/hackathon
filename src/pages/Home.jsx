@@ -2,6 +2,7 @@ import { Event } from "../components/Event";
 import { Faqs } from "../components/Faqs";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { Images } from "../components/Images";
 import { Mentors } from "../components/Mentors";
 import { Prizes } from "../components/Prizes";
 import { ProblemStatements } from "../components/ProblemStatements";
@@ -31,6 +32,9 @@ export const Home = () => {
         </div>
         <div className="pt-16 pb-16">
           <Faqs />
+        </div>
+        <div className="pt-16 pb-16 mt-[-230px] pb-[300px]">
+          <Images />
         </div>
       </main>
       <div>
