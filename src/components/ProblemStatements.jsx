@@ -12,7 +12,7 @@ export const ProblemStatements = () => {
         Lorem ipsum dolor sit amet consectetur adipiscing elit
       </div>
       <div className="flex justify-center gap-5 flex-wrap">
-        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[422px]">
+        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[422px]">
           <img
             src="/assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
@@ -26,7 +26,7 @@ export const ProblemStatements = () => {
             answer questions, and provide recommendations...
           </div>
         </div>
-        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[422px]">
+        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[422px]">
           <img
             src="/assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
@@ -40,7 +40,7 @@ export const ProblemStatements = () => {
             answer questions, and provide recommendations...
           </div>
         </div>
-        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[422px]">
+        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[422px]">
           <img
             src="/assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
@@ -54,7 +54,7 @@ export const ProblemStatements = () => {
             answer questions, and provide recommendations...
           </div>
         </div>
-        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[422px]">
+        <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[422px]">
           <img
             src="/assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"

@@ -2,7 +2,7 @@ import { Button } from "./Button";
 
 export const Rules = () => {
   return (
-    <div className="flex gap-5 w-[1120px] h-[330px] mx-auto rounded-[31px] bg-[#d9d9d9] pt-[50px] pr-[34px] pb-[50px] pl-[34px]">
+    <div className="flex gap-5 w-[1120px] h-[330px] mx-auto rounded-[31px] bg-bannerBackground pt-[50px] pr-[34px] pb-[50px] pl-[34px]">
       <div className="w-[465px] flex flex-col justify-center">
         <div className="font-semibold text-[36px] leading-[53px]">
           Rules & Regulations
@@ -16,6 +16,7 @@ export const Rules = () => {
       <div className="w-[587px]">
         <img
           src="/assets/pics/rules-regulations.jpg"
+          alt="rules and regulations banner"
           className="rounded-[31px]"
         />
       </div>

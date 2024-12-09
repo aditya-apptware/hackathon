@@ -39,10 +39,10 @@ export const Mentors = () => {
               <img
                 src={imageSource}
                 alt={name}
-                className={`w-auto object-cover h-[401.65px] bg-gray-300 rotate-[${rotateValue}] rounded-[14px]`}
+                className={`w-auto object-cover h-[401.65px] bg-mentorBackground rotate-[${rotateValue}] rounded-[14px]`}
               />
-              <div className="absolute bottom-[-6px] bg-white bg-opacity-10">
-                <div className="font-bold text-[28px] leading-[36px] text-black">
+              <div className="absolute bottom-[-6px] bg-textLight bg-opacity-10">
+                <div className="font-bold text-[28px] leading-[36px] text-textDark">
                   {name.split(" ").map((word) => (
                     <p>{word}</p>
                   ))}

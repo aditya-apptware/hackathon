@@ -55,15 +55,15 @@ export const Faqs = () => {
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleAnswer(index)}
             >
-              <span className="font-normal text-black text-[28px] leading-[51px]">
+              <span className="font-normal text-textDark text-[28px] leading-[51px]">
                 {item.question}
               </span>
-              <span className="text-black font-bold w-[28.5px] h-full text-[28.5px] opacity-[50%]">
+              <span className="text-textDark font-bold w-[28.5px] h-full text-[28.5px] opacity-[50%]">
                 {item.showAnswer ? "-" : "+"}
               </span>
             </div>
             {item.showAnswer && (
-              <p className="mt-2 text-normal text-gray-500 text-[24px] leading-[51px]">
+              <p className="mt-2 text-normal text-faqAnswerText text-[24px] leading-[51px]">
                 {item.answer}
               </p>
             )}

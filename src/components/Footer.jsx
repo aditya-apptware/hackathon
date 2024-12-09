@@ -3,17 +3,17 @@
 // ContactInformation Component
 const ContactInformation = ({ title, branches, copyright }) => {
   return (
-    <div className="w-1/3 bg-gray-400">
+    <div className="w-1/3 bg-officesBackground">
       <div className="flex flex-col gap-5 p-5">
         <div className="text-xl font-bold">{title}</div>
         {branches.map((branch, index) => (
           <div className="branch" key={index}>
             <div className="font-semibold">{branch.name}</div>
-            <div className="text-sm text-gray-800">{branch.address}</div>
+            <div className="text-sm text-footerText">{branch.address}</div>
             <div className="text-sm font-medium">{branch.contact}</div>
           </div>
         ))}
-        <div className="text-sm text-gray-600">{copyright}</div>
+        <div className="text-sm text-copyright">{copyright}</div>
       </div>
     </div>
   );
@@ -32,7 +32,7 @@ const ImportantLinks = ({ links }) => {
                   href={link.redirectionPath}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-blue-600"
+                  className="text-dark hover:text-primary"
                 >
                   {link.label}
                 </a>
@@ -86,7 +86,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="flex bg-gray-200">
+      <div className="flex bg-footerBackground">
         <ContactInformation
           title="APPTWARE"
           branches={branches}

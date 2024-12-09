@@ -8,7 +8,7 @@ export const Prizes = () => {
         With Exclusive Hackathon Benefits
       </div>
       <div className="flex justify-center gap-6">
-        <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[507px]">
+        <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[507px]">
           <img
             src="/assets/images/winner.svg"
             alt=""
@@ -24,7 +24,7 @@ export const Prizes = () => {
           </div>
         </div>
         <div className="flex flex-col gap-6 text-center">
-          <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[242px]">
+          <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[242px]">
             <div className="font-extrabold text-[43px] leading-[42px]">
               1st Runner Up
             </div>
@@ -34,7 +34,7 @@ export const Prizes = () => {
               amet consectetur adipisicing elit.
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-gray-300 w-[549px] h-[242px]">
+          <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-mentorBackground w-[549px] h-[242px]">
             <div className="font-extrabold text-[43px] leading-[42px]">
               2nd Runner Up
             </div>

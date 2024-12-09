@@ -2,7 +2,7 @@ import { Button } from "./Button";
 
 export const Header = () => {
     return (
-      <header className="flex items-center justify-center bg-[#323232] text-white pt-12 pb-8">
+      <header className="flex items-center justify-center bg-[#323232] text-textLight pt-12 pb-8">
         <div className="content text-center py-8">
           <div className="title w-[50%] m-auto">
             <h1 className="text-4xl font-bold">Hackathon is Back</h1>

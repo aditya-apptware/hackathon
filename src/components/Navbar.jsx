@@ -5,7 +5,7 @@ const NavItem = ({ label, to }) => {
     <li>
       <Link
         to={to}
-        className="text-lg font-normal hover:text-red-600 transition duration-300"
+        className="text-lg font-normal hover:text-primary transition duration-300"
       >
         {label}
       </Link>
@@ -13,10 +13,10 @@ const NavItem = ({ label, to }) => {
   );
 };
 
-export const Navbar = ({ className }) => {
+export const Navbar = () => {
   return (
     <div
-      className={`flex items-center justify-between h-[58px] w-[1120px] mx-auto bg-gray-900 text-white rounded-xl ${className}`}
+      className={`flex items-center justify-between h-[58px] w-[1120px] mx-auto bg-navbarBackground text-textLight rounded-xl`}
     >
       <div className="w-1/2 text-xl font-bold pl-8">CodeKraft</div>
       <div className="w-1/2">
