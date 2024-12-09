@@ -2,7 +2,7 @@ import React from "react";
 
 export const Event = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-5 w-[650px] mx-auto">
       <div className="w-[326px] font-bold text-[47.42px] leading-[112px] text-black opacity-[36%] mx-auto">
         Jan 17 - Jan 19
       </div>

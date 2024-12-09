@@ -1,4 +1,5 @@
 import { Event } from "../components/Event";
+import { Faqs } from "../components/Faqs";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
@@ -27,6 +28,9 @@ export const Home = () => {
         </div>
         <div className="pt-16 pb-16">
           <Prizes />
+        </div>
+        <div className="pt-16 pb-16">
+          <Faqs />
         </div>
       </main>
       <div>
