@@ -22,9 +22,12 @@ export const Navbar = ({ className }) => {
       <div className="w-1/2">
         <ul className="flex justify-around w-full">
           <NavItem label="Home" to="/" />
-          <NavItem label="Problem statements" to="/problem-statements" />
-          <NavItem label="Registration" to="/registration" />
-          <NavItem label="Payment" to="/payment" />
+          <NavItem label="Problem statements" to="" />
+          {/* /problem-statements */}
+          <NavItem label="Registration" to="" />
+          {/* /registration */}
+          <NavItem label="Payment" to="" />
+          {/* /payment */}
         </ul>
       </div>
     </div>
