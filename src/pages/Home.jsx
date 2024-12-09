@@ -1,3 +1,4 @@
+import { Event } from "../components/Event";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
@@ -7,11 +8,15 @@ import { Rules } from "../components/Rules";
 
 export const Home = () => {
   return (
-    <div>
-      <Header />
-
+    <div className="w-[1440px] mx-auto">
+      <div>
+        <Header />
+      </div>
       <main>
-      <div className="pt-16 pb-16">
+        <div className="pt-16 pb-16">
+          <Event />
+        </div>
+        <div className="pt-16 pb-16">
           <Rules />
         </div>
         <div className="pt-16 pb-16">
@@ -24,7 +29,9 @@ export const Home = () => {
           <Prizes />
         </div>
       </main>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

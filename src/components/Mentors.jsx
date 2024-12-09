@@ -31,18 +31,18 @@ export const Mentors = () => {
         sed do eiusmod
       </div>
       <div className="flex justify-center gap-5 flex-wrap">
-        {mentors.map((mentor) => {
+        {mentors.map((mentor, mentorItemIndex) => {
           const { name, role, imageSource } = mentor;
-
+          const rotateValue = mentorItemIndex % 2 === 0 ? '7.3deg' : '-7.3deg'
           return (
             <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] w-[340.81px] h-[422px] relative">
               <img
                 src={imageSource}
                 alt={name}
-                className="w-auto object-cover h-[401.65px] bg-gray-300 rotate-[7.3deg] rounded-[14px]"
+                className={`w-auto object-cover h-[401.65px] bg-gray-300 rotate-[${rotateValue}] rounded-[14px]`}
               />
               <div className="absolute bottom-[-6px] bg-white bg-opacity-10">
-                <div className="font-medium text-[28px] leading-[36px] text-black">
+                <div className="font-bold text-[28px] leading-[36px] text-black">
                   {name.split(" ").map((word) => (
                     <p>{word}</p>
                   ))}
