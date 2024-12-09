@@ -67,9 +67,9 @@ export const Navbar = () => {
       <div className="hidden md:block">
         <ul className="flex justify-end w-full">
           <NavItem label="Home" to="/" />
-          <NavItem label="Problem statements" to="/problem-statements" />
-          <NavItem label="Registration" to="/registration" />
-          <NavItem label="Payment" to="/payment" />
+          <NavItem label="Problem statements" to="/" />
+          <NavItem label="Registration" to="/" />
+          <NavItem label="Payment" to="/" />
         </ul>
       </div>
 
@@ -84,17 +84,17 @@ export const Navbar = () => {
           <NavItem label="Home" to="/" onClick={() => setIsMenuOpen(false)} />
           <NavItem
             label="Problem statements"
-            to="/problem-statements"
+            to="/"
             onClick={() => setIsMenuOpen(false)}
           />
           <NavItem
             label="Registration"
-            to="/registration"
+            to="/"
             onClick={() => setIsMenuOpen(false)}
           />
           <NavItem
             label="Payment"
-            to="/payment"
+            to="/"
             onClick={() => setIsMenuOpen(false)}
           />
         </ul>

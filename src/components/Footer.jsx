@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 // ContactInformation Component
 const ContactInformation = ({ title, branches, copyright }) => {
   return (
@@ -28,9 +30,9 @@ const ImportantLinks = ({ links }) => {
               <li key={subIndex}>
                 <a
                   href={link.redirectionPath}
-                  target="_blank"
+                  target={link.redirectionPath && "_blank"}
                   rel="noopener noreferrer"
-                  className="text-dark hover:text-primary"
+                  className="text-dark hover:text-primary transition duration-300"
                 >
                   {link.label}
                 </a>
@@ -62,11 +64,11 @@ export const Footer = () => {
 
   const importantLinks = [
     [
-      { label: "For Startups", redirectionPath: "/startups" },
-      { label: "For Enterprises", redirectionPath: "/enterprises" },
-      { label: "Apptware AI Lab", redirectionPath: "/ai-lab" },
-      { label: "Contact", redirectionPath: "/contact" },
-      { label: "Blog", redirectionPath: "/blog" },
+      { label: "For Startups", redirectionPath: "" },
+      { label: "For Enterprises", redirectionPath: "" },
+      { label: "Apptware AI Lab", redirectionPath: "" },
+      { label: "Contact", redirectionPath: "" },
+      { label: "Blog", redirectionPath: "" },
     ],
     [
       { label: "Facebook", redirectionPath: "https://facebook.com" },
@@ -76,9 +78,9 @@ export const Footer = () => {
       { label: "YouTube", redirectionPath: "https://youtube.com" },
     ],
     [
-      { label: "MVP", redirectionPath: "/mvp" },
-      { label: "Artificial Intelligence", redirectionPath: "/ai" },
-      { label: "Team Augmentation", redirectionPath: "/team-augmentation" },
+      { label: "MVP", redirectionPath: "" },
+      { label: "Artificial Intelligence", redirectionPath: "" },
+      { label: "Team Augmentation", redirectionPath: "" },
     ],
   ];
 
