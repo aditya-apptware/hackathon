@@ -5,7 +5,7 @@ export const Images = () => {
         <img
           src="/assets/pics/faq1.jpg"
           alt="First"
-          className="absolute left-[-50%] h-full object-cover"
+          className="absolute left-0 h-full object-cover"
         />
       </div>
       <div className="w-[315px] h-[296px] overflow-hidden absolute top-[75%] left-[15%] rounded-[45px]">
@@ -26,7 +26,7 @@ export const Images = () => {
         <img
           src="/assets/pics/faq4.jpg"
           alt="Fourth"
-          className="absolute right-[-50%] h-full object-cover"
+          className="absolute right-0 h-full object-cover"
         />
       </div>
     </div>

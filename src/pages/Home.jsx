@@ -33,7 +33,7 @@ export const Home = () => {
         <div className="pt-16 pb-16">
           <Faqs />
         </div>
-        <div className="pt-16 pb-16 mt-[-230px] pb-[300px]">
+        <div className="pt-16 pb-16 mt-[-230px] pb-[330px]">
           <Images />
         </div>
       </main>
