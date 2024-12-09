@@ -9,7 +9,7 @@ import { Registration } from "./pages/Registration";
 export const App = () => {
   return (
     <Router>
-      <div className="bg-[#323232] pt-5 w-[1440px] mx-auto">
+      <div className="bg-[#323232] pt-5 w-full md:w-[1440px] mx-auto">
         <Navbar />
       </div>
       <Routes>

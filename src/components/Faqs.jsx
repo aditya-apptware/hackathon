@@ -4,19 +4,19 @@ const faq = [
   {
     question: "Is this online or inhouse event?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur  adipiscing elit, sed do eiusmod",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
     showAnswer: true,
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur  adipiscing elit?",
+    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur  adipiscing elit, sed do eiusmod",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
     showAnswer: false,
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur  adipiscing elit?",
+    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur  adipiscing elit, sed do eiusmod",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
     showAnswer: false,
   },
 ];
@@ -33,17 +33,20 @@ export const Faqs = () => {
   };
 
   return (
-    <div className="flex flex-col gap-5 w-[1120px] mx-auto">
-      <div className="font-extrabold text-[70px] leading-[68px]">
+    <div className="flex flex-col gap-8 w-full px-4 md:px-0 md:w-[1120px] mx-auto">
+      <div className="font-extrabold text-[40px] md:text-[70px] leading-[50px] md:leading-[68px] text-center md:text-start">
         LOREM
         <br />
         FAQ'S
       </div>
-      <div className="font-normal text-[28px] leading-[42px]">
+      <div className="hidden md:block font-normal text-[18px] md:text-[28px] leading-[30px] md:leading-[42px] text-center md:text-start">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, <br />
         sed do eiusmod
       </div>
-      <div className="w-[1120px] mx-auto">
+      <div className="md:hidden font-normal text-[18px] md:text-[28px] leading-[30px] md:leading-[42px] text-center">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+      </div>
+      <div className="w-full mt-8">
         {faqs.map((item, index) => (
           <div
             key={index}
@@ -55,7 +58,7 @@ export const Faqs = () => {
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleAnswer(index)}
             >
-              <span className="font-normal text-textDark text-[28px] leading-[51px]">
+              <span className="font-normal text-textDark text-[20px] md:text-[28px] leading-[30px] md:leading-[51px]">
                 {item.question}
               </span>
               <span className="text-textDark font-bold w-[28.5px] h-full text-[28.5px] opacity-[50%]">
@@ -63,7 +66,7 @@ export const Faqs = () => {
               </span>
             </div>
             {item.showAnswer && (
-              <p className="mt-2 text-normal text-faqAnswerText text-[24px] leading-[51px]">
+              <p className="mt-2 text-normal text-faqAnswerText text-[20px] md:text-[24px] leading-[30px] md:leading-[51px]">
                 {item.answer}
               </p>
             )}

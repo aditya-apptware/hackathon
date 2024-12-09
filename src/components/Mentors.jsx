@@ -20,34 +20,38 @@ const mentors = [
 
 export const Mentors = () => {
   return (
-    <div className="flex flex-col gap-5 w-[1120px] mx-auto">
-      <div className="font-extrabold text-[70px] leading-[68px]">
+    <div className="flex flex-col gap-5 w-full md:w-[1120px] mx-auto px-4">
+      <div className="font-extrabold text-[50px] md:text-[70px] leading-[50px] md:leading-[68px]">
         LOREM
         <br />
         MENTORS
       </div>
-      <div className="font-normal text-[28px] leading-[42px]">
+      <div className="font-normal text-[20px] md:text-[28px] leading-[30px] md:leading-[42px]">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, <br />
         sed do eiusmod
       </div>
-      <div className="flex justify-center gap-5 flex-wrap">
+      <div className="flex justify-center gap-5 flex-wrap mt-10">
         {mentors.map((mentor, mentorItemIndex) => {
           const { name, role, imageSource } = mentor;
-          const rotateValue = mentorItemIndex % 2 === 0 ? '7.3deg' : '-7.3deg'
+          const rotateValue = mentorItemIndex % 2 === 0 ? '7.3deg' : '-7.3deg';
           return (
-            <div className="flex flex-col p-16 items-start justify-center gap-5 rounded-[14px] w-[340.81px] h-[422px] relative">
+            <div
+              key={mentorItemIndex}
+              className="flex flex-col p-8 items-center justify-center gap-5 rounded-[14px] w-full md:w-[340.81px] h-[422px] relative"
+            >
               <img
                 src={imageSource}
                 alt={name}
-                className={`w-auto object-cover h-[401.65px] bg-mentorBackground rotate-[${rotateValue}] rounded-[14px]`}
+                style={{ transform: `rotate(${rotateValue})` }}
+                className="w-full md:w-auto object-cover h-[250px] md:h-[401.65px] bg-mentorBackground rounded-[14px]"
               />
-              <div className="absolute bottom-[-6px] bg-textLight bg-opacity-10">
-                <div className="font-bold text-[28px] leading-[36px] text-textDark">
-                  {name.split(" ").map((word) => (
-                    <p>{word}</p>
+              <div className="absolute bottom-[-6px] bg-textLight bg-opacity-10 p-4">
+                <div className="font-bold text-[18px] md:text-[28px] leading-[26px] md:leading-[36px] text-textDark">
+                  {name.split(" ").map((word, index) => (
+                    <p key={index}>{word}</p>
                   ))}
                 </div>
-                <div className="font-normal text-[24px] leading-[42px]">
+                <div className="font-normal text-[16px] md:text-[24px] leading-[26px] md:leading-[42px]">
                   {role}
                 </div>
               </div>

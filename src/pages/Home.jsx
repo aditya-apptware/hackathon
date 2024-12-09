@@ -10,30 +10,30 @@ import { Rules } from "../components/Rules";
 
 export const Home = () => {
   return (
-    <div className="w-[1440px] mx-auto">
+    <div className="w-full md:w-[1440px] mx-auto">
       <div>
         <Header />
       </div>
       <main>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16">
           <Event />
         </div>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16 mx-4">
           <Rules />
         </div>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16">
           <Mentors />
         </div>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16">
           <ProblemStatements />
         </div>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16">
           <Prizes />
         </div>
-        <div className="pt-16 pb-16">
+        <div className="py-8 md:py-16 relative z-10">
           <Faqs />
         </div>
-        <div className="pt-16 pb-16 mt-[-230px] pb-[330px]">
+        <div className="py-8 md:py-16 mt-[-230px] md:pb-[330px] hidden md:block">
           <Images />
         </div>
       </main>

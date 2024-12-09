@@ -1,9 +1,7 @@
-// Reusable Components
-
 // ContactInformation Component
 const ContactInformation = ({ title, branches, copyright }) => {
   return (
-    <div className="w-1/3 bg-officesBackground">
+    <div className="w-full md:w-1/3 bg-officesBackground">
       <div className="flex flex-col gap-5 p-5">
         <div className="text-xl font-bold">{title}</div>
         {branches.map((branch, index) => (
@@ -22,8 +20,8 @@ const ContactInformation = ({ title, branches, copyright }) => {
 // ImportantLinks Component
 const ImportantLinks = ({ links }) => {
   return (
-    <div className="w-2/3 flex justify-center items-center">
-      <div className="w-3/4 h-2/5 flex justify-around -ml-24">
+    <div className="w-full md:w-2/3 flex md:justify-center items-center">
+      <div className="py-10 md:w-full md:w-3/4 flex flex-col md:flex-row md:justify-around ml-5 md:-ml-24 flex-wrap md:gap-5">
         {links.map((linkGroup, index) => (
           <ul className="flex flex-col gap-1" key={index}>
             {linkGroup.map((link, subIndex) => (
@@ -86,7 +84,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="flex bg-footerBackground">
+      <div className="flex flex-col md:flex-row bg-footerBackground">
         <ContactInformation
           title="APPTWARE"
           branches={branches}
