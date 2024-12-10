@@ -1,5 +1,5 @@
 // App.js
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Payment } from "./pages/Payment";
@@ -8,7 +8,7 @@ import { Registration } from "./pages/Registration";
 
 export const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/hackathon">
       <div className="bg-[#323232] pt-5 w-full md:w-[1440px] mx-auto">
         <Navbar />
       </div>
@@ -18,6 +18,6 @@ export const App = () => {
         <Route path="/registration" element={<Registration />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
