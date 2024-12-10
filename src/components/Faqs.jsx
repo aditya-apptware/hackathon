@@ -34,11 +34,7 @@ export const Faqs = () => {
 
   return (
     <div className="flex flex-col gap-8 w-full px-4 md:px-0 md:w-[1120px] mx-auto">
-      <div className="font-extrabold text-[40px] md:text-[70px] leading-[50px] md:leading-[68px] text-center md:text-start">
-        LOREM
-        <br />
-        FAQ'S
-      </div>
+      <img src="/assets/labels/faqs.svg" alt="FAQS Title SVG" width="241.93px" height="127.03px" />
       <div className="hidden md:block font-normal text-[18px] md:text-[28px] leading-[30px] md:leading-[42px] text-center md:text-start">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, <br />
         sed do eiusmod

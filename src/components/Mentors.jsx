@@ -21,11 +21,7 @@ const mentors = [
 export const Mentors = () => {
   return (
     <div className="flex flex-col gap-5 w-full md:w-[1120px] mx-auto px-4">
-      <div className="font-extrabold text-[50px] md:text-[70px] leading-[50px] md:leading-[68px]">
-        LOREM
-        <br />
-        MENTORS
-      </div>
+      <img src="/assets/labels/mentors.svg" alt="Mentors Title SVG" width="342.77px" height="122.44px" />
       <div className="font-normal text-[20px] md:text-[28px] leading-[30px] md:leading-[42px]">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, <br />
         sed do eiusmod

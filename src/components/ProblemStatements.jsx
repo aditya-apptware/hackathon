@@ -3,11 +3,7 @@ import { Button } from "./Button";
 export const ProblemStatements = () => {
   return (
     <div className="flex flex-col gap-5 w-full md:w-[1120px] mx-auto px-4">
-      <div className="font-extrabold text-[50px] md:text-[70px] leading-[50px] md:leading-[68px] text-center md:text-start">
-        PROBLEM
-        <br />
-        STATEMENTS
-      </div>
+      <img src="/assets/labels/problem-statements.svg" alt="Problem Statements Title SVG" width="467.34px" height="119.8px" />
       <div className="font-normal text-[20px] md:text-[28px] leading-[30px] md:leading-[42px] text-center md:text-start">
         Lorem ipsum dolor sit amet consectetur adipiscing elit
       </div>
