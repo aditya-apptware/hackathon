@@ -11,7 +11,7 @@ export const Prizes = () => {
         {/* Winner Prize Card */}
         <div className="flex flex-col items-center justify-center gap-5 rounded-[14px] bg-mentorBackground w-full md:w-[500px] h-[507px] p-6">
           <img
-            src="/assets/images/winner.svg"
+            src="./assets/images/winner.svg"
             alt=""
             className="w-[94.07px] h-[134.2px]"
           />

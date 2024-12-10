@@ -15,7 +15,7 @@ export const Rules = () => {
       </div>
       <div className="w-full md:w-[587px] mt-5 md:mt-0">
         <img
-          src="/assets/pics/rules-regulations.jpg"
+          src="./assets/pics/rules-regulations.jpg"
           alt="rules and regulations banner"
           className="w-full h-auto rounded-[31px]"
         />

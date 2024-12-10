@@ -3,7 +3,7 @@ import { Button } from "./Button";
 export const ProblemStatements = () => {
   return (
     <div className="flex flex-col gap-5 w-full md:w-[1120px] mx-auto px-4">
-      <img src="/assets/labels/problem-statements.svg" alt="Problem Statements Title SVG" width="467.34px" height="119.8px" />
+      <img src="./assets/labels/problem-statements.svg" alt="Problem Statements Title SVG" width="467.34px" height="119.8px" />
       <div className="font-normal text-[20px] md:text-[28px] leading-[30px] md:leading-[42px] text-center md:text-start">
         Lorem ipsum dolor sit amet consectetur adipiscing elit
       </div>
@@ -11,7 +11,7 @@ export const ProblemStatements = () => {
         {/* Problem Card 1 */}
         <div className="flex flex-col p-8 md:p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-full md:w-[500px] h-[422px]">
           <img
-            src="/assets/images/personal-assistant.svg"
+            src="./assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
             className="w-[82px] h-[84px]"
           />
@@ -27,7 +27,7 @@ export const ProblemStatements = () => {
         {/* Problem Card 2 */}
         <div className="flex flex-col p-8 md:p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-full md:w-[500px] h-[422px]">
           <img
-            src="/assets/images/personal-assistant.svg"
+            src="./assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
             className="w-[82px] h-[84px]"
           />
@@ -43,7 +43,7 @@ export const ProblemStatements = () => {
         {/* Problem Card 3 */}
         <div className="flex flex-col p-8 md:p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-full md:w-[500px] h-[422px]">
           <img
-            src="/assets/images/personal-assistant.svg"
+            src="./assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
             className="w-[82px] h-[84px]"
           />
@@ -59,7 +59,7 @@ export const ProblemStatements = () => {
         {/* Problem Card 4 */}
         <div className="flex flex-col p-8 md:p-16 items-start justify-center gap-5 rounded-[14px] bg-mentorBackground w-full md:w-[500px] h-[422px]">
           <img
-            src="/assets/images/personal-assistant.svg"
+            src="./assets/images/personal-assistant.svg"
             alt="ai powered personal assistant"
             className="w-[82px] h-[84px]"
           />

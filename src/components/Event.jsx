@@ -4,7 +4,7 @@ export const Event = () => {
   return (
     <div className="flex flex-col gap-5 md:w-[650px] w-full mx-auto px-4">
       <img
-        src="/assets/images/event.svg"
+        src="./assets/images/event.svg"
         className="w-full object-cover"
         alt="event"
       />
