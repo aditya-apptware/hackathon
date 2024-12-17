@@ -27,7 +27,7 @@ const mentors = [
 
 export const Mentors = () => {
   return (
-    <div className="flex flex-col gap-5 px-[218px] py-[84px] mx-auto px-4 text-textLight">
+    <div className="flex flex-col gap-5 px-[218px] py-[104px] mx-auto px-4 text-textLight">
       <div className="font-karmatic text-[58px] leading-[77px] text-[#ABD40F]">
         Our Mentors
       </div>

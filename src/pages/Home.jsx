@@ -23,11 +23,12 @@ export const Home = () => {
         </div>
         <div className="py-8 md:py-16 mx-4">
           <Rules />
-        </div> */}
-        {/* <div className="py-8 md:py-16">
-          <ProblemStatements />
         </div>
         <div className="py-8 md:py-16">
+          <Mentors />
+        </div>*/}
+        <ProblemStatements />
+        {/*<div className="py-8 md:py-16">
           <Prizes />
         </div>
         <div className="py-8 md:py-16 relative z-10">
