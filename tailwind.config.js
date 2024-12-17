@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         robotoMono: ["Roboto Mono", "monospace"],
         karmatic: ['"Karmatic Arcade"', "sans-serif"],
+        spaceGrotesk: ["Space Grotesk", "sans-serif"],
       },
     },
   },
