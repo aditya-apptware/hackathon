@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Images } from "../components/Images";
 import { Mentors } from "../components/Mentors";
+import { Participate } from "../components/Participate";
 import { Prizes } from "../components/Prizes";
 import { ProblemStatements } from "../components/ProblemStatements";
 import { Rules } from "../components/Rules";
@@ -28,6 +29,7 @@ export const Home = () => {
           <Mentors />
         </div>*/}
         <ProblemStatements />
+        <Participate />
         {/*<div className="py-8 md:py-16">
           <Prizes />
         </div>
