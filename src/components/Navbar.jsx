@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import Logo from "../assets/images/logo.svg";
+import { Button } from "./Button";
 
 const NavItem = ({ label, to, onClick }) => {
   return (
@@ -7,7 +9,7 @@ const NavItem = ({ label, to, onClick }) => {
       <Link
         to={to}
         onClick={onClick} // Close menu after clicking the link
-        className="text-lg font-normal hover:text-primary transition duration-300 block py-2 px-4"
+        className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
         {label}
       </Link>
@@ -29,8 +31,8 @@ export const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        menuRef.current && 
-        !menuRef.current.contains(event.target) && 
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
         !menuButtonRef.current.contains(event.target)
       ) {
         setIsMenuOpen(false); // Close the menu
@@ -46,9 +48,11 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`flex items-center justify-between h-[58px] w-full md:w-[1120px] mx-auto bg-navbarBackground text-textLight rounded-xl px-4 md:px-8`}
+      className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-navbarBackground text-textLight rounded-xl`}
     >
-      <div className="w-full md:w-1/2 text-xl font-bold pl-4 md:pl-8">CodeKraft</div>
+      <div className="text-xl font-bold pl-4 md:pl-8">
+        <img src={Logo} alt="Logo" />
+      </div>
 
       {/* Hamburger Icon for Mobile */}
       <div
@@ -65,11 +69,12 @@ export const Navbar = () => {
 
       {/* Navigation Menu for Large Screens */}
       <div className="hidden md:block">
-        <ul className="flex justify-end w-full">
+        <ul className="flex gap-[45px] w-full">
           <NavItem label="Home" to="/" />
+          <NavItem label="About event" to="/" />
           <NavItem label="Problem statements" to="/" />
-          <NavItem label="Registration" to="/" />
-          <NavItem label="Payment" to="/" />
+          <NavItem label="Mentors" to="/" />
+          <NavItem label="Contact" to="/" />
         </ul>
       </div>
 
@@ -98,6 +103,13 @@ export const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           />
         </ul>
+      </div>
+
+      <div className="hidden md:block">
+        <Button
+          className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
+          label="Register Now"
+        />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import { Rules } from "../components/Rules";
 
 export const Home = () => {
   return (
-    <div className="w-full md:w-[1440px] mx-auto">
+    <div className="w-full md:w-[1728px] mx-auto">
       <div>
         <Header />
       </div>

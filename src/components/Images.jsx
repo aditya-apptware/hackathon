@@ -1,6 +1,6 @@
 export const Images = () => {
   return (
-    <div className="flex justify-between items-center w-full md:w-[1440px] h-[200px] mx-auto relative">
+    <div className="flex justify-between items-center w-full md:w-[1728px] h-[200px] mx-auto relative">
       <div className="w-[166px] h-[100px] md:w-[166px] md:h-[227px] overflow-hidden absolute top-[100px] md:top-0 left-0 rounded-r-[45px]">
         <img
           src="./assets/pics/faq1.jpg"

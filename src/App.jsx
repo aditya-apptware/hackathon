@@ -9,7 +9,7 @@ import { Registration } from "./pages/Registration";
 export const App = () => {
   return (
     <BrowserRouter basename="/hackathon">
-      <div className="bg-[#323232] pt-5 w-full md:w-[1440px] mx-auto">
+      <div className="bg-[#121212] py-3 px-[80px] w-full md:w-[1728px] mx-auto">
         <Navbar />
       </div>
       <Routes>
