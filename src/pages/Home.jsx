@@ -15,18 +15,16 @@ export const Home = () => {
       <div>
         <Header />
       </div>
-      <main>
+      <main className="bg-black">
         <CodeBuildRepeat />
-        {/*        <div className="py-8 md:py-16">
+          <Mentors />
+        {/* <div className="py-8 md:py-16">
           <Event />
         </div>
         <div className="py-8 md:py-16 mx-4">
           <Rules />
-        </div>
-        <div className="py-8 md:py-16">
-          <Mentors />
-        </div>
-        <div className="py-8 md:py-16">
+        </div> */}
+        {/* <div className="py-8 md:py-16">
           <ProblemStatements />
         </div>
         <div className="py-8 md:py-16">
@@ -37,8 +35,8 @@ export const Home = () => {
         </div>
         <div className="py-8 md:py-16 mt-[-230px] md:pb-[330px] hidden md:block">
           <Images />
-        </div>*/}
-      </main>
+        </div> */}
+      </main> 
       {/*  <div>
         <Footer />
       </div> */}
