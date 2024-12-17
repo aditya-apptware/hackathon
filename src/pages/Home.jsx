@@ -1,5 +1,6 @@
 import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
 import { Countdown } from "../components/Countdown";
+import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Participate } from "../components/Participate";
@@ -20,9 +21,7 @@ export const Home = () => {
         <Participate />
        <Questions />
       </main>
-      {/*  <div>
-        <Footer />
-      </div> */}
+      <Foot />
     </div>
   );
 };
