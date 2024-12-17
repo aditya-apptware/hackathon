@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hackathon/static/css/main.ea4dec81.css",
-    "main.js": "/hackathon/static/js/main.d8faadef.js",
+    "main.css": "/hackathon/static/css/main.44bbedc0.css",
+    "main.js": "/hackathon/static/js/main.f0717cb5.js",
     "static/js/453.2e44b72a.chunk.js": "/hackathon/static/js/453.2e44b72a.chunk.js",
     "static/media/box1.svg": "/hackathon/static/media/box1.36bc17be59f3ba633b6dffea5f95d88f.svg",
     "static/media/mentor-2.jpg": "/hackathon/static/media/mentor-2.f83afc8332a2503d305c.jpg",
@@ -12,12 +12,12 @@
     "static/media/logo.svg": "/hackathon/static/media/logo.510d0c11f7ab7a9c16961b9632e2405f.svg",
     "index.html": "/hackathon/index.html",
     "static/media/arrow-right.svg": "/hackathon/static/media/arrow-right.a378ee4068cdd0fa30c698a087497e8c.svg",
-    "main.ea4dec81.css.map": "/hackathon/static/css/main.ea4dec81.css.map",
-    "main.d8faadef.js.map": "/hackathon/static/js/main.d8faadef.js.map",
+    "main.44bbedc0.css.map": "/hackathon/static/css/main.44bbedc0.css.map",
+    "main.f0717cb5.js.map": "/hackathon/static/js/main.f0717cb5.js.map",
     "453.2e44b72a.chunk.js.map": "/hackathon/static/js/453.2e44b72a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea4dec81.css",
-    "static/js/main.d8faadef.js"
+    "static/css/main.44bbedc0.css",
+    "static/js/main.f0717cb5.js"
   ]
 }
