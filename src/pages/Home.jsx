@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Participate } from "../components/Participate";
 import { ProblemStatements } from "../components/ProblemStatements";
+import { Questions } from "../components/Questions";
 
 export const Home = () => {
   return (
@@ -15,29 +16,9 @@ export const Home = () => {
         <CodeBuildRepeat />
         <Countdown />
         <Mentors />
-        {/* <div className="py-8 md:py-16">
-       <main>
-        <Countdown />
-       {/*  <div className="py-8 md:py-16">
-          <Event />
-        </div>
-        <div className="py-8 md:py-16 mx-4">
-          <Rules />
-        </div>
-        <div className="py-8 md:py-16">
-          <Mentors />
-        </div>*/}
         <ProblemStatements />
         <Participate />
-        {/*<div className="py-8 md:py-16">
-          <Prizes />
-        </div>
-        <div className="py-8 md:py-16 relative z-10">
-          <Faqs />
-        </div>
-        <div className="py-8 md:py-16 mt-[-230px] md:pb-[330px] hidden md:block">
-          <Images />
-        </div> */}
+       <Questions />
       </main>
       {/*  <div>
         <Footer />
