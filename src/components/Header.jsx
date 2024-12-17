@@ -57,7 +57,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="relative w-full h-screen overflow-hidden">
+    <header className="relative w-full bg-black overflow-hidden">
       {/* Matrix Rain Canvas */}
       <canvas
         ref={canvasRef}

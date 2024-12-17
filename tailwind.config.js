@@ -18,7 +18,8 @@ module.exports = {
         copyright: "#4b5563",
       },
       fontFamily: {
-        robotoMono: ["Roboto Mono", "monospace"]
+        robotoMono: ["Roboto Mono", "monospace"],
+        karmatic: ['"Karmatic Arcade"', "sans-serif"],
       },
     },
   },
