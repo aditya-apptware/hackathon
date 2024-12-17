@@ -14,7 +14,7 @@ export const Home = () => {
       <div>
         <Header />
       </div>
-      <main>
+      {/*  <main>
         <div className="py-8 md:py-16">
           <Event />
         </div>
@@ -36,10 +36,10 @@ export const Home = () => {
         <div className="py-8 md:py-16 mt-[-230px] md:pb-[330px] hidden md:block">
           <Images />
         </div>
-      </main>
-      <div>
+      </main> */}
+      {/*  <div>
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
