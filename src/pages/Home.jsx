@@ -1,3 +1,4 @@
+import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
 import { Event } from "../components/Event";
 import { Faqs } from "../components/Faqs";
 import { Footer } from "../components/Footer";
@@ -14,8 +15,9 @@ export const Home = () => {
       <div>
         <Header />
       </div>
-      {/*  <main>
-        <div className="py-8 md:py-16">
+      <main>
+        <CodeBuildRepeat />
+        {/*        <div className="py-8 md:py-16">
           <Event />
         </div>
         <div className="py-8 md:py-16 mx-4">
@@ -35,8 +37,8 @@ export const Home = () => {
         </div>
         <div className="py-8 md:py-16 mt-[-230px] md:pb-[330px] hidden md:block">
           <Images />
-        </div>
-      </main> */}
+        </div>*/}
+      </main>
       {/*  <div>
         <Footer />
       </div> */}
