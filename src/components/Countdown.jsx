@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 
 const targetDate = new Date("2025-01-17T00:00:00").getTime();
 
+function padTwoDigits(number) {
+  return number.toString().padStart(2, "0");
+}
+
 export const Countdown = () => {
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
@@ -52,10 +56,10 @@ export const Countdown = () => {
         DATE
       </div>
       <div className="text-white text-6 mt-[10px]">17th - 19th January</div>
-      <div className="flex gap-[79px] px-[30px] py-[20px] mt-5 font-karmatic text-[#ABD40F] text-[96px] border border-[2px] border-[#ABD40F]">
-        <span>{timeRemaining.days}</span>
-        <span>{timeRemaining.hours}</span>
-        <span>{timeRemaining.minutes}</span>
+      <div className="flex gap-[79px] pl-[21px] pr-[30px] py-[20px] mt-5 font-karmatic text-[#ABD40F] text-[96px] border border-[2px] border-[#ABD40F]">
+        <span>{padTwoDigits(timeRemaining.days)}</span>
+        <span>{padTwoDigits(timeRemaining.hours)}</span>
+        <span>{padTwoDigits(timeRemaining.minutes)}</span>
       </div>
       <div className="mt-[30px] text-[#ABD40F]">
         Registration closes on 16th January 2024 ...
