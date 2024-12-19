@@ -6,7 +6,7 @@ const NavItem = ({ label, to, onClick }) => {
   return (
     <li>
       <a
-        to={to}
+        href={to}
         onClick={onClick} // Close menu after clicking the link
         className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
