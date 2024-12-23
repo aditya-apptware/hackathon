@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/images/logo.svg";
 import { Button } from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const NavItem = ({ label, to, onClick }) => {
   return (
@@ -18,6 +19,7 @@ const NavItem = ({ label, to, onClick }) => {
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const menuRef = useRef(null); // Ref for the menu
   const menuButtonRef = useRef(null); // Ref for the hamburger button
 
@@ -45,12 +47,25 @@ export const Navbar = () => {
     };
   }, []);
 
+  const navigateToRegisterationForm = () => {
+    navigate("/register");
+  };
+
+  const navigateToHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <div
       className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-navbarBackground text-textLight rounded-xl`}
     >
       <div className="text-xl font-bold pl-4 md:pl-8">
-        <img src={Logo} alt="Logo" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="cursor-pointer"
+          onClick={navigateToHomePage}
+        />
       </div>
 
       {/* Hamburger Icon for Mobile */}
@@ -108,6 +123,7 @@ export const Navbar = () => {
         <Button
           className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
           label="Register Now"
+          onClick={navigateToRegisterationForm}
         />
       </div>
     </div>
