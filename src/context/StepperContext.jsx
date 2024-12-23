@@ -19,8 +19,6 @@ export const StepperProvider = ({ children }) => {
     collegeName: "",
   });
 
-
-
   const [currentStep, setCurrentStep] = useState(0);
   const [errors, setErrors] = useState({});
 
@@ -78,8 +76,6 @@ export const StepperProvider = ({ children }) => {
       validate: () => true, // No validation for the confirmation step
     },
   ];
-
-  console.log(formData, '..formData', currentStep, steps)
 
   return (
     <StepperContext.Provider

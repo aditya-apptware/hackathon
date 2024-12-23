@@ -15,7 +15,11 @@ const Stepper = () => {
   }, [currentStep]);
 
   return (
-    <div className="px-[200px] py-[100px] overflow-hidden">
+    <div
+      className={`overflow-hidden h-[100%] w-[100%] py-[100px] z-10 relative flex flex-col justify-center ${
+        currentStep === 6 ? "mx-auto" : ""
+      }`}
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={currentStep}
@@ -23,6 +27,7 @@ const Stepper = () => {
           animate={{ opacity: 1, y: 0 }} // Slide to original position
           exit={{ opacity: 0, y: "-100vh" }} // Slide out upwards
           transition={{ duration: 0.5 }} // Smooth transition duration
+          className="h-fit"
         >
           {steps[currentStep]?.component}
           <div className="mt-10">

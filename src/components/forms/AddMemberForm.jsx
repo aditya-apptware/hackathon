@@ -88,7 +88,8 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none"
+            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            autoComplete="off"
             required
           />
           {errors.fullName && (
@@ -105,7 +106,8 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none"
+            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            autoComplete="off"
             required
           />
           {errors.email && (
@@ -122,7 +124,8 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none"
+            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            autoComplete="off"
             required
           />
           {errors.mobile && (
@@ -134,17 +137,18 @@ const AddMemberForm = ({ memberIndex }) => {
             Graduation Year
           </label>
           <div className="mt-2 w-[648.05px] border-b border-b-[#313030] pb-2 flex gap-8 text-[18px] leading-[25.06px] font-normal">
-            {["2023", "2024", "2025"].map((year) => (
-              <div key={year}>
+            {["2023", "2024", "2025"].map((year, yearIndex) => (
+              <div key={year} className="flex align-center">
                 <input
                   type="radio"
                   name="graduationYear"
                   value={year}
-                  checked={member.graduationYear === year}
+                  defaultChecked={yearIndex === 0}
                   onChange={(e) => {
                     handleChange(e);
                     handleBlur(e);
                   }}
+                  className="w-5 h-5 appearance-none border-2 border-black rounded-full checked:bg-black checked:border-transparent cursor-pointer"
                 />
                 <label className="ml-4">{year}</label>
               </div>

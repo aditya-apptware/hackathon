@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="bg-[#121212] py-3 px-[80px] w-full md:w-[1728px] mx-auto">
-          <Navbar />
-        </div>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />

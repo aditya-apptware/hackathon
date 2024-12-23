@@ -10,7 +10,8 @@ const ButtonContainer = () => {
   const isLastStep = currentStep === steps.length - 1;
   const isMaxMembers = formData.members.length >= 4;
 
-  if (isLastStep || isMaxMembers) return <OkButton />;
+  if (isLastStep) return null;
+  if (isMaxMembers) return <OkButton />;
 
   return (
     <div className="flex gap-4">

@@ -15,9 +15,15 @@ const CollegeNameForm = () => {
 
   const handleBlur = () => {
     if (!collegeName.trim()) {
-      setErrors((prev) => ({ ...prev, collegeName: "College Name is required." }));
+      setErrors((prev) => ({
+        ...prev,
+        collegeName: "College Name is required.",
+      }));
     } else if (collegeName.trim().length < 3) {
-      setErrors((prev) => ({ ...prev, collegeName: "College Name must be at least 3 characters." }));
+      setErrors((prev) => ({
+        ...prev,
+        collegeName: "College Name must be at least 3 characters.",
+      }));
     } else {
       // If no error, update the form data
       updateFormData({ collegeName });
@@ -39,7 +45,8 @@ const CollegeNameForm = () => {
         value={collegeName}
         onChange={handleChange}
         onBlur={handleBlur}
-        className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none"
+        className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+        autoComplete="off"
         required
       />
       {errors.collegeName && (
