@@ -2,11 +2,21 @@ import React from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const NextButton = () => {
-  const { currentStep, setCurrentStep, steps } = useStepperContext();
+  const {
+    currentStep,
+    setCurrentStep,
+    steps,
+    formData: { teamName, members, collegeName },
+  } = useStepperContext();
 
   const handleNext = () => {
     if (validateCurrentStep()) {
-      setCurrentStep((prev) => prev + 1);
+      if (teamName && members.length && collegeName){
+        setCurrentStep(6)
+      }
+      else {
+        setCurrentStep((prev) => prev + 1);
+      }
     }
   };
 

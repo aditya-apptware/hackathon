@@ -18,6 +18,9 @@ export const StepperProvider = ({ children }) => {
     members: [],
     collegeName: "",
   });
+
+
+
   const [currentStep, setCurrentStep] = useState(0);
   const [errors, setErrors] = useState({});
 
@@ -57,7 +60,7 @@ export const StepperProvider = ({ children }) => {
         return true;
       },
     },
-    ...Array(4)
+    ...Array(3)
       .fill(null)
       .map((_, index) => ({
         component: <AddMemberForm memberIndex={index + 1} />,
@@ -75,6 +78,8 @@ export const StepperProvider = ({ children }) => {
       validate: () => true, // No validation for the confirmation step
     },
   ];
+
+  console.log(formData, '..formData', currentStep, steps)
 
   return (
     <StepperContext.Provider

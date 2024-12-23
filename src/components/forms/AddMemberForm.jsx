@@ -12,7 +12,13 @@ const AddMemberForm = ({ memberIndex }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setMember((prev) => ({ ...prev, [name]: value }));
+    const updatedMember = { ...member, [name]: value };
+    setMember(updatedMember);
+
+    // Update formData immediately
+    const updatedMembers = [...formData.members];
+    updatedMembers[memberIndex] = updatedMember;
+    updateFormData({ members: updatedMembers });
 
     // Clear error for the field as the user types
     setErrors((prev) => ({ ...prev, [name]: "" }));
@@ -21,10 +27,6 @@ const AddMemberForm = ({ memberIndex }) => {
   const handleBlur = (e) => {
     const { name, value } = e.target;
     validateField(name, value);
-
-    const updatedMembers = [...formData.members];
-    updatedMembers[memberIndex] = member;
-    updateFormData({ members: updatedMembers });
   };
 
   const validateField = (name, value) => {
