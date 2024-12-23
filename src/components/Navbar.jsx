@@ -61,9 +61,9 @@ export const Navbar = () => {
   }
 
   return (
-    <div className="bg-[#121212] py-3 px-[80px] w-full md:w-[1728px] mx-auto">
+    <div className="bg-black py-3 px-[80px] w-full md:w-[1728px] mx-auto">
       <div
-        className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-navbarBackground text-textLight rounded-xl`}
+        className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
       >
         <div className="text-xl font-bold pl-4 md:pl-8">
           <img
