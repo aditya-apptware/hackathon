@@ -5,12 +5,6 @@ import CollegeNameForm from "../components/forms/CollegeNameForm";
 import ConfirmationPopup from "../components/forms/ConfirmationPopup";
 
 const StepperContext = createContext();
-const defaultMember = {
-  fullName: "",
-  email: "",
-  mobile: "",
-  graduationYear: "2023",
-};
 
 export const StepperProvider = ({ children }) => {
   const [formData, setFormData] = useState({

@@ -45,7 +45,7 @@ export const Countdown = () => {
     }, 1000); // Update every second
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, [targetDate]);
+  }, []);
 
   return (
     <div

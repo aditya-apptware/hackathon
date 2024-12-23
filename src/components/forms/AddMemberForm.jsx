@@ -49,29 +49,6 @@ const AddMemberForm = ({ memberIndex }) => {
     setErrors((prev) => ({ ...prev, [name]: error }));
   };
 
-  // Function to validate all fields when the user clicks "Next"
-  const validateAllFields = () => {
-    let isValid = true;
-    const fields = ["fullName", "email", "mobile"];
-    fields.forEach((field) => {
-      const value = member[field] || "";
-      if (!value.trim()) {
-        setErrors((prev) => ({ ...prev, [field]: `${field} is required.` }));
-        isValid = false;
-      } else if (field === "email" && !/^\S+@\S+\.\S+$/.test(value)) {
-        setErrors((prev) => ({ ...prev, email: "A valid email is required." }));
-        isValid = false;
-      } else if (field === "mobile" && !/^\d{10}$/.test(value)) {
-        setErrors((prev) => ({
-          ...prev,
-          mobile: "A valid 10-digit mobile number is required.",
-        }));
-        isValid = false;
-      }
-    });
-    return isValid;
-  };
-
   return (
     <>
       <h1 className="font-medium text-[32px] leading-[25.06px] mb-16">
