@@ -1,0 +1,106 @@
+name: Deploy Apptware Hackathon Website
+run-name: Deployment initiated by ${{github.actor}}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-apptware-hackathon:
+    name: Deploy Apptware Hackathon Website
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pulling code from main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Building node Application
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+        run: |
+          npm i
+          npm run buid
+
+      - name: configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::012345678901:role/github-action-access
+          role-session-name: github-action-access
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Checking Server State
+        id: status
+        run: |
+          INSTANCE_STATE=$(aws ec2 describe-instances --region ap-south-1 --instance-ids ${{ secrets.AWS_INSTANCE_ID }} --query Reservations[].Instances[].State[].Name --output text)
+          echo "INSTANCE_STATE_UPDATE=$INSTANCE_STATE" >> "$GITHUB_OUTPUT"
+          echo "Instance is $INSTANCE_STATE"
+
+      - name: Get runner IP
+        id: ip
+        uses: candidob/get-runner-ip@v1.0.0
+        if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
+
+      - name: whitelist runner ip address
+        if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
+        run: |
+          aws ec2 authorize-security-group-ingress \
+            --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
+            --protocol tcp \
+            --port 22 \
+            --cidr ${{ steps.ip.outputs.ipv4 }}/32
+
+      - name: Copy Files to Server
+        uses: easingthemes/ssh-deploy@main
+        if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
+        with:
+          REMOTE_HOST: ${{ secrets.EC2_SERVER_IP }}
+          REMOTE_USER: ${{ secrents.EC@_SERVER_USER}}
+          SSH_PRIVATE_KEY: ${{ secrets.EC@_SERVER_ACCESS }}
+          SOURCE: 'build/*'
+          TARGET: /home/ubuntu/hackathon/
+
+      - name: Starting Application
+        id: deploy
+        uses: JimCronqvist/action-ssh@master
+        if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
+        with:
+          hosts: ${{ secrets.EC2_SERVER_USER }}@${{ secrets.EC2_SERVER_IP }} 
+          privateKey: ${{ secrets.EC2_SERVER_ACCESS }}
+          command: |
+            sudo rm -rvf /var/wwww/html/hackathon/*
+            sudo mv -rvf /home/ubuntu/hackathon/* /var/www/html/hackathon/
+            sudo systemctl restart nginx
+
+      - name: Revoke runner ip address
+        if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
+        run: |
+          aws ec2 revoke-security-group-ingress \
+            --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
+            --protocol tcp \
+            --port 22 \
+            --cidr ${{ steps.ip.outputs.ipv4 }}/32
+
+      - name: Notify Google Chat
+        if: ${{ steps.deploy.outcome == 'success' }}
+        uses: SimonScholz/google-chat-action@main
+        with:
+          webhookUrl: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
+          jobStatus: '${{ job.status }}'
+          title: Backend Application Deployment
+            
+      - name: Notify Google Chat For Failure
+        if: ${{ steps.deploy.outcome == 'failure' }}
+        uses: SimonScholz/google-chat-action@main
+        with:
+          webhookUrl: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
+          title: Backend Application Deployment Failed, Please check logs.
+            
+      - name: Notify Google Chat For Cancelled
+        if: ${{ steps.deploy.outcome == 'skipped' || steps.deploy.outcome == 'cancelled' }}
+        uses: SimonScholz/google-chat-action@main
+        with:
+          webhookUrl: '${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}'
+          title: Backend Application Deployment Cancelled, Please check logs
