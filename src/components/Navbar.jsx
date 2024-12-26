@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
+import { Register } from "../pages/Register";
 import { Button } from "./Button";
-import { useLocation, useNavigate } from "react-router-dom";
 
 const NavItem = ({ label, to, onClick }) => {
   return (
@@ -18,11 +19,15 @@ const NavItem = ({ label, to, onClick }) => {
 };
 
 export const Navbar = () => {
-  const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const menuRef = useRef(null); // Ref for the menu
   const menuButtonRef = useRef(null); // Ref for the hamburger button
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+
+  const handleCloseRegisterForm = () => {
+    setShowRegistrationForm(false);
+  };
 
   // Toggle the menu state when the hamburger icon is clicked
   const toggleMenu = () => {
@@ -49,88 +54,98 @@ export const Navbar = () => {
   }, []);
 
   const navigateToRegisterationForm = () => {
-    navigate("/register");
+    setShowRegistrationForm(true);
   };
 
   const navigateToHomePage = () => {
     navigate("/");
   };
 
-  if (pathname === "/register") {
-    return null;
-  }
-
   return (
-    <div className="bg-black py-3 px-[80px] w-full md:w-[1728px] mx-auto">
-      <div
-        className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
-      >
-        <div className="text-xl font-bold pl-4 md:pl-8">
-          <img
-            src={Logo}
-            alt="Logo"
-            className="cursor-pointer"
-            onClick={navigateToHomePage}
-          />
-        </div>
-
-        {/* Hamburger Icon for Mobile */}
+    <div className="flex w-[100%] justify-center">
+      {showRegistrationForm && (
         <div
-          ref={menuButtonRef} // Add ref to hamburger button
-          className="md:hidden flex items-center cursor-pointer"
-          onClick={toggleMenu}
+          className="absolute bg-white backdrop-blur z-99 w-[1728px] h-[1134px] bg-[#ffffff90] flex flex-col justify-center align-center"
+          style={{ zIndex: 99 }}
         >
-          <div className="space-y-2">
-            <div className="w-6 h-0.5 bg-textLight"></div>
-            <div className="w-6 h-0.5 bg-textLight"></div>
-            <div className="w-6 h-0.5 bg-textLight"></div>
+          <Register onCloseIconClick={handleCloseRegisterForm} />
+        </div>
+      )}
+      <div className="relative bg-black py-3 px-[80px] w-full md:w-[1728px] mx-auto z-1">
+        <div
+          className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
+        >
+          <div className="text-xl font-bold pl-4 md:pl-8">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="cursor-pointer"
+              onClick={navigateToHomePage}
+            />
           </div>
-        </div>
 
-        {/* Navigation Menu for Large Screens */}
-        <div className="hidden md:block">
-          <ul className="flex gap-[45px] w-full">
-            <NavItem label="Home" to="/" />
-            <NavItem label="About event" to="/" />
-            <NavItem label="Problem statements" to="/" />
-            <NavItem label="Mentors" to="/" />
-            <NavItem label="Contact" to="/" />
-          </ul>
-        </div>
+          {/* Hamburger Icon for Mobile */}
+          <div
+            ref={menuButtonRef} // Add ref to hamburger button
+            className="md:hidden flex items-center cursor-pointer"
+            onClick={toggleMenu}
+          >
+            <div className="space-y-2">
+              <div className="w-6 h-0.5 bg-textLight"></div>
+              <div className="w-6 h-0.5 bg-textLight"></div>
+              <div className="w-6 h-0.5 bg-textLight"></div>
+            </div>
+          </div>
 
-        {/* Navigation Menu for Mobile */}
-        <div
-          ref={menuRef} // Add ref to menu container
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
-        >
-          <ul className="flex flex-col items-end py-4 px-4 w-full">
-            <NavItem label="Home" to="/" onClick={() => setIsMenuOpen(false)} />
-            <NavItem
-              label="Problem statements"
-              to="/"
-              onClick={() => setIsMenuOpen(false)}
-            />
-            <NavItem
-              label="Registration"
-              to="/"
-              onClick={() => setIsMenuOpen(false)}
-            />
-            <NavItem
-              label="Payment"
-              to="/"
-              onClick={() => setIsMenuOpen(false)}
-            />
-          </ul>
-        </div>
+          {/* Navigation Menu for Large Screens */}
+          <div className="hidden md:block">
+            <ul className="flex gap-[45px] w-full">
+              <NavItem label="Home" to="/" />
+              <NavItem label="About event" to="/" />
+              <NavItem label="Problem statements" to="/" />
+              <NavItem label="Mentors" to="/" />
+              <NavItem label="Contact" to="/" />
+            </ul>
+          </div>
 
-        <div className="hidden md:block">
-          <Button
-            className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
-            label="Register Now"
-            onClick={navigateToRegisterationForm}
-          />
+          {/* Navigation Menu for Mobile */}
+          <div
+            ref={menuRef} // Add ref to menu container
+            className={`${
+              isMenuOpen ? "block" : "hidden"
+            } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
+          >
+            <ul className="flex flex-col items-end py-4 px-4 w-full">
+              <NavItem
+                label="Home"
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+              />
+              <NavItem
+                label="Problem statements"
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+              />
+              <NavItem
+                label="Registration"
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+              />
+              <NavItem
+                label="Payment"
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+              />
+            </ul>
+          </div>
+
+          <div className="hidden md:block">
+            <Button
+              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
+              label="Register Now"
+              onClick={navigateToRegisterationForm}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -4,15 +4,7 @@ import ButtonContainer from "./buttons/ButtonContainer";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Stepper = () => {
-  const { currentStep, steps } = useStepperContext();
-
-  useEffect(() => {
-    // Scroll to the top of the new step when the currentStep changes
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll effect
-    });
-  }, [currentStep]);
+  const { currentStep, steps, direction } = useStepperContext();
 
   return (
     <div
@@ -23,9 +15,9 @@ const Stepper = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentStep}
-          initial={{ opacity: 0, y: "100vh" }} // Start from below the view
+          initial={{ opacity: 0, y: direction === "up" ? "100vh" : "-100vh" }} // Start from the corresponding direction
           animate={{ opacity: 1, y: 0 }} // Slide to original position
-          exit={{ opacity: 0, y: "-100vh" }} // Slide out upwards
+          exit={{ opacity: 0, y: direction === "up" ? "-100vh" : "100vh" }} // Reverse the direction on exit
           transition={{ duration: 0.5 }} // Smooth transition duration
           className="h-fit"
         >

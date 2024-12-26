@@ -9,8 +9,11 @@ import { Questions } from "../components/Questions";
 
 export const Home = () => {
   return (
-    <div className="w-full md:w-[1728px] mx-auto">
-      <div>
+    <div
+      className="w-full md:w-[1728px] mx-auto relative"
+      style={{ zIndex: 1 }}
+    >
+      <div className="z-1 relative">
         <Header />
       </div>
       <main className="bg-black">
@@ -19,7 +22,7 @@ export const Home = () => {
         <Mentors />
         <ProblemStatements />
         <Participate />
-       <Questions />
+        <Questions />
       </main>
       <Foot />
     </div>

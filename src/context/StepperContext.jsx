@@ -12,6 +12,7 @@ export const StepperProvider = ({ children }) => {
     members: [],
     collegeName: "",
   });
+  const [direction, setDirection] = useState("up"); // Default direction
 
   const [currentStep, setCurrentStep] = useState(0);
   const [errors, setErrors] = useState({});
@@ -80,7 +81,9 @@ export const StepperProvider = ({ children }) => {
         updateFormData,
         errors,
         setErrors,
-        steps, // Expose steps to the rest of the application
+        steps,
+        direction,
+        setDirection,
       }}
     >
       {children}

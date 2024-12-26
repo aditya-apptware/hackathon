@@ -3,16 +3,18 @@ import ArrowUp from "../../assets/images/arrow_up.svg";
 import ArrowDown from "../../assets/images/arrow_down.svg";
 
 export const StepperNavButton = () => {
-  const { currentStep, setCurrentStep } = useStepperContext();
+  const { currentStep, setCurrentStep, setDirection } = useStepperContext();
 
   const handleNextClick = () => {
     if (currentStep < 6) {
+      setDirection("up")
       setCurrentStep((prev) => prev + 1);
     }
   };
 
   const handlePrevClick = () => {
     if (currentStep > 0) {
+      setDirection("down")
       setCurrentStep((prev) => prev - 1);
     }
   };
