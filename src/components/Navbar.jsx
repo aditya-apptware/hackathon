@@ -63,14 +63,14 @@ export const Navbar = () => {
 
   return (
     <div className="flex w-[100%] justify-center">
-     {showRegistrationForm && (
-  <div
-    className="absolute bg-white backdrop-blur z-99 w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] bg-[#ffffff90] flex flex-col justify-center items-center"
-    style={{ zIndex: 99 }}
-  >
-    <Register onCloseIconClick={handleCloseRegisterForm} />
-  </div>
-)}
+      {showRegistrationForm && (
+        <div
+          className="absolute bg-white backdrop-blur w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] bg-[#ffffff90] flex flex-col justify-center items-center"
+          style={{ zIndex: 99 }}
+        >
+          <Register onCloseIconClick={handleCloseRegisterForm} />
+        </div>
+      )}
 
       <div className="relative bg-black py-3 px-4 md:px-[40px] w-full md:w-[1728px] mx-auto z-1">
         <div
