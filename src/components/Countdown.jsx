@@ -49,19 +49,21 @@ export const Countdown = () => {
 
   return (
     <div
-      className="font-robotoMono px-[505px] py-[199px] bg-black text-center"
+      className="font-robotoMono px-4 md:px-[505px] py-[80px] md:py-[199px] bg-black text-center"
       style={{ backgroundImage: "url('../assets/images/countdownbg.svg')" }}
     >
-      <div className="text-white text-[96px] font-bold tracking-[76.8px] w-[462px] mx-auto">
+      <div className="text-white text-[48px] md:text-[96px] font-bold tracking-[20px] md:tracking-[76.8px] w-full md:w-[462px] mx-auto">
         DATE
       </div>
-      <div className="text-white text-6 mt-[10px]">17th - 19th January</div>
-      <div className="flex gap-[79px] pl-[21px] pr-[30px] py-[20px] mt-5 font-karmatic text-[#ABD40F] text-[96px] border border-[2px] border-[#ABD40F]">
-        <span>{padTwoDigits(timeRemaining.days)}</span>
-        <span>{padTwoDigits(timeRemaining.hours)}</span>
-        <span>{padTwoDigits(timeRemaining.minutes)}</span>
+      <div className="text-white text-[14px] md:text-6 mt-[10px]">
+        17th - 19th January
       </div>
-      <div className="mt-[30px] text-[#ABD40F]">
+      <div className="flex flex-wrap justify-center gap-6 md:gap-[72px] pl-[10px] md:pl-[0px] pr-[10px] md:pr-[0px] py-[20px] mt-5 font-karmatic text-[#ABD40F] text-[48px] md:text-[96px] border border-[2px] border-[#ABD40F]">
+        <span className="px-1">{padTwoDigits(timeRemaining.days)}</span>
+        <span className="px-1">{padTwoDigits(timeRemaining.hours)}</span>
+        <span className="px-1">{padTwoDigits(timeRemaining.minutes)}</span>
+      </div>
+      <div className="mt-[30px] text-[#ABD40F] text-[14px] md:text-[16px]">
         Registration closes on 16th January 2024 ...
       </div>
     </div>
