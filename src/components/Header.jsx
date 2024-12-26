@@ -38,10 +38,9 @@ export const Header = () => {
         drops[i]++;
       }
 
-      
-    setTimeout(() => {
-      requestAnimationFrame(draw); // Slow down the animation
-    }, 10); // Adjust the delay here (in milliseconds)
+      setTimeout(() => {
+        requestAnimationFrame(draw); // Slow down the animation
+      }, 10); // Adjust the delay here (in milliseconds)
     };
 
     draw();
@@ -65,25 +64,25 @@ export const Header = () => {
       ></canvas>
 
       {/* Header Content */}
-      <div className="relative px-[217px] py-[158px] z-10 flex flex-col items-center text-black font-robotoMono gap-[22px]">
+      <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center text-black font-robotoMono gap-[22px]">
         <div className="title md:w-full m-auto">
           <img
             src={Hackathon}
             alt="hackathon is back 2025"
-            width={544}
+            className="w-full max-w-[544px]"
             height={154}
           />
         </div>
-        <div className="subtitle w-full">
+        <div className="subtitle w-full text-center md:text-left">
           <p className="text-[16px] md:text-[22px] md:leading-[32px] font-normal text-white">
             &lt;Lorem ipsum dolor sit, amet consectetur
             <br />
             adipisicing elit. Veniam&gt;
           </p>
         </div>
-        <div className="hidden md:block w-full">
+        <div className="w-full text-center md:text-left">
           <Button
-            className="bg-white text-black border-none px-[18px] py-3 rounded-none text-4 font-bold"
+            className="bg-white text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold"
             label="Know more"
           />
         </div>
