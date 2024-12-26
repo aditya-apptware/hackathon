@@ -71,11 +71,12 @@ export const Navbar = () => {
           <Register onCloseIconClick={handleCloseRegisterForm} />
         </div>
       )}
-      <div className="relative bg-black py-3 px-[80px] w-full md:w-[1728px] mx-auto z-1">
+      <div className="relative bg-black py-3 px-4 md:px-[40px] w-full md:w-[1728px] mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
         >
-          <div className="text-xl font-bold pl-4 md:pl-8">
+          {/* Logo on the Left */}
+          <div className="text-xl font-bold pl-4 md:pl-8 flex-shrink-0">
             <img
               src={Logo}
               alt="Logo"
@@ -115,7 +116,7 @@ export const Navbar = () => {
               isMenuOpen ? "block" : "hidden"
             } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
           >
-            <ul className="flex flex-col items-end py-4 px-4 w-full">
+            <ul className="flex flex-col gap-6 justify-around items-end py-4 px-4 w-full">
               <NavItem
                 label="Home"
                 to="/"
@@ -139,6 +140,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
+          {/* Desktop Button */}
           <div className="hidden md:block">
             <Button
               className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
