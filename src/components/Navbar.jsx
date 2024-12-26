@@ -65,7 +65,7 @@ export const Navbar = () => {
     <div className="flex w-[100%] justify-center">
       {showRegistrationForm && (
         <div
-          className="absolute backdrop-blur w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
+          className="absolute backdrop-blur backdrop-blur-[20px] w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
           style={{ zIndex: 99 }}
         >
           <Register onCloseIconClick={handleCloseRegisterForm} />
