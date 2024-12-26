@@ -52,8 +52,10 @@ export const ProblemStatements = () => {
               key={itemIndex}
               className={`bg-${bgColor} p-4 md:p-5 text-${color} border border-white h-auto md:h-[190px]`}
               style={{
-                transform: `rotate(${rotateValue}deg)`,
-                marginTop: `${top}px`,
+                transform: `rotate(${
+                  window.innerWidth >= 768 ? rotateValue : 0
+                }deg)`,
+                marginTop: `${window.innerWidth >= 768 ? top : 0}px`,
               }}
             >
               <div className="text-sm md:text-4 font-medium leading-6">
@@ -71,7 +73,7 @@ export const ProblemStatements = () => {
           );
         })}
       </div>
-      <div className="absolute bottom-[50px] md:bottom-[146px] right-[32px] md:right-[148px]">
+      <div className="absolute bottom-[20px] md:bottom-[146px] right-[32px] md:right-[148px]">
         <button className="flex items-stretch text-white border border-white uppercase text-sm md:text-base">
           <span className="flex items-center px-3 py-1 md:px-4 md:py-2">
             View All
