@@ -27,32 +27,32 @@ const mentors = [
 
 export const Mentors = () => {
   return (
-    <div className="flex flex-col gap-5 px-[218px] py-[104px] mx-auto px-4 text-textLight">
-      <div className="font-karmatic text-[58px] leading-[77px] text-[#ABD40F]">
+    <div className="flex flex-col gap-5 px-4 md:px-[218px] py-10 md:py-[104px] mx-auto text-textLight">
+      <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
         Our Mentors
       </div>
-      <div className="flex justify-center gap-5 mt-10">
+      <div className="flex flex-wrap justify-center md:justify-start gap-5 mt-10">
         {mentors.map((mentor, mentorItemIndex) => {
           const { name, role, imageSource } = mentor;
           const rotateValue = mentorItemIndex < 2 ? "7.3deg" : "-7.3deg";
           return (
             <div
               key={mentorItemIndex}
-              className="flex flex-col p-8 items-center justify-center gap-5 w-full md:w-[340.81px] h-[422px] relative"
+              className="flex flex-col p-8 items-center justify-center gap-5 w-full sm:w-[300px] md:w-[307.81px] h-auto md:h-[422px] relative"
             >
               <img
                 src={imageSource}
                 alt={name}
                 style={{ transform: `rotate(${rotateValue})` }}
-                className="w-full md:w-auto object-cover h-[250px] md:h-[401.65px] bg-mentorBackground"
+                className="w-full object-cover h-[200px] sm:h-[250px] md:h-[401.65px] bg-mentorBackground"
               />
-              <div className="absolute md:left-0 bottom-[20px] md:bottom-[-50px]  p-4">
-                <div className="font-bold text-[18px] md:text-[28px] leading-[26px] md:leading-[36px] text-textLight">
+              <div className="absolute left-0 bottom-[-40px] md:bottom-[-50px] p-4 text-center md:text-left">
+                <div className="font-bold text-[14px] sm:text-[18px] md:text-[28px] leading-[20px] sm:leading-[26px] md:leading-[36px] text-textLight">
                   {name.split(" ").map((word, index) => (
                     <p key={index}>{word}</p>
                   ))}
                 </div>
-                <div className="font-normal text-[16px] md:text-[24px] leading-[26px] md:leading-[42px]">
+                <div className="font-normal text-[12px] sm:text-[16px] md:text-[24px] leading-[18px] sm:leading-[26px] md:leading-[42px]">
                   {role}
                 </div>
               </div>
