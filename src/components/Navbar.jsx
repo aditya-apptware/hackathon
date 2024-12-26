@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 import { Register } from "../pages/Register";
 import { Button } from "./Button";
@@ -7,13 +7,13 @@ import { Button } from "./Button";
 const NavItem = ({ label, to, onClick }) => {
   return (
     <li>
-      <a
+      <Link
         href={to}
         onClick={onClick} // Close menu after clicking the link
         className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
         {label}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -65,17 +65,19 @@ export const Navbar = () => {
     <div className="flex w-[100%] justify-center">
       {showRegistrationForm && (
         <div
-          className="absolute bg-white backdrop-blur z-99 w-[1728px] h-[1134px] bg-[#ffffff90] flex flex-col justify-center align-center"
+          className="absolute backdrop-blur w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
           style={{ zIndex: 99 }}
         >
           <Register onCloseIconClick={handleCloseRegisterForm} />
         </div>
       )}
-      <div className="relative bg-black py-3 px-[80px] w-full md:w-[1728px] mx-auto z-1">
+
+      <div className="relative bg-black py-3 px-4 md:px-[40px] w-full md:w-[1728px] mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
         >
-          <div className="text-xl font-bold pl-4 md:pl-8">
+          {/* Logo on the Left */}
+          <div className="text-xl font-bold pl-4 md:pl-8 flex-shrink-0">
             <img
               src={Logo}
               alt="Logo"
@@ -115,7 +117,7 @@ export const Navbar = () => {
               isMenuOpen ? "block" : "hidden"
             } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
           >
-            <ul className="flex flex-col items-end py-4 px-4 w-full">
+            <ul className="flex flex-col gap-6 justify-around items-end py-4 px-4 w-full">
               <NavItem
                 label="Home"
                 to="/"
@@ -126,10 +128,11 @@ export const Navbar = () => {
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
               />
+              {/* Registration as NavItem */}
               <NavItem
                 label="Registration"
                 to="/"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={navigateToRegisterationForm} // Trigger the registration form on click
               />
               <NavItem
                 label="Payment"
@@ -139,6 +142,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
+          {/* Desktop Button */}
           <div className="hidden md:block">
             <Button
               className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
