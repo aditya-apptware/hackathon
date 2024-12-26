@@ -56,16 +56,16 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="relative w-full bg-black overflow-hidden">
+    <header className="relative w-full bg-black overflow-hidden h-[500px] md:h-[805px] px-[32px]">
       {/* Matrix Rain Canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-[604px] z-0"
+        className="absolute top-0 left-0 w-full h-[805px] z-0"
       ></canvas>
 
       {/* Header Content */}
-      <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center text-black font-robotoMono gap-[22px]">
-        <div className="title md:w-full m-auto">
+      <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center justify-center h-[500px] md:h-[805px] text-black font-robotoMono gap-[22px]">
+        <div className="title md:w-full">
           <img
             src={Hackathon}
             alt="hackathon is back 2025"

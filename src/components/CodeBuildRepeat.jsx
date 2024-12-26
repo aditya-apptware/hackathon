@@ -2,12 +2,12 @@ import Box1 from "../assets/images/box1.svg";
 
 export const CodeBuildRepeat = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center bg-black pt-[120px] pb-[147px] font-robotoMono">
+    <div className="relative flex flex-col items-center justify-center bg-black pt-[120px] font-robotoMono h-[837px] px-[32px]">
       {/* Responsive Image */}
       <img
         src={Box1}
         alt="box model 1"
-        className="w-full md:w-[1060px] md:h-[570px] object-contain"
+        className="w-full md:w-[1060px] md:h-[818px] object-contain absolute top-[-55px] md:top-[-145px]"
       />
 
       {/* Left Text */}

@@ -49,7 +49,7 @@ export const Countdown = () => {
 
   return (
     <div
-      className="font-robotoMono px-4 md:px-[505px] py-[80px] md:py-[199px] bg-black text-center"
+      className="font-robotoMono md:px-[505px] py-[80px] md:py-[199px] bg-black text-center px-[32px]"
       style={{ backgroundImage: "url('../assets/images/countdownbg.svg')" }}
     >
       <div className="text-white text-[48px] md:text-[96px] font-bold tracking-[20px] md:tracking-[76.8px] w-full md:w-[462px] mx-auto">

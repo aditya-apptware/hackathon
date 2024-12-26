@@ -37,11 +37,11 @@ const statements = [
 
 export const ProblemStatements = () => {
   return (
-    <div className="relative flex flex-col gap-5 w-full bg-black font-robotoMono pb-10 md:pb-[119px]">
-      <div className="font-karmatic text-[36px] leading-[48px] md:text-[58px] md:leading-[77px] text-[#abd40f] mt-8 md:mt-[89px] mx-8 md:ml-[209px]">
+    <div className="relative flex flex-col gap-5 w-full bg-black font-robotoMono py-[80px] md:pb-[119px] px-[32px]">
+      <div className="font-karmatic text-[36px] leading-[48px] md:text-[58px] md:leading-[77px] text-[#abd40f] mt-8 md:mt-[89px] md:mx-8 md:ml-[209px]">
         Problem Statements
       </div>
-      <div className="flex flex-col md:flex-row gap-6 md:gap-12 mx-8 md:mx-[150px] items-start">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12 md:mx-8 md:mx-[150px] items-start">
         {statements.map((item, itemIndex) => {
           const bgColor = itemIndex % 2 === 0 ? "black" : "white";
           const color = itemIndex % 2 === 0 ? "white" : "black";
