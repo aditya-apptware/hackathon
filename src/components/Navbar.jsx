@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 import { Register } from "../pages/Register";
 import { Button } from "./Button";
@@ -7,13 +7,13 @@ import { Button } from "./Button";
 const NavItem = ({ label, to, onClick }) => {
   return (
     <li>
-      <a
+      <Link
         href={to}
         onClick={onClick} // Close menu after clicking the link
         className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
         {label}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -127,10 +127,11 @@ export const Navbar = () => {
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
               />
+              {/* Registration as NavItem */}
               <NavItem
                 label="Registration"
                 to="/"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={navigateToRegisterationForm} // Trigger the registration form on click
               />
               <NavItem
                 label="Payment"
