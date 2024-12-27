@@ -72,7 +72,7 @@ export const Navbar = () => {
         </div>
       )}
 
-      <div className="relative bg-black py-3 px-4 md:px-[40px] w-full md:w-[1728px] mx-auto z-1">
+      <div className="relative bg-black py-3 px-4 md:px-[80px] w-full md:w-[1728px] mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
         >

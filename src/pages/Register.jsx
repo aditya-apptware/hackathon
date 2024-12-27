@@ -7,7 +7,7 @@ import { StepperProvider } from "../context/StepperContext";
 
 export const Register = ({ onCloseIconClick }) => {
   return (
-    <div className="relative font-robotoMono bg-[#ABD40F] w-full sm:w-[1485px] h-[884px] mx-auto flex px-[40px] sm:px-[200px] z-1 rounded-[10px]">
+    <div className="relative font-robotoMono bg-[#ABD40F] w-full sm:w-[1485px] h-[884px] mx-auto flex p-[40px] sm:px-[200px] z-1 rounded-[10px]">
       <img
         src={FormBg}
         className="w-full h-full absolute left-0 opacity-[40%] object-cover"
