@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.9957a687.css",
-    "main.js": "./static/js/main.87f76f11.js",
+    "main.js": "./static/js/main.debb2cad.js",
     "static/media/formbg.png": "./static/media/formbg.b3fb8f0ae179005a9df5.png",
     "static/media/box1.svg": "./static/media/box1.3d14f69c969d8de57a6c30ffed08d651.svg",
     "static/media/mentor-2.jpg": "./static/media/mentor-2.f83afc8332a2503d305c.jpg",
@@ -18,10 +18,10 @@
     "static/media/arrow_down.svg": "./static/media/arrow_down.1460e76df5a7374c0af2e6d47d2b83de.svg",
     "static/media/arrow_up.svg": "./static/media/arrow_up.a77e1ec7acd61ac195b22961dd48db36.svg",
     "main.9957a687.css.map": "./static/css/main.9957a687.css.map",
-    "main.87f76f11.js.map": "./static/js/main.87f76f11.js.map"
+    "main.debb2cad.js.map": "./static/js/main.debb2cad.js.map"
   },
   "entrypoints": [
     "static/css/main.9957a687.css",
-    "static/js/main.87f76f11.js"
+    "static/js/main.debb2cad.js"
   ]
 }

@@ -3,9 +3,10 @@ import ArrowUp from "../../assets/images/arrow_up.svg";
 import { useStepperContext } from "../../context/StepperContext";
 
 export const StepperNavButton = () => {
-  const { currentStep, setCurrentStep, setDirection, setAnimatingStep } =
+  const { currentStep, setCurrentStep, setDirection, setAnimatingStep, formData: {members} } =
     useStepperContext();
 
+    console.info(members, '...members')
   const handleNextClick = () => {
     if (currentStep < 6) {
       setDirection("up");

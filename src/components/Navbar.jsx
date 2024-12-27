@@ -62,7 +62,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex w-[100%] justify-center">
+    <div className="flex w-full md:w-[1728px] mx-auto justify-center">
       {showRegistrationForm && (
         <div
           className="absolute backdrop-blur backdrop-blur-[20px] w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
