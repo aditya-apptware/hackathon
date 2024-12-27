@@ -6,10 +6,11 @@ on:
   push:
     branches:
       - main
+
 permissions:
   id-token: write
   contents: read
-  
+
 jobs:
   deploy-apptware-hackathon:
     name: Deploy Apptware Hackathon Website
@@ -45,7 +46,7 @@ jobs:
       - name: Checking Server State
         id: status
         run: |
-          INSTANCE_STATE=$(aws ec2 describe-instances --region  --instance-ids ${{ secrets.INSTANCE_ID }} --query Reservations[].Instances[].State[].Name --output text)
+          INSTANCE_STATE=$(aws ec2 describe-instances --region ${{ secrets.AWS_REGION }} --instance-ids ${{ secrets.INSTANCE_ID }} --query Reservations[].Instances[].State[].Name --output text)
           echo "INSTANCE_STATE_UPDATE=$INSTANCE_STATE" >> "$GITHUB_OUTPUT"
           echo "Instance is $INSTANCE_STATE"
 
