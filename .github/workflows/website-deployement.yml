@@ -1,8 +1,11 @@
-name: Deploy Apptware Hackathon Website
+name: Deploy-Website
 run-name: Deployment initiated by ${{github.actor}}
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy-apptware-hackathon:
@@ -16,25 +19,28 @@ jobs:
         with:
           ref: main
 
-      - name: Building node Application
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+
+      - name: Building node Application
         run: |
           npm i
           npm run build
+          ls -l build
 
       - name: configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::012345678901:role/github-action-access
+          role-to-assume: ${{ secrets.AWS_ROLE}}
           role-session-name: github-action-access
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Checking Server State
         id: status
         run: |
-          INSTANCE_STATE=$(aws ec2 describe-instances --region ap-south-1 --instance-ids ${{ secrets.AWS_INSTANCE_ID }} --query Reservations[].Instances[].State[].Name --output text)
+          INSTANCE_STATE=$(aws ec2 describe-instances --region  --instance-ids ${{ secrets.INSTANCE_ID }} --query Reservations[].Instances[].State[].Name --output text)
           echo "INSTANCE_STATE_UPDATE=$INSTANCE_STATE" >> "$GITHUB_OUTPUT"
           echo "Instance is $INSTANCE_STATE"
 
@@ -47,7 +53,7 @@ jobs:
         if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
         run: |
           aws ec2 authorize-security-group-ingress \
-            --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
+            --group-id ${{ secrets.AWS_SG }} \
             --protocol tcp \
             --port 22 \
             --cidr ${{ steps.ip.outputs.ipv4 }}/32
@@ -56,20 +62,21 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
         with:
-          REMOTE_HOST: ${{ secrets.EC2_SERVER_IP }}
-          REMOTE_USER: ${{ secrents.EC@_SERVER_USER}}
-          SSH_PRIVATE_KEY: ${{ secrets.EC@_SERVER_ACCESS }}
+          REMOTE_HOST: ${{ secrets.SERVER_IP}}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           SOURCE: 'build/*'
           TARGET: /home/ubuntu/hackathon/
 
       - name: Starting Application
         id: deploy
-        uses: JimCronqvist/action-ssh@master
+        uses: appleboy/ssh-action@v1.2.0
         if: ${{ steps.status.outputs.INSTANCE_STATE_UPDATE == 'running'}}
         with:
-          hosts: ${{ secrets.EC2_SERVER_USER }}@${{ secrets.EC2_SERVER_IP }} 
-          privateKey: ${{ secrets.EC2_SERVER_ACCESS }}
-          command: |
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.PRIVATE_KEY }} 
+          script:  |
             sudo rm -rvf /var/wwww/html/hackathon/*
             sudo mv -rvf /home/ubuntu/hackathon/* /var/www/html/hackathon/
             sudo systemctl restart nginx
