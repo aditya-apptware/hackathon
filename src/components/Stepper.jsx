@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 import { useStepperContext } from "../context/StepperContext";
 import ButtonContainer from "./buttons/ButtonContainer";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Stepper = () => {
-  const { currentStep, steps, direction } = useStepperContext();
+  const { currentStep, steps, direction, animatingStep } = useStepperContext();
 
   return (
     <div
@@ -14,14 +14,14 @@ const Stepper = () => {
     >
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentStep}
-          initial={{ opacity: 0, y: direction === "up" ? "100vh" : "-100vh" }} // Start from the corresponding direction
-          animate={{ opacity: 1, y: 0 }} // Slide to original position
-          exit={{ opacity: 0, y: direction === "up" ? "-100vh" : "100vh" }} // Reverse the direction on exit
-          transition={{ duration: 0.5 }} // Smooth transition duration
+          key={animatingStep} // Use animatingStep for motion key
+          initial={{ opacity: 0, y: direction === "up" ? "100vh" : "-100vh" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: direction === "up" ? "-100vh" : "100vh" }}
+          transition={{ duration: 0.5 }}
           className="h-fit"
         >
-          {steps[currentStep]?.component}
+          {steps[animatingStep]?.component}
           <div className="mt-10">
             <ButtonContainer />
           </div>

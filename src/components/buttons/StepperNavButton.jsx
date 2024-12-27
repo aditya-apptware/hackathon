@@ -1,21 +1,28 @@
-import { useStepperContext } from "../../context/StepperContext";
-import ArrowUp from "../../assets/images/arrow_up.svg";
 import ArrowDown from "../../assets/images/arrow_down.svg";
+import ArrowUp from "../../assets/images/arrow_up.svg";
+import { useStepperContext } from "../../context/StepperContext";
 
 export const StepperNavButton = () => {
-  const { currentStep, setCurrentStep, setDirection } = useStepperContext();
+  const { currentStep, setCurrentStep, setDirection, setAnimatingStep } =
+    useStepperContext();
 
   const handleNextClick = () => {
     if (currentStep < 6) {
-      setDirection("up")
-      setCurrentStep((prev) => prev + 1);
+      setDirection("up");
+      setTimeout(() => {
+        setAnimatingStep((prev) => prev + 1);
+        setCurrentStep((prev) => prev + 1);
+      }, 0); // Ensures direction state is updated before animation
     }
   };
 
   const handlePrevClick = () => {
     if (currentStep > 0) {
-      setDirection("down")
-      setCurrentStep((prev) => prev - 1);
+      setDirection("down");
+      setTimeout(() => {
+        setAnimatingStep((prev) => prev - 1);
+        setCurrentStep((prev) => prev - 1);
+      }, 0); // Ensures direction state is updated before animation
     }
   };
 
@@ -33,7 +40,7 @@ export const StepperNavButton = () => {
         onClick={handleNextClick}
         aria-label="Previous Step"
       >
-        <img src={ArrowDown} className="w-fit mx-auto" alt="arrow down"/>
+        <img src={ArrowDown} className="w-fit mx-auto" alt="arrow down" />
       </button>
     </div>
   );

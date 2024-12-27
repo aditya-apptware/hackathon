@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
-import TeamNameForm from "../components/forms/TeamNameForm";
 import AddMemberForm from "../components/forms/AddMemberForm";
 import CollegeNameForm from "../components/forms/CollegeNameForm";
 import ConfirmationPopup from "../components/forms/ConfirmationPopup";
+import TeamNameForm from "../components/forms/TeamNameForm";
 
 const StepperContext = createContext();
 
@@ -13,8 +13,9 @@ export const StepperProvider = ({ children }) => {
     collegeName: "",
   });
   const [direction, setDirection] = useState("up"); // Default direction
-
   const [currentStep, setCurrentStep] = useState(0);
+  const [animatingStep, setAnimatingStep] = useState(currentStep); // Separate state for the animating step
+
   const [errors, setErrors] = useState({});
 
   const updateFormData = (data) =>
@@ -84,6 +85,8 @@ export const StepperProvider = ({ children }) => {
         steps,
         direction,
         setDirection,
+        animatingStep,
+        setAnimatingStep,
       }}
     >
       {children}
