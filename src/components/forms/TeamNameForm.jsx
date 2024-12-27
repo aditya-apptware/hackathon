@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const TeamNameForm = () => {
-  const { updateFormData, errors, setErrors } = useStepperContext();
-  const [teamName, setTeamName] = useState("");
+  const { updateFormData, errors, setErrors, formData:{teamName} } = useStepperContext();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setTeamName(value);
+    updateFormData({ teamName: value });
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 

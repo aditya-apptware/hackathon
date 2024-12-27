@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const CollegeNameForm = () => {
-  const { updateFormData, setErrors, errors } = useStepperContext();
-  const [collegeName, setCollegeName] = useState("");
+  const {
+    updateFormData,
+    setErrors,
+    errors,
+    formData: { collegeName },
+  } = useStepperContext();
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setCollegeName(value);
+    updateFormData({ collegeName: value });
 
     // Clear any previous errors on user input
     setErrors((prev) => ({ ...prev, collegeName: "" }));

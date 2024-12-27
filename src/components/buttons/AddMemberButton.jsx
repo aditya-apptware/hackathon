@@ -2,11 +2,13 @@ import React from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const AddMemberButton = () => {
-  const { currentStep, setCurrentStep, steps } = useStepperContext();
+  const { currentStep, setCurrentStep, steps, setAnimatingStep } =
+    useStepperContext();
 
   const handleClick = () => {
     if (validateCurrentStep()) {
       setCurrentStep((prev) => prev + 1);
+      setAnimatingStep((prev) => prev + 1);
     }
   };
 

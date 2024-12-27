@@ -5,13 +5,14 @@ import ConfirmationPopup from "../components/forms/ConfirmationPopup";
 import TeamNameForm from "../components/forms/TeamNameForm";
 
 const StepperContext = createContext();
+const defaultFormData = {
+  teamName: "",
+  members: [],
+  collegeName: "",
+};
 
 export const StepperProvider = ({ children }) => {
-  const [formData, setFormData] = useState({
-    teamName: "",
-    members: [],
-    collegeName: "",
-  });
+  const [formData, setFormData] = useState({ ...defaultFormData });
   const [direction, setDirection] = useState("up"); // Default direction
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingStep, setAnimatingStep] = useState(currentStep); // Separate state for the animating step
@@ -20,6 +21,19 @@ export const StepperProvider = ({ children }) => {
 
   const updateFormData = (data) =>
     setFormData((prev) => ({ ...prev, ...data }));
+
+  const onConfirm = () => {
+    console.info(formData, "this is the formData");
+  };
+
+  const onCancel = () => {
+    setFormData({ ...defaultFormData });
+    setDirection("down");
+    setTimeout(() => {
+      setCurrentStep(0);
+      setAnimatingStep(0);
+    }, 0);
+  };
 
   // Define the steps array
   const steps = [
@@ -68,7 +82,9 @@ export const StepperProvider = ({ children }) => {
         },
       })),
     {
-      component: <ConfirmationPopup />,
+      component: (
+        <ConfirmationPopup onCancel={onCancel} onConfirm={onConfirm} />
+      ),
       validate: () => true, // No validation for the confirmation step
     },
   ];
