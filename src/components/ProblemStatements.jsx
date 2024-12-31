@@ -37,7 +37,7 @@ const statements = [
 
 export const ProblemStatements = () => {
   return (
-    <div className="relative flex flex-col gap-5 w-full bg-black font-robotoMono py-[80px] md:pb-[119px] px-[32px]">
+    <div className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-[80px] md:pb-[119px] px-[32px]">
       <div className="font-karmatic text-[36px] leading-[48px] md:text-[58px] md:leading-[77px] text-[#abd40f] mt-8 md:mt-[89px] md:mx-8 md:ml-[209px]">
         Problem Statements
       </div>
@@ -50,7 +50,7 @@ export const ProblemStatements = () => {
           return (
             <div
               key={itemIndex}
-              className={`bg-${bgColor} p-4 md:p-5 text-${color} border border-white h-auto md:h-[190px]`}
+              className={`bg-${bgColor} p-4 md:p-5 text-${color} border border-black h-auto md:h-[190px]`}
               style={{
                 transform: `rotate(${
                   window.innerWidth >= 768 ? rotateValue : 0
