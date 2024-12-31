@@ -74,11 +74,11 @@ export const ProblemStatements = () => {
         })}
       </div>
       <div className="absolute bottom-[20px] md:bottom-[146px] right-[32px] md:right-[148px]">
-        <button className="flex items-stretch text-white border border-white uppercase text-sm md:text-base">
+        <button className="flex items-stretch text-black border border-black uppercase text-sm md:text-base">
           <span className="flex items-center px-3 py-1 md:px-4 md:py-2">
             View All
           </span>
-          <span className="flex items-center justify-center w-8 md:w-9 bg-[#ABD40F] border-l border-[#ABD40F] text-black">
+          <span className="flex items-center justify-center w-8 md:w-9 bg-[#ABD40F] border-l border-black text-black">
             <img src={ArrowRight} width={14} height={14} alt="arrow" />
           </span>
         </button>
