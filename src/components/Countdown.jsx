@@ -49,21 +49,22 @@ export const Countdown = () => {
 
   return (
     <div
-      className="font-robotoMono md:px-[505px] pb-[80px] md:py-[199px] bg-black text-center px-[32px]"
+      className="font-robotoMono bg-black text-center px-4 py-8 md:py-20 relative"
       style={{ backgroundImage: "url('../assets/images/countdownbg.svg')" }}
     >
-      <div className="text-white text-[48px] md:text-[96px] font-bold tracking-[20px] md:tracking-[76.8px] w-full md:w-[462px] mx-auto">
+      <div className="text-white text-4xl md:text-8xl font-bold tracking-wider w-full max-w-md mx-auto">
         DATE
       </div>
-      <div className="text-white text-[14px] md:text-6 mt-[10px]">
+      <div className="text-white text-sm md:text-xl mt-2">
         17th - 19th January
       </div>
-      <div className="flex flex-wrap justify-center gap-6 md:gap-[72px] pl-[10px] md:pl-[0px] pr-[10px] md:pr-[0px] py-[20px] mt-5 font-karmatic text-[#ABD40F] text-[48px] md:text-[96px] border border-[2px] border-[#ABD40F]">
+      <div className="max-w-[1022px] mx-auto flex flex-wrap justify-center gap-4 md:gap-16 mt-5 font-karmatic text-[#ABD40F] text-4xl md:text-8xl border border-2 border-[#ABD40F] p-4 md:p-8">
         <span className="px-1">{padTwoDigits(timeRemaining.days)}</span>
         <span className="px-1">{padTwoDigits(timeRemaining.hours)}</span>
         <span className="px-1">{padTwoDigits(timeRemaining.minutes)}</span>
+        <span className="px-1">{padTwoDigits(timeRemaining.seconds)}</span>
       </div>
-      <div className="mt-[30px] text-[#ABD40F] text-[14px] md:text-[16px]">
+      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">
         Registration closes on 16th January 2024 ...
       </div>
     </div>

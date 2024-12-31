@@ -37,20 +37,20 @@ const statements = [
 
 export const ProblemStatements = () => {
   return (
-    <div className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-[80px] md:pb-[119px] px-[32px]">
-      <div className="font-karmatic text-[36px] leading-[48px] md:text-[58px] md:leading-[77px] text-[#abd40f] mt-8 md:mt-[89px] md:mx-8 md:ml-[209px]">
+    <div className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-10 md:py-16 px-4 md:px-20">
+      <div className="font-karmatic text-2xl md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8 md:mt-20">
         Problem Statements
       </div>
-      <div className="flex flex-col md:flex-row gap-6 md:gap-12 md:mx-8 md:mx-[150px] items-start">
+      <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 items-start">
         {statements.map((item, itemIndex) => {
-          const bgColor = itemIndex % 2 === 0 ? "black" : "white";
-          const color = itemIndex % 2 === 0 ? "white" : "black";
+          const bgColor = itemIndex % 2 === 0 ? "bg-black" : "bg-white";
+          const textColor = itemIndex % 2 === 0 ? "text-white" : "text-black";
           const { rotate: rotateValue, top } = item;
 
           return (
             <div
               key={itemIndex}
-              className={`bg-${bgColor} p-4 md:p-5 text-${color} border border-black h-auto md:h-[190px]`}
+              className={`${bgColor} ${textColor} max-w-[328px] max-h-[192px] border border-black p-4 md:p-6 flex flex-col justify-between w-full md:w-[calc(50%-24px)]`}
               style={{
                 transform: `rotate(${
                   window.innerWidth >= 768 ? rotateValue : 0
@@ -58,14 +58,14 @@ export const ProblemStatements = () => {
                 marginTop: `${window.innerWidth >= 768 ? top : 0}px`,
               }}
             >
-              <div className="text-sm md:text-4 font-medium leading-6">
+              <div className="text-sm md:text-lg font-medium leading-6">
                 {item.statement}
               </div>
-              <div className="flex gap-3 mt-5 items-center">
-                <div className="w-7 h-7 md:w-9 md:h-9 px-2 py-2 bg-[#abd40f] text-black text-[12px] md:text-[14px]">
+              <div className="flex gap-3 mt-2 items-center">
+                <div className="w-7 h-7 md:w-10 md:h-10 flex items-center justify-center bg-[#abd40f] text-black text-xs md:text-sm font-bold">
                   {item.abbr}
                 </div>
-                <div className="text-[12px] md:text-[14px] uppercase font-bold leading-6 md:leading-8">
+                <div className="text-xs md:text-sm uppercase font-bold">
                   {item.title}
                 </div>
               </div>
@@ -73,12 +73,12 @@ export const ProblemStatements = () => {
           );
         })}
       </div>
-      <div className="absolute bottom-[20px] md:bottom-[146px] right-[32px] md:right-[148px]">
-        <button className="flex items-stretch text-black border border-black uppercase text-sm md:text-base">
+      <div className="absolute bottom-3 md:bottom-16 right-4 md:right-20">
+        <button className="flex items-stretch text-black border border-black uppercase text-xs md:text-sm">
           <span className="flex items-center px-3 py-1 md:px-4 md:py-2">
             View All
           </span>
-          <span className="flex items-center justify-center w-8 md:w-9 bg-[#ABD40F] border-l border-black text-black">
+          <span className="flex items-center justify-center w-8 md:w-10 bg-[#ABD40F] border-l border-black">
             <img src={ArrowRight} width={14} height={14} alt="arrow" />
           </span>
         </button>
