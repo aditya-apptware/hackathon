@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.8109a6d2.css",
-    "main.js": "./static/js/main.bcdbd2f4.js",
+    "main.css": "./static/css/main.853da0f3.css",
+    "main.js": "./static/js/main.c934fa8b.js",
     "static/media/formbg.png": "./static/media/formbg.b3fb8f0ae179005a9df5.png",
-    "static/media/box1.svg": "./static/media/box1.3d14f69c969d8de57a6c30ffed08d651.svg",
+    "static/media/box2.svg": "./static/media/box2.3d14f69c969d8de57a6c30ffed08d651.svg",
+    "static/media/box1.svg": "./static/media/box1.ce8addebd7cee1283e5e508f3540cf82.svg",
     "static/media/mentor-2.jpg": "./static/media/mentor-2.f83afc8332a2503d305c.jpg",
     "static/media/mentor-3.jpg": "./static/media/mentor-3.4f8e9f505d9d3255235b.jpg",
     "static/media/ka1.ttf": "./static/media/ka1.5df8cd545dcd2db2bf8b.ttf",
-    "static/media/hackathon.svg": "./static/media/hackathon.78389123755c7f339611233053c22375.svg",
     "static/media/mentor-1.jpg": "./static/media/mentor-1.a2b1eb0c6aa6c02b4395.jpg",
     "static/media/codecraft.svg": "./static/media/codecraft.c8c6e7eec56f3ea6734038f4e8f36e3b.svg",
     "static/media/logo.svg": "./static/media/logo.510d0c11f7ab7a9c16961b9632e2405f.svg",
@@ -17,11 +17,11 @@
     "static/media/closeRegisterPopup.svg": "./static/media/closeRegisterPopup.eea76432864f521aebc1e23731eb678e.svg",
     "static/media/arrow_down.svg": "./static/media/arrow_down.1460e76df5a7374c0af2e6d47d2b83de.svg",
     "static/media/arrow_up.svg": "./static/media/arrow_up.a77e1ec7acd61ac195b22961dd48db36.svg",
-    "main.8109a6d2.css.map": "./static/css/main.8109a6d2.css.map",
-    "main.bcdbd2f4.js.map": "./static/js/main.bcdbd2f4.js.map"
+    "main.853da0f3.css.map": "./static/css/main.853da0f3.css.map",
+    "main.c934fa8b.js.map": "./static/js/main.c934fa8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8109a6d2.css",
-    "static/js/main.bcdbd2f4.js"
+    "static/css/main.853da0f3.css",
+    "static/js/main.c934fa8b.js"
   ]
 }
