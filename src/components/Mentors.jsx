@@ -38,7 +38,7 @@ export const Mentors = () => {
           return (
             <div
               key={mentorItemIndex}
-              className="flex flex-col p-8 items-center justify-center gap-5 w-full sm:w-[300px] md:w-[307.81px] h-auto md:h-[422px] relative"
+              className="flex flex-col p-8 items-center justify-center gap-10 md:gap-5 w-full sm:w-[300px] md:w-[307.81px] h-[300px] md:h-[422px] relative"
             >
               <img
                 src={imageSource}
@@ -46,7 +46,7 @@ export const Mentors = () => {
                 style={{ transform: `rotate(${rotateValue})` }}
                 className="w-full object-cover h-[200px] sm:h-[250px] md:h-[401.65px] bg-mentorBackground"
               />
-              <div className="absolute left-0 bottom-[-40px] md:bottom-[-50px] p-4 text-center md:text-left">
+              <div className="absolute left-0 bottom-[-45px] md:bottom-[-50px] p-4 text-start md:text-left">
                 <div className="font-bold text-[14px] sm:text-[18px] md:text-[28px] leading-[20px] sm:leading-[26px] md:leading-[36px] text-textLight">
                   {name.split(" ").map((word, index) => (
                     <p key={index}>{word}</p>

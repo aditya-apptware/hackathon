@@ -6,9 +6,7 @@ export const Participate = () => {
           <span className="text-[#abd40f]">&gt;</span>Participate in teams
         </div>
         <div className="font-robotoMono text-sm md:text-base">
-          Don’t let fear hold you back - <br />
-          team up, <br />
-          build amazing apps, <br /> and showcase your talent!
+          Don’t let fear hold you back - team up, build amazing apps, and showcase your talent!
         </div>
       </div>
       <div className="relative mx-auto w-full md:w-[608px] h-[300px] md:h-[326px]">
