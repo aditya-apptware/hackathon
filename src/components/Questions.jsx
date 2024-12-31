@@ -2,27 +2,18 @@ import { useState } from "react";
 
 const faq = [
   {
-    question: "Is this online or inhouse event?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
+    question: "Is this an online or in-house event?",
+    answer: "This will be an in-house event held at Apptware HQ.",
     showAnswer: true,
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
+    question: "Who can participate?",
+    answer: "Freshers graduating in 2023, 2024, or 2025.",
     showAnswer: false,
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
-    showAnswer: false,
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod",
+    question: "What is the theme of the hackathon?",
+    answer: "Build a full-fledged app with end-to-end delivery.",
     showAnswer: false,
   },
 ];
@@ -45,7 +36,7 @@ export const Questions = () => {
       </div>
       <div className="max-w-[739px] mx-auto flex flex-col gap-8">
         {faqs.map((each, eachIndex) => {
-          let borderClasses = "border-t border-[#abd40f]";
+          let borderClasses = "border-t border-[#292B21]";
           if (eachIndex === 0) borderClasses = "";
           return (
             <div key={eachIndex}>
@@ -54,7 +45,7 @@ export const Questions = () => {
                 className={`text-[#abd40f] text-base md:text-6 leading-6 md:leading-8 flex w-full justify-between items-center ${borderClasses} hover:cursor-pointer`}
               >
                 <div className="flex gap-4 md:gap-8 justify-between w-full">
-                  <div>/{eachIndex + 1}</div>
+                  <div>/{(eachIndex + 1).toString().padStart(2, "0")}</div>
                   <div className="flex-1">{each.question}</div>
                 </div>
                 <div className="w-3 h-3 flex items-center justify-center">

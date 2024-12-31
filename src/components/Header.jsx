@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Button } from "./Button";
-import Hackathon from "../assets/images/hackathon.svg";
 
 export const Header = () => {
   const canvasRef = useRef(null);
@@ -66,24 +65,22 @@ export const Header = () => {
       {/* Header Content */}
       <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center justify-center h-[500px] md:h-[805px] text-black font-robotoMono gap-[22px]">
         <div className="title md:w-full">
-          <img
-            src={Hackathon}
-            alt="hackathon is back 2025"
-            className="w-full max-w-[544px]"
-            height={154}
-          />
+          <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
+            Hackathon is <br />
+            back 2025
+          </div>
         </div>
         <div className="subtitle w-full text-center md:text-left">
           <p className="text-[16px] md:text-[22px] md:leading-[32px] font-normal text-white">
-            &lt;Lorem ipsum dolor sit, amet consectetur
+            Gear up for an unforgettable coding experience.
             <br />
-            adipisicing elit. Veniam&gt;
+            Build. Innovate. Compete.
           </p>
         </div>
         <div className="w-full text-center md:text-left">
           <Button
             className="bg-white text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold"
-            label="Know more"
+            label="Register Now"
           />
         </div>
       </div>
