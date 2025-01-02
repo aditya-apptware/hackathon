@@ -83,7 +83,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.PRIVATE_KEY }} 
           script:  |
-            sudo rm -rvf /var/wwww/html/hackathon/*
+            sudo rm -rvf /var/www/html/hackathon/*
             sudo mv -rvf /home/ubuntu/hackathon/* /var/www/html/hackathon/
             sudo rm -rvf /home/ubuntu/hackathon/*
             sudo systemctl restart nginx
