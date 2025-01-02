@@ -1,4 +1,5 @@
 import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
+import { Container } from "../components/Container";
 import { Countdown } from "../components/Countdown";
 import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
@@ -23,6 +24,7 @@ export const Home = ({
         <Countdown />
         <Mentors />
         <ProblemStatements />
+        {/* <Container /> */}
         <Participate />
         <Questions />
       </main>

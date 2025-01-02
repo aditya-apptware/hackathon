@@ -16,6 +16,9 @@ module.exports = {
         officesBackground: "#9ca3af",
         footerText: "#1f2937",
         copyright: "#4b5563",
+        default: '#abd40f',
+        lightText: '#8e8c8c',
+        lightText2: '#929090'
       },
       fontFamily: {
         robotoMono: ["Roboto Mono", "monospace"],
