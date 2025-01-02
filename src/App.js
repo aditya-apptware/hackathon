@@ -1,17 +1,21 @@
-import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import { useState } from "react";
 import { Navbar } from "./components/Navbar";
+import { AppProvider } from "./context/AppContext";
 import { Home } from "./pages/Home";
 
 function App() {
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const handleCloseRegisterForm = () => {
+    setShowRegistrationForm(false);
+  };
+  const navigateToRegisterationForm = () => {
+    setShowRegistrationForm(true);
+  };
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </>
+    <AppProvider>
+      <Navbar />
+      <Home />
+    </AppProvider>
   );
 }
 

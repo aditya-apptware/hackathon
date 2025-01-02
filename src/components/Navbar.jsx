@@ -1,33 +1,29 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 import { Register } from "../pages/Register";
 import { Button } from "./Button";
+import { useAppContext } from "../context/AppContext";
 
 const NavItem = ({ label, to, onClick }) => {
   return (
     <li>
-      <Link
+      <a
         href={to}
         onClick={onClick} // Close menu after clicking the link
         className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
         {label}
-      </Link>
+      </a>
     </li>
   );
 };
 
 export const Navbar = () => {
+  const { openForm, isOpen } = useAppContext();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
   const menuRef = useRef(null); // Ref for the menu
   const menuButtonRef = useRef(null); // Ref for the hamburger button
-  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
-
-  const handleCloseRegisterForm = () => {
-    setShowRegistrationForm(false);
-  };
 
   // Toggle the menu state when the hamburger icon is clicked
   const toggleMenu = () => {
@@ -53,22 +49,18 @@ export const Navbar = () => {
     };
   }, []);
 
-  const navigateToRegisterationForm = () => {
-    setShowRegistrationForm(true);
-  };
-
   const navigateToHomePage = () => {
-    navigate("/");
+    // do nothing
   };
 
   return (
     <div className="flex w-full md:w-[1728px] mx-auto justify-center">
-      {showRegistrationForm && (
+      {isOpen && (
         <div
           className="absolute backdrop-blur backdrop-blur-[20px] w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
           style={{ zIndex: 99 }}
         >
-          <Register onCloseIconClick={handleCloseRegisterForm} />
+          <Register />
         </div>
       )}
 
@@ -132,7 +124,7 @@ export const Navbar = () => {
               <NavItem
                 label="Registration"
                 to="/"
-                onClick={navigateToRegisterationForm} // Trigger the registration form on click
+                onClick={openForm} // Trigger the registration form on click
               />
               <NavItem
                 label="Payment"
@@ -147,7 +139,7 @@ export const Navbar = () => {
             <Button
               className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
               label="Register Now"
-              onClick={navigateToRegisterationForm}
+              onClick={openForm}
             />
           </div>
         </div>

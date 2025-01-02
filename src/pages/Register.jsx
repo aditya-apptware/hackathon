@@ -3,9 +3,12 @@ import CodeCraftImage from "../assets/images/codecraft.svg";
 import FormBg from "../assets/images/formbg.png";
 import { StepperNavButton } from "../components/buttons/StepperNavButton";
 import Stepper from "../components/Stepper";
+import { useAppContext } from "../context/AppContext";
 import { StepperProvider } from "../context/StepperContext";
 
-export const Register = ({ onCloseIconClick }) => {
+export const Register = () => {
+  const { closeForm } = useAppContext();
+
   return (
     <div className="relative font-robotoMono bg-[#ABD40F] w-full sm:w-[1485px] h-[884px] mx-auto flex p-[40px] sm:px-[200px] z-1 rounded-[10px]">
       <img
@@ -20,7 +23,7 @@ export const Register = ({ onCloseIconClick }) => {
       />
       <img
         src={CloseIcon}
-        onClick={onCloseIconClick}
+        onClick={closeForm}
         className="absolute w-[21px] h-[21px] right-[20px] top-[20px] cursor-pointer sm:right-[24px] sm:top-[24px]"
         alt="close icon"
       />

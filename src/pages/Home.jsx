@@ -7,14 +7,16 @@ import { Participate } from "../components/Participate";
 import { ProblemStatements } from "../components/ProblemStatements";
 import { Questions } from "../components/Questions";
 
-export const Home = () => {
+export const Home = ({
+}) => {
   return (
     <div
       className="w-full md:w-[1728px] mx-auto relative"
       style={{ zIndex: 1 }}
     >
       <div className="z-1 relative">
-        <Header />
+        <Header
+        />
       </div>
       <main className="bg-black">
         <CodeBuildRepeat />

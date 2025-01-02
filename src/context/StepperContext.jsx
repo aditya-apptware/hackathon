@@ -3,6 +3,7 @@ import AddMemberForm from "../components/forms/AddMemberForm";
 import CollegeNameForm from "../components/forms/CollegeNameForm";
 import ConfirmationPopup from "../components/forms/ConfirmationPopup";
 import TeamNameForm from "../components/forms/TeamNameForm";
+import { useAppContext } from "./AppContext";
 
 const StepperContext = createContext();
 const defaultFormData = {
@@ -15,6 +16,8 @@ const googleScriptUrl =
   "https://script.google.com/macros/s/AKfycbwK3fV-fjjDLDd3vMs23TL4m0RsQnWXXfi6IYHRK-fbT35xxTuYuPruuKLPtNKhTvE4/exec";
 
 export const StepperProvider = ({ children }) => {
+  const { closeForm } = useAppContext();
+
   const [formData, setFormData] = useState({ ...defaultFormData });
   const [direction, setDirection] = useState("up"); // Default direction
   const [currentStep, setCurrentStep] = useState(0);
@@ -33,6 +36,7 @@ export const StepperProvider = ({ children }) => {
       .then((response) => response.text())
       .then((data) => {
         console.log("Data sent to Google Sheets:", data);
+        closeForm();
       })
       .catch((error) => {
         console.error("Error sending data:", error);
