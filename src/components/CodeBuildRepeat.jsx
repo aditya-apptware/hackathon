@@ -85,7 +85,7 @@ export const CodeBuildRepeat = () => {
                 return (
                   <span
                     key={charIndex}
-                    className={`transition-colors duration-300 ${
+                    className={`transition-colors duration-300 text-[75px] ${
                       isVisible ? "text-white" : "text-gray-800"
                     }`}
                   >
@@ -96,7 +96,7 @@ export const CodeBuildRepeat = () => {
               {/* Add green vertical line */}
               {visibleIndex > start && visibleIndex <= end && (
                 <span
-                  className="absolute top-[-7px] h-[60px] w-[5px] bg-[#abd40f]"
+                  className="absolute top-[-7px] h-[60px] w-[5px] bg-[#abd40f] text-[75px]"
                   style={{
                     left: `${(visibleIndex - start) * 1}ch`, // Adjust position dynamically
                   }}
