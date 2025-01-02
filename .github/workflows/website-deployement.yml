@@ -85,6 +85,7 @@ jobs:
           script:  |
             sudo rm -rvf /var/wwww/html/hackathon/*
             sudo mv -rvf /home/ubuntu/hackathon/* /var/www/html/hackathon/
+            sudo rm -rvf /home/ubuntu/hackathon/*
             sudo systemctl restart nginx
 
       - name: Revoke runner ip address
