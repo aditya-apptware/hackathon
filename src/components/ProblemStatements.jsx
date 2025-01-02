@@ -73,7 +73,7 @@ export const ProblemStatements = () => {
           );
         })}
       </div>
-      <div className="absolute bottom-3 md:bottom-16 right-4 md:right-20">
+      <div className="absolute bottom-1 md:bottom-16 right-4 md:right-20">
         <button className="flex items-stretch text-black border border-black uppercase text-xs md:text-sm">
           <span className="flex items-center px-3 py-1 md:px-4 md:py-2">
             View All
