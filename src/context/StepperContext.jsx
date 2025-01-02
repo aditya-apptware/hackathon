@@ -11,6 +11,9 @@ const defaultFormData = {
   collegeName: "",
 };
 
+const googleScriptUrl =
+  "https://script.google.com/macros/s/AKfycbwK3fV-fjjDLDd3vMs23TL4m0RsQnWXXfi6IYHRK-fbT35xxTuYuPruuKLPtNKhTvE4/exec";
+
 export const StepperProvider = ({ children }) => {
   const [formData, setFormData] = useState({ ...defaultFormData });
   const [direction, setDirection] = useState("up"); // Default direction
@@ -23,7 +26,17 @@ export const StepperProvider = ({ children }) => {
     setFormData((prev) => ({ ...prev, ...data }));
 
   const onConfirm = () => {
-    console.info(formData, "this is the formData");
+    fetch(googleScriptUrl, {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        console.log("Data sent to Google Sheets:", data);
+      })
+      .catch((error) => {
+        console.error("Error sending data:", error);
+      });
   };
 
   const onCancel = () => {
