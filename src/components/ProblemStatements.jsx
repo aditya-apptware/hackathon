@@ -41,7 +41,7 @@ export const ProblemStatements = () => {
       <div className="font-karmatic text-2xl md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8 md:mt-20">
         Problem Statements
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 items-start">
+      <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center md:self-start items-start">
         {statements.map((item, itemIndex) => {
           const bgColor = itemIndex % 2 === 0 ? "bg-black" : "bg-white";
           const textColor = itemIndex % 2 === 0 ? "text-white" : "text-black";
