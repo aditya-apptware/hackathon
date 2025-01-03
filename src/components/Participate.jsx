@@ -41,7 +41,7 @@ export const Participate = () => {
             Stay updated on rules and regulations <br />
             to excel in the competition.
           </div>
-          <button className="w-[155px] mt-3 px-4 py-2 md:py-3 text-xs md:text-4 font-bold bg-white">
+          <button className="w-[160px] mt-3 px-4 py-2 md:py-3 text-xs md:text-4 font-bold bg-white hover:bg-default hover:border hover:border-black">
             Download Rulebook
           </button>
         </div>

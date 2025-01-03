@@ -74,27 +74,27 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex gap-[45px] w-full">
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Home"
                 onClick={scrollToTop}
               />
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="About event"
                 onClick={() => scrollIntoView(eventRef)}
               />
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Mentors"
                 onClick={() => scrollIntoView(mentorsRef)}
               />
               {/* <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Problem statements"
                 onClick={() => scrollIntoView(problemStatementsRef)}
               /> */}
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Contact"
                 onClick={() => scrollIntoView(contactRef)}
               />
@@ -110,7 +110,7 @@ export const Navbar = () => {
           >
             <ul className="flex flex-col gap-6 justify-around items-end py-4 px-4 w-full">
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Home"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -118,7 +118,7 @@ export const Navbar = () => {
                 }}
               />
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="About Event"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -126,7 +126,7 @@ export const Navbar = () => {
                 }}
               />
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Mentors"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -134,7 +134,7 @@ export const Navbar = () => {
                 }}
               />
               {/* <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Problem Statements"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -142,7 +142,7 @@ export const Navbar = () => {
                 }}
               /> */}
               <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Contact"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -155,7 +155,7 @@ export const Navbar = () => {
           {/* Desktop Button */}
           <div className="hidden md:block">
             <Button
-              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none"
+              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black"
               label="Register Now"
               onClick={openForm}
             />

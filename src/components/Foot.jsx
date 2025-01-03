@@ -54,7 +54,7 @@ export const Foot = () => {
                     href={item.path}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:underline"
+                    className="hover:text-default"
                   >
                     {item.title}
                   </a>

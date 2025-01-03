@@ -81,7 +81,7 @@ export const Header = ({ navigateToRegisterationForm }) => {
         </div>
         <div className="w-full text-center md:text-left">
           <Button
-            className="bg-white text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold"
+            className="bg-white text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold hover:bg-default"
             label="Register Now"
             onClick={openForm}
           />
