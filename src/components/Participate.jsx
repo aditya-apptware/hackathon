@@ -3,7 +3,7 @@ import "./styles.css";
 export const Participate = () => {
   return (
     <div className="px-6 md:px-[216px] py-[80px] md:py-[150px] flex flex-col md:flex-row gap-10 md:gap-[80px] bg-white font-spaceGrotesk">
-      <div className="w-[400px] md:w-[592px] mx-auto">
+      <div className="min-w-[300px] max-w-[592px] md:w-[592px] mx-auto">
         <div className="my-[31px] w-full text-[36px] leading-[44px] md:h-[200px] md:text-[90px] md:leading-[100px] bg-black text-white">
           <span className="text-[#abd40f]">&gt;</span>Participate in teams
         </div>
