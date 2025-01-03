@@ -7,17 +7,13 @@ const AddMemberButton = () => {
     setCurrentStep,
     steps,
     setAnimatingStep,
-    setIsError,
   } = useStepperContext();
 
   const handleClick = () => {
     if (validateCurrentStep()) {
-      setIsError(false);
       setCurrentStep((prev) => prev + 1);
       setAnimatingStep((prev) => prev + 1);
-    } else {
-      setIsError(true);
-    }
+    } 
   };
 
   // Validate the fields for the current step

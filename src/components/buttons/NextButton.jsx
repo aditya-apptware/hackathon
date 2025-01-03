@@ -8,12 +8,10 @@ const NextButton = () => {
     steps,
     formData: { teamName, members, collegeName },
     setAnimatingStep,
-    setIsError,
   } = useStepperContext();
 
   const handleNext = () => {
     if (validateCurrentStep()) {
-      setIsError(false);
       if (teamName && members.length && collegeName) {
         setCurrentStep(6);
         setAnimatingStep(6);
@@ -21,8 +19,6 @@ const NextButton = () => {
         setCurrentStep((prev) => prev + 1);
         setAnimatingStep((prev) => prev + 1);
       }
-    } else {
-      setIsError(true);
     }
   };
 

@@ -5,7 +5,7 @@ import AddMemberButton from "./AddMemberButton";
 import OkButton from "./OkayButton";
 
 const ButtonContainer = () => {
-  const { formData, currentStep, steps, isError } = useStepperContext();
+  const { formData, currentStep, steps } = useStepperContext();
 
   const isLastStep = currentStep === steps.length - 1;
   const isMaxMembers = formData.members.length >= 4;
@@ -19,11 +19,6 @@ const ButtonContainer = () => {
         <NextButton />
         {currentStep > 1 && !isLastStep && !isMaxMembers && <AddMemberButton />}
       </div>
-      {isError && (
-        <p className="text-red-500 mt-2 text-sm bg-transparent">
-          All Fields are mandatory
-        </p>
-      )}
     </>
   );
 };

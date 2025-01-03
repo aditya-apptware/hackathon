@@ -22,7 +22,6 @@ export const StepperProvider = ({ children }) => {
   const [direction, setDirection] = useState("up"); // Default direction
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingStep, setAnimatingStep] = useState(currentStep); // Separate state for the animating step
-  const [isError, setIsError] = useState(false);
 
   const [errors, setErrors] = useState({});
 
@@ -59,7 +58,10 @@ export const StepperProvider = ({ children }) => {
       component: <TeamNameForm />,
       validate: () => {
         if (!formData.teamName || formData.teamName.trim() === "") {
-          // setError("Team Name is required.");
+          setErrors((prev) => ({
+            ...prev,
+            teamName: "Team Name is required.",
+          }));
           return false;
         }
         return true;
@@ -69,7 +71,10 @@ export const StepperProvider = ({ children }) => {
       component: <CollegeNameForm />,
       validate: () => {
         if (!formData.collegeName || formData.collegeName.trim() === "") {
-          // setError("College Name is required.");
+          setErrors((prev) => ({
+            ...prev,
+            collegeName: "College Name is required.",
+          }));
           return false;
         }
         return true;
@@ -80,7 +85,24 @@ export const StepperProvider = ({ children }) => {
       validate: () => {
         const member = formData.members[0];
         if (!member || !member.fullName || !member.email || !member.mobile) {
-          // setError("All fields for Team Member 1 are required.");
+          if(!member?.fullName){
+            setErrors((prev) => ({
+              ...prev,
+              fullName: "Full Name is required.",
+            }));
+          }
+          if(!member?.email){
+            setErrors((prev) => ({
+              ...prev,
+              email: "Email is required.",
+            }));
+          }
+          if(!member?.mobile){
+            setErrors((prev) => ({
+              ...prev,
+              mobile: "Mobile is required.",
+            }));
+          }
           return false;
         }
         return true;
@@ -120,9 +142,7 @@ export const StepperProvider = ({ children }) => {
         direction,
         setDirection,
         animatingStep,
-        setAnimatingStep,
-        isError,
-        setIsError
+        setAnimatingStep
       }}
     >
       {children}
