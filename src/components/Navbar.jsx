@@ -1,27 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import Logo from "../assets/images/logo.svg";
-import { Register } from "../pages/Register";
-import { Button } from "./Button";
 import { useAppContext } from "../context/AppContext";
-
-const NavItem = ({ label, onClick }) => {
-  return (
-    <li>
-      <a
-        href="void:javascript(0);"
-        onClick={onClick} // Close menu after clicking the link
-        className="text-[18px] font-normal hover:text-primary transition duration-300 block"
-      >
-        {label}
-      </a>
-    </li>
-  );
-};
+import { Button } from "./Button";
 
 export const Navbar = () => {
   const {
     openForm,
-    isOpen,
     eventRef,
     problemStatementsRef,
     mentorsRef,
@@ -63,10 +47,8 @@ export const Navbar = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <div className="flex w-full md:w-[1728px] mx-auto justify-center sticky top-0 z-50 bg-black">
-     
-
-      <div className="relative bg-black py-3 px-4 md:px-[80px] w-full md:w-[1728px] mx-auto z-1">
+    <div className="flex w-full mx-auto justify-center sticky top-0 z-50 bg-black">
+      <div className="relative bg-black py-3 px-4 md:px-[80px] w-full mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
         >
