@@ -34,7 +34,13 @@ export const Mentors = () => {
       ref={mentorsRef}
     >
       <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
-        Our Mentors
+        Expert Guidance, Every Step of the Way
+      </div>
+      <div className="subtitle w-[300px] mx-auto text-center md:text-left md:w-full">
+        <p className="max-w-[630px] text-[16px] md:text-[18px] lg:text-[22px] md:leading-[22px] lg:leading-[32px] font-normal text-white">
+          Learn from the best! Apptware mentors will be there to guide, inspire,
+          and help you turn your ideas into reality.
+        </p>
       </div>
       <div className="flex flex-wrap justify-center md:justify-start lg:gap-5 md:gap-2 mt-10 mx-auto max-w-[1296px]">
         {mentors.map((mentor, mentorItemIndex) => {
