@@ -24,7 +24,7 @@ export const CodeBuildRepeat = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center bg-black pt-[120px] font-robotoMono h-[837px] px-[32px]">
+    <div className="relative flex flex-col items-center justify-center bg-black sm:pt-[550px] md:pt-[840px] pt-[350px] pb-[100px] md:pb-0 font-robotoMono px-[32px]">
       {/* Responsive Image */}
       <img
         src={Box1}
@@ -50,11 +50,11 @@ export const CodeBuildRepeat = () => {
       </div>
 
       {/* Below Text for Smaller Screens */}
-      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px]">
+      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative bg-[#00000050]">
         Code drives innovation — it's the language of creativity and
         transformation, shaping the future from ideation to execution.
       </div>
-      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px]">
+      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative">
         Repetition refines. By testing and enhancing, we create robust solutions
         ready to make an impact.
       </div>
