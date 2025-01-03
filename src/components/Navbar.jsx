@@ -64,14 +64,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex w-full md:w-[1728px] mx-auto justify-center sticky top-0 z-50 bg-black">
-      {isOpen && (
-        <div
-          className="absolute backdrop-blur backdrop-blur-[20px] w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
-          style={{ zIndex: 99 }}
-        >
-          <Register />
-        </div>
-      )}
+     
 
       <div className="relative bg-black py-3 px-4 md:px-[80px] w-full md:w-[1728px] mx-auto z-1">
         <div
