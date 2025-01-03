@@ -3,24 +3,14 @@ import { useAppContext } from "../context/AppContext";
 
 const footerItems = [
   {
-    title: "share",
-    subs: [
-      { title: "X (TWITTER)", path: "" },
-      { title: "Facebook", path: "" },
-      { title: "LinkedIn", path: "" },
-      { title: "Hacker News", path: "" },
-      { title: "Reddit", path: "" },
-    ],
-  },
-  {
     title: "follow",
     subs: [
-      { title: "Discord", path: "" },
-      { title: "X (TWITTER)", path: "" },
-      { title: "Mastodon", path: "" },
-      { title: "Bluesky", path: "" },
-      { title: "Reddit", path: "" },
-      { title: "Email", path: "" },
+      { title: "Instagram", path: "https://www.instagram.com/apptwareindia?igsh=bGlnNmVjaHplYmpk" },
+      { title: "LinkedIn", path: "https://www.linkedin.com/company/apptware/" },
+      { title: "X (TWITTER)", path: "https://x.com/ApptwareIndia" },
+      { title: "Facebook", path: "https://www.facebook.com/apptware?mibextid=ZbWKwL" },
+      { title: "Youtube", path: "https://m.youtube.com/channel/UCm7ShvOMvDUhq8DDbRKWDQQ" },
+      { title: "Apptware Website", path: "https://apptware.com/" },
     ],
   },
   {
@@ -52,7 +42,7 @@ export const Foot = () => {
       </div>
 
       {/* Footer Items */}
-      <div className="mt-[100px] md:mt-[170px] md:ml-[602px] flex flex-col md:flex-row gap-[20px] md:gap-[256px] uppercase leading-[26px] text-4">
+      <div className="md:w-[full] justify-end mt-[100px] self-end md:mt-[170px]  flex flex-col md:flex-row gap-[20px] md:gap-[256px] uppercase leading-[26px] text-4">
         {footerItems.map((each, index) => (
           <div key={index} className={`${index>0 ? 'mt-[50px] md:mt-0': ''}`}>
             <div className="font-bold mb-5">{each.title}</div>
