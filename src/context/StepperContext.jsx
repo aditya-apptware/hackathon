@@ -65,21 +65,21 @@ export const StepperProvider = ({ children }) => {
       },
     },
     {
-      component: <AddMemberForm memberIndex={0} />,
+      component: <CollegeNameForm />,
       validate: () => {
-        const member = formData.members[0];
-        if (!member || !member.fullName || !member.email || !member.mobile) {
-          // setError("All fields for Team Member 1 are required.");
+        if (!formData.collegeName || formData.collegeName.trim() === "") {
+          // setError("College Name is required.");
           return false;
         }
         return true;
       },
     },
     {
-      component: <CollegeNameForm />,
+      component: <AddMemberForm memberIndex={0} />,
       validate: () => {
-        if (!formData.collegeName || formData.collegeName.trim() === "") {
-          // setError("College Name is required.");
+        const member = formData.members[0];
+        if (!member || !member.fullName || !member.email || !member.mobile) {
+          // setError("All fields for Team Member 1 are required.");
           return false;
         }
         return true;
