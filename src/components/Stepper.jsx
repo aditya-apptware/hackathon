@@ -16,7 +16,7 @@ const Stepper = () => {
         <motion.div
           key={animatingStep} // Use animatingStep for motion key
           initial={{ opacity: 0, y: direction === "up" ? "100vh" : "-100vh" }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: direction === "up" ? "-100vh" : "100vh" }}
           transition={{ duration: 0.5 }}
           className="h-fit"
