@@ -4,13 +4,8 @@ import { useAppContext } from "../context/AppContext";
 import { Button } from "./Button";
 
 export const Navbar = () => {
-  const {
-    openForm,
-    eventRef,
-    problemStatementsRef,
-    mentorsRef,
-    contactRef,
-  } = useAppContext();
+  const { openForm, eventRef, problemStatementsRef, mentorsRef, contactRef } =
+    useAppContext();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Ref for the menu
@@ -90,14 +85,14 @@ export const Navbar = () => {
               />
               <Button
                 className="text-[18px] font-normal hover:text-primary transition duration-300 block"
-                label="Problem statements"
-                onClick={() => scrollIntoView(problemStatementsRef)}
-              />
-              <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="Mentors"
                 onClick={() => scrollIntoView(mentorsRef)}
               />
+              {/* <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Problem statements"
+                onClick={() => scrollIntoView(problemStatementsRef)}
+              /> */}
               <Button
                 className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="Contact"
@@ -132,20 +127,20 @@ export const Navbar = () => {
               />
               <Button
                 className="text-[18px] font-normal hover:text-primary transition duration-300 block"
-                label="Problem Statements"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  scrollIntoView(problemStatementsRef);
-                }}
-              />
-              <Button
-                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="Mentors"
                 onClick={() => {
                   setIsMenuOpen(false);
                   scrollIntoView(mentorsRef);
                 }}
               />
+              {/* <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Problem Statements"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollIntoView(problemStatementsRef);
+                }}
+              /> */}
               <Button
                 className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="Contact"

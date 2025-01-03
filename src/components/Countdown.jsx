@@ -61,10 +61,10 @@ export const Countdown = () => {
       <div className="text-white text-sm md:text-xl mt-2">
         17th - 19th January
       </div>
-      <div className="max-w-[1022px] md:w-[1022px] w-[350px] mx-auto flex flex-wrap justify-center gap-[6px] md:gap-16 mt-5 font-karmatic text-[#ABD40F] text-4xl md:text-8xl border border-2 border-[#ABD40F] p-4 md:p-8">
+      <div className="max-w-[1022px] md:w-[1022px] w-[350px] mx-auto flex flex-wrap justify-center gap-[4px] md:gap-16 mt-5 font-karmatic text-[#ABD40F] text-4xl md:text-8xl border border-2 border-[#ABD40F] p-4 md:p-8">
         <span className="px-1">{padTwoDigits(timeRemaining.days)}</span>
         <span className="px-1">{padTwoDigits(timeRemaining.hours)}</span>
-        <span className="px-1">{padTwoDigits(timeRemaining.minutes)}</span>
+        <span className="px-1"><span className="font-robotoMono">:</span>{padTwoDigits(timeRemaining.minutes)}</span>
         <span className="px-1">{padTwoDigits(timeRemaining.seconds)}</span>
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">

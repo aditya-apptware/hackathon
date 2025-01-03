@@ -34,7 +34,7 @@ export const Home = ({}) => {
         <CodeBuildRepeat />
         <Countdown />
         <Mentors />
-        <ProblemStatements />
+        {/* <ProblemStatements /> */}
         {/* <Container /> */}
         <Participate />
         <Questions />
