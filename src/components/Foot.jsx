@@ -52,23 +52,25 @@ export const Foot = () => {
       </div>
 
       {/* Footer Items */}
-      <div className="mt-[100px] md-mt-[170px] md:ml-[602px] flex flex-col md:flex-row gap-[20px] md:gap-[256px] uppercase leading-[26px] text-4">
+      <div className="mt-[100px] md:mt-[170px] md:ml-[602px] flex flex-col md:flex-row gap-[20px] md:gap-[256px] uppercase leading-[26px] text-4">
         {footerItems.map((each, index) => (
-          <div key={index}>
+          <div key={index} className={`${index>0 ? 'mt-[50px] md:mt-0': ''}`}>
             <div className="font-bold mb-5">{each.title}</div>
             <div className="border-2 w-[40px] mb-5"></div>
-            {each.subs.map((item, subIndex) => (
-              <div key={subIndex}>
-                <a
-                  href={item.path}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:underline"
-                >
-                  {item.title}
-                </a>
-              </div>
-            ))}
+            <div className="flex md:block flex-row justify-start gap-x-[20px] md:gap-0 flex-wrap">
+              {each.subs.map((item, subIndex) => (
+                <div key={subIndex} className="min-w-[155px]">
+                  <a
+                    href={item.path}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:underline"
+                  >
+                    {item.title}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
