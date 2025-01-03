@@ -55,7 +55,7 @@ export const ProblemStatements = () => {
           return (
             <div
               key={itemIndex}
-              className={`${bgColor} ${textColor} max-w-[328px] max-h-[192px] border border-black p-4 md:p-6 flex flex-col justify-between w-full md:w-[calc(50%-24px)]`}
+              className={`${bgColor} ${textColor} min-w-[233px] md:max-w-[328px] max-h-[192px] border border-black p-4 md:p-6 flex flex-col justify-between w-full md:w-[calc(50%-24px)]`}
               style={{
                 transform: `rotate(${
                   window.innerWidth >= 768 ? rotateValue : 0
