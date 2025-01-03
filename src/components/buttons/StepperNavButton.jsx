@@ -145,7 +145,7 @@ export const StepperNavButton = () => {
         <img src={ArrowUp} className="w-fit mx-auto" alt="arrow up" />
       </button>
       <button
-        className="w-[55.17px] h-[44.45px] border-2 border-black z-10 "
+        className="w-[55.17px] h-[44.45px] border-2 border-black z-10"
         onClick={handleNextClick}
         aria-label="Next Step"
         disabled={isLastStep}

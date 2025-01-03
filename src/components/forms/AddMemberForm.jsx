@@ -120,7 +120,6 @@ const AddMemberForm = ({ memberIndex }) => {
                   type="radio"
                   name="graduationYear"
                   value={year}
-                  defaultChecked={yearIndex === 1}
                   onChange={(e) => {
                     handleChange(e);
                     handleBlur(e);
