@@ -13,7 +13,7 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
         >
           Cancel
         </button>
-        <button className="bg-black text-white px-4 py-2" onClick={onConfirm}>
+        <button className="bg-black text-white px-4 py-3" onClick={onConfirm}>
           Yes
         </button>
       </div>

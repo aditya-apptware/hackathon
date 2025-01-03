@@ -27,7 +27,7 @@ const TeamNameForm = () => {
     <div className="flex flex-col gap-2 bg-transparent">
       <label
         htmlFor="teamName"
-        className="font-medium text-[25px] leading-[25.06px] bg-transparent"
+        className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px] bg-transparent"
       >
         Team Name
       </label>
@@ -39,7 +39,7 @@ const TeamNameForm = () => {
         value={teamName}
         onChange={handleChange}
         onBlur={handleBlur}
-        className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+        className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
         required
         autoComplete="off"
       />

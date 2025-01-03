@@ -8,7 +8,7 @@ const Stepper = () => {
 
   return (
     <div
-      className={`overflow-hidden w-full py-[50px] sm:py-[100px] z-10 relative flex flex-col justify-center ${
+      className={`overflow-auto w-full h-full z-10 py-16 relative flex flex-col justify-center ${
         currentStep === 6 ? "mx-auto" : ""
       }`}
     >

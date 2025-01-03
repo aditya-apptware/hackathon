@@ -51,12 +51,12 @@ const AddMemberForm = ({ memberIndex }) => {
 
   return (
     <>
-      <h1 className="font-medium text-[32px] leading-[25.06px] mb-16">
+      <h1 className="font-semibold text-[20px] md:text-[32px] leading-[18px] md:leading-[25.06px] mb-16">
         Team Member {memberIndex + 1}
       </h1>
       <form className="flex flex-col gap-10">
         <div className="flex flex-col gap-2">
-          <label className="font-medium text-[25px] leading-[25.06px]">
+          <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Full Name
           </label>
           <input
@@ -65,7 +65,7 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
             required
           />
@@ -74,7 +74,7 @@ const AddMemberForm = ({ memberIndex }) => {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <label className="font-medium text-[25px] leading-[25.06px]">
+          <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Email
           </label>
           <input
@@ -83,7 +83,7 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
             required
           />
@@ -92,7 +92,7 @@ const AddMemberForm = ({ memberIndex }) => {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <label className="font-medium text-[25px] leading-[25.06px]">
+          <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Mobile
           </label>
           <input
@@ -101,7 +101,7 @@ const AddMemberForm = ({ memberIndex }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Type your answer here"
-            className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
             required
           />
@@ -110,10 +110,10 @@ const AddMemberForm = ({ memberIndex }) => {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <label className="font-medium text-[25px] leading-[25.06px]">
+          <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Graduation Year
           </label>
-          <div className="mt-2 w-[648.05px] border-b border-b-[#313030] pb-2 flex gap-8 text-[18px] leading-[25.06px] font-normal">
+          <div className="mt-2 md:w-[648.05px] border-b border-b-[#313030] pb-2 flex gap-8 text-[14px] md:text-[18px] leading-[18px] md:leading-[25.06px] font-normal">
             {["2023", "2024", "2025"].map((year, yearIndex) => (
               <div key={year} className="flex align-center">
                 <input

@@ -38,7 +38,7 @@ const CollegeNameForm = () => {
     <div className="flex flex-col gap-2">
       <label
         htmlFor="collegeName"
-        className="font-medium text-[25px] leading-[25.06px]"
+        className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]"
       >
         College Name
       </label>
@@ -49,7 +49,7 @@ const CollegeNameForm = () => {
         value={collegeName}
         onChange={handleChange}
         onBlur={handleBlur}
-        className="w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+        className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
         autoComplete="off"
         required
       />
