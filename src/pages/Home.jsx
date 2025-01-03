@@ -29,7 +29,7 @@ export const Home = () => {
   }, [isOpen]);
 
   return (
-    <div className="w-full md:w-[1728px] mx-auto relative">
+    <div className="w-full mx-auto relative">
       {isOpen && (
         <div className="fixed top-0 backdrop-blur backdrop-blur-[20px] p-4 md:p-16 left-0 h-full w-full flex items-center justify-center z-[99]">
           <Register />
@@ -45,7 +45,9 @@ export const Home = () => {
         <Mentors />
         {/* <ProblemStatements /> */}
         {/* <Container /> */}
+        <div className="w-full bg-white">
         <Participate />
+        </div>
         <Questions />
       </main>
       <Foot />

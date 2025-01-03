@@ -43,7 +43,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex w-full mx-auto justify-center sticky top-0 z-50 bg-black">
-      <div className="relative bg-black py-3 px-4 md:px-[80px] w-full mx-auto z-1">
+      <div className="relative bg-black py-3 px-4 lg:px-[80px] w-full mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}
         >
@@ -72,29 +72,29 @@ export const Navbar = () => {
 
           {/* Navigation Menu for Large Screens */}
           <div className="hidden md:block">
-            <ul className="flex gap-[45px] w-full">
+            <ul className="flex lg:gap-[45px] md:gap-[20px] w-full">
               <Button
-                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Home"
                 onClick={scrollToTop}
               />
               <Button
-                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="About event"
                 onClick={() => scrollIntoView(eventRef)}
               />
               <Button
-                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Mentors"
                 onClick={() => scrollIntoView(mentorsRef)}
               />
               {/* <Button
-                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                className="text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Problem statements"
                 onClick={() => scrollIntoView(problemStatementsRef)}
               /> */}
               <Button
-                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Contact"
                 onClick={() => scrollIntoView(contactRef)}
               />
@@ -155,7 +155,7 @@ export const Navbar = () => {
           {/* Desktop Button */}
           <div className="hidden md:block">
             <Button
-              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black"
+              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black lg:text-[18px] md:text-[16px]"
               label="Register Now"
               onClick={openForm}
             />

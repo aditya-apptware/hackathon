@@ -24,12 +24,12 @@ export const CodeBuildRepeat = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center bg-black sm:pt-[550px] md:pt-[840px] pt-[350px] pb-[100px] md:pb-0 font-robotoMono px-[32px]">
+    <div className="relative max-w-[1060px] mx-auto flex flex-col items-center justify-center bg-black sm:pt-[550px] md:pt-[500px] lg:pt-[840px] pt-[350px] pb-[100px] md:pb-0 font-robotoMono px-[32px]">
       {/* Responsive Image */}
       <img
         src={Box1}
         alt="box model 1"
-        className="w-full hidden md:block md:w-[1060px] md:h-[818px] object-contain absolute top-[-55px] md:top-[-145px]"
+        className="w-full hidden md:block md:w-[700px] lg:w-[1060px] md:h-[818px] object-contain absolute top-[-55px] md:top-[-230px] lg:top-[-145px]"
       />
       <img
         src={Box2}
@@ -38,23 +38,23 @@ export const CodeBuildRepeat = () => {
       />
 
       {/* Left Text */}
-      <div className="absolute text-white w-[90%] sm:w-[378px] h-[96px] text-[18px] leading-6 capitalize left-[5%] sm:left-[276px] top-[15%] sm:top-[307px] text-center sm:text-left hidden md:block">
+      <div className="absolute text-white w-[90%] sm:w-[378px] h-[96px] text-[18px] leading-6 capitalize left-[5%] sm:left-[-4%] top-[15%] sm:top-[36%] text-center sm:text-left hidden lg:block">
         Code drives innovation — it's the language of creativity and
         transformation, shaping the future from ideation to execution.
       </div>
 
       {/* Right Text */}
-      <div className="absolute text-white w-[90%] sm:w-[407px] h-[96px] text-[18px] leading-6 capitalize right-[5%] sm:right-[324px] bottom-[15%] sm:bottom-[133px] text-center sm:text-left hidden md:block">
+      <div className="absolute text-white w-[90%] sm:w-[407px] h-[96px] text-[18px] leading-6 capitalize right-[5%] sm:right-[0%] bottom-[15%] sm:bottom-[18%] text-center sm:text-left hidden lg:block">
         Repetition refines. By testing and enhancing, we create robust solutions
         ready to make an impact.
       </div>
 
       {/* Below Text for Smaller Screens */}
-      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative bg-[#00000050]">
+      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative bg-[#00000050]">
         Code drives innovation — it's the language of creativity and
         transformation, shaping the future from ideation to execution.
       </div>
-      <div className="md:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative">
+      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative">
         Repetition refines. By testing and enhancing, we create robust solutions
         ready to make an impact.
       </div>
@@ -65,13 +65,13 @@ export const CodeBuildRepeat = () => {
 
           let classes = "";
           if (index === 0) {
-            classes = "left-[550px] top-[200px]";
+            classes = "lg:left-[20%] lg:top-[200px] md:left-[25%] md:top-[20%]";
           }
           if (index === 1) {
-            classes = "left-[750px] top-[430px]";
+            classes = "lg:left-[40%] lg:top-[430px] md:left-[48%] md:top-[37%]";
           }
           if (index === 2) {
-            classes = "left-[1075px] top-[500px]";
+            classes = "lg:left-[70%] lg:top-[500px] md:left-[70%] md:top-[46%]";
           }
 
           return (
@@ -85,7 +85,7 @@ export const CodeBuildRepeat = () => {
                 return (
                   <span
                     key={charIndex}
-                    className={`transition-colors duration-300 text-[75px] ${
+                    className={`transition-colors duration-300 md:text-[40px] lg:text-[75px] ${
                       isVisible ? "text-white" : "text-gray-800"
                     }`}
                   >

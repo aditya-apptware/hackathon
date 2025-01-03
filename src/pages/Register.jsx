@@ -10,7 +10,7 @@ export const Register = () => {
   const { closeForm } = useAppContext();
 
   return (
-    <div className="relative font-robotoMono bg-[#ABD40F] w-full h-full overflow-hidden mx-auto flex p-8 sm:px-[200px] z-1 rounded-[10px]">
+    <div className="relative font-robotoMono bg-[#ABD40F] w-full h-full overflow-hidden mx-auto flex p-8 md:px-[50px] lg:px-[200px] z-1 rounded-[10px]">
       <img
         src={FormBg}
         className="w-full h-full absolute left-0 top-0 opacity-[40%] object-cover"
@@ -29,7 +29,7 @@ export const Register = () => {
       />
       <StepperProvider>
         <Stepper />
-        <div className="absolute bottom-[30px] sm:bottom-[50px] right-[30px] sm:right-[400px]">
+        <div className="absolute bottom-[30px] sm:bottom-[50px] right-[30px]">
           <StepperNavButton />
         </div>
       </StepperProvider>

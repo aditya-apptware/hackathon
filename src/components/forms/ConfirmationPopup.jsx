@@ -23,7 +23,7 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
   }, [formData]);
 
   return (
-    <div className="relative border border-black p-8 md:p-16 rounded-lg shadow-lg bg-gradient-to-br from-[#ABD40F] to-[#ABD40F] md:w-[624px] md:h-[386px] opacity-90 mx-auto">
+    <div className="relative border border-black p-4 md:p-12 rounded-lg shadow-lg bg-gradient-to-br from-[#ABD40F] to-[#ABD40F] lg:w-[495px] h-[200px] md:h-[386px] opacity-90 mx-auto">
       <h2 className="font-bold mb-6 font-medium text-[18px] md:text-[32px] leading-[24px] md:leading-[45px]">
         Are you sure you want to submit the form?
       </h2>

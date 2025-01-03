@@ -30,9 +30,9 @@ export const Questions = () => {
   };
 
   return (
-    <div className="text-[#abd40f] font-robotoMono py-[80px] px-[32px] md:px-[279px] bg-black">
+    <div className="text-[#abd40f] font-robotoMono py-[80px] px-[32px] md:px-[100px] bg-black max-w-[1200px] mx-auto">
       <div className="text-[48px] md:text-[128px] font-medium mb-10 text-center md:text-left">
-        {"{/faq/}"}
+        {"{/faq/]"}
       </div>
       <div className="max-w-[739px] mx-auto flex flex-col gap-8">
         {faqs.map((each, eachIndex) => {

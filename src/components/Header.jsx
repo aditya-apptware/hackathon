@@ -66,15 +66,15 @@ export const Header = ({ navigateToRegisterationForm }) => {
       ></canvas>
 
       {/* Header Content */}
-      <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center justify-center h-[500px] md:h-[805px] text-black font-robotoMono gap-[22px]">
+      <div className="relative px-4 md:px-[50px] lg:px-[150px] py-[100px] md:py-0 lg:py-[158px] z-10 flex flex-col items-center justify-center h-[500px] md:h-[805px] text-black font-robotoMono gap-[22px]">
         <div className="title md:w-full">
-          <div className="font-karmatic min-w-[366px] text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
+          <div className="font-karmatic min-w-[330px] text-[32px] md:text-[44px] lg:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
             Hackathon is <br />
             back 2025
           </div>
         </div>
-        <div className="subtitle w-full text-center md:text-left">
-          <p className="max-w-[630px] text-[16px] md:text-[22px] md:leading-[32px] font-normal text-white">
+        <div className="subtitle w-[330px] text-center md:text-left md:w-full">
+          <p className="max-w-[630px] text-[16px] md:text-[18px] lg:text-[22px] md:leading-[22px] lg:leading-[32px] font-normal text-white">
             Gear up for an unforgettable coding experience.
             Build. Innovate. Compete.
           </p>
