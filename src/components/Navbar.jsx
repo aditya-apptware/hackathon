@@ -8,7 +8,7 @@ const NavItem = ({ label, to, onClick }) => {
   return (
     <li>
       <a
-        href={to}
+        href="void:javascript(0);"
         onClick={onClick} // Close menu after clicking the link
         className="text-[18px] font-normal hover:text-primary transition duration-300 block"
       >
@@ -19,7 +19,14 @@ const NavItem = ({ label, to, onClick }) => {
 };
 
 export const Navbar = () => {
-  const { openForm, isOpen } = useAppContext();
+  const {
+    openForm,
+    isOpen,
+    eventRef,
+    problemStatementsRef,
+    mentorsRef,
+    contactRef,
+  } = useAppContext();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Ref for the menu
@@ -51,6 +58,10 @@ export const Navbar = () => {
 
   const navigateToHomePage = () => {
     // do nothing
+  };
+
+  const scrollIntoView = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -95,10 +106,26 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex gap-[45px] w-full">
               <NavItem label="Home" to="/" />
-              <NavItem label="About event" to="/" />
-              <NavItem label="Problem statements" to="/" />
-              <NavItem label="Mentors" to="/" />
-              <NavItem label="Contact" to="/" />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="About event"
+                onClick={() => scrollIntoView(eventRef)}
+              />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Problem statements"
+                onClick={() => scrollIntoView(problemStatementsRef)}
+              />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Mentors"
+                onClick={() => scrollIntoView(mentorsRef)}
+              />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Contact"
+                onClick={() => scrollIntoView(contactRef)}
+              />
             </ul>
           </div>
 

@@ -1,4 +1,5 @@
 import ArrowRight from "../assets/images/arrow-right.svg";
+import { useAppContext } from "../context/AppContext";
 
 const statements = [
   {
@@ -36,8 +37,12 @@ const statements = [
 ];
 
 export const ProblemStatements = () => {
+  const { problemStatementsRef } = useAppContext();
   return (
-    <div className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-10 md:py-16 px-4 md:px-20">
+    <div
+      className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-10 md:py-16 px-4 md:px-20"
+      ref={problemStatementsRef}
+    >
       <div className="font-karmatic text-2xl md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8 md:mt-20">
         Problem Statements
       </div>

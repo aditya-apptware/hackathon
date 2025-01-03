@@ -1,6 +1,7 @@
 import Mentor1 from "../assets/pics/mentor-1.jpg";
 import Mentor2 from "../assets/pics/mentor-2.jpg";
 import Mentor3 from "../assets/pics/mentor-3.jpg";
+import { useAppContext } from "../context/AppContext";
 
 const mentors = [
   {
@@ -26,8 +27,12 @@ const mentors = [
 ];
 
 export const Mentors = () => {
+  const { mentorsRef } = useAppContext();
   return (
-    <div className="flex flex-col gap-5 md:px-[218px] py-[80px] md:py-[104px] mx-auto text-textLight px-[32px]">
+    <div
+      className="flex flex-col gap-5 md:px-[218px] py-[80px] md:py-[104px] mx-auto text-textLight px-[32px]"
+      ref={mentorsRef}
+    >
       <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
         Our Mentors
       </div>

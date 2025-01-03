@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useAppContext } from "../context/AppContext";
 
 const targetDate = new Date("2025-01-17T00:00:00").getTime();
 
@@ -7,6 +8,7 @@ function padTwoDigits(number) {
 }
 
 export const Countdown = () => {
+  const { eventRef } = useAppContext();
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -51,6 +53,7 @@ export const Countdown = () => {
     <div
       className="font-robotoMono bg-black text-center px-4 py-8 md:py-20 relative"
       style={{ backgroundImage: "url('../assets/images/countdownbg.svg')" }}
+      ref={eventRef}
     >
       <div className="text-white text-4xl md:text-8xl font-bold tracking-wider w-full max-w-md mx-auto">
         DATE
