@@ -22,6 +22,7 @@ export const StepperProvider = ({ children }) => {
   const [direction, setDirection] = useState("up"); // Default direction
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingStep, setAnimatingStep] = useState(currentStep); // Separate state for the animating step
+  const [isError, setIsError] = useState(false);
 
   const [errors, setErrors] = useState({});
 
@@ -120,6 +121,8 @@ export const StepperProvider = ({ children }) => {
         setDirection,
         animatingStep,
         setAnimatingStep,
+        isError,
+        setIsError
       }}
     >
       {children}

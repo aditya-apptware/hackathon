@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const AddMemberButton = () => {
-  const { currentStep, setCurrentStep, steps, setAnimatingStep } =
-    useStepperContext();
+  const {
+    currentStep,
+    setCurrentStep,
+    steps,
+    setAnimatingStep,
+    setIsError,
+  } = useStepperContext();
 
   const handleClick = () => {
     if (validateCurrentStep()) {
+      setIsError(false);
       setCurrentStep((prev) => prev + 1);
       setAnimatingStep((prev) => prev + 1);
+    } else {
+      setIsError(true);
     }
   };
 
@@ -23,12 +31,12 @@ const AddMemberButton = () => {
   };
 
   return (
-    <button
-      className="bg-transparent border-black px-4 py-2"
-      onClick={handleClick}
-    >
-      Add Member
-    </button>
+      <button
+        className="bg-transparent border-black px-4 py-2"
+        onClick={handleClick}
+      >
+        Add Member
+      </button>
   );
 };
 
