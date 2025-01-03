@@ -68,15 +68,14 @@ export const Header = ({ navigateToRegisterationForm }) => {
       {/* Header Content */}
       <div className="relative px-4 md:px-[217px] py-[100px] md:py-[158px] z-10 flex flex-col items-center justify-center h-[500px] md:h-[805px] text-black font-robotoMono gap-[22px]">
         <div className="title md:w-full">
-          <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
+          <div className="font-karmatic min-w-[366px] text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
             Hackathon is <br />
             back 2025
           </div>
         </div>
         <div className="subtitle w-full text-center md:text-left">
-          <p className="text-[16px] md:text-[22px] md:leading-[32px] font-normal text-white">
+          <p className="max-w-[630px] text-[16px] md:text-[22px] md:leading-[32px] font-normal text-white">
             Gear up for an unforgettable coding experience.
-            <br />
             Build. Innovate. Compete.
           </p>
         </div>
