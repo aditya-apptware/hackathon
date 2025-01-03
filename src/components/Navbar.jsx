@@ -4,7 +4,7 @@ import { Register } from "../pages/Register";
 import { Button } from "./Button";
 import { useAppContext } from "../context/AppContext";
 
-const NavItem = ({ label, to, onClick }) => {
+const NavItem = ({ label, onClick }) => {
   return (
     <li>
       <a
@@ -56,16 +56,14 @@ export const Navbar = () => {
     };
   }, []);
 
-  const navigateToHomePage = () => {
-    // do nothing
-  };
-
   const scrollIntoView = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <div className="flex w-full md:w-[1728px] mx-auto justify-center">
+    <div className="flex w-full md:w-[1728px] mx-auto justify-center sticky top-0 z-50 bg-black">
       {isOpen && (
         <div
           className="absolute backdrop-blur backdrop-blur-[20px] w-full px-[16px] sm:w-[1728px] h-full sm:h-[1134px] flex flex-col justify-center items-center"
@@ -85,7 +83,7 @@ export const Navbar = () => {
               src={Logo}
               alt="Logo"
               className="cursor-pointer"
-              onClick={navigateToHomePage}
+              onClick={scrollToTop}
             />
           </div>
 
@@ -105,7 +103,11 @@ export const Navbar = () => {
           {/* Navigation Menu for Large Screens */}
           <div className="hidden md:block">
             <ul className="flex gap-[45px] w-full">
-              <NavItem label="Home" to="/" />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Home"
+                onClick={scrollToTop}
+              />
               <Button
                 className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="About event"
@@ -137,26 +139,45 @@ export const Navbar = () => {
             } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
           >
             <ul className="flex flex-col gap-6 justify-around items-end py-4 px-4 w-full">
-              <NavItem
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
                 label="Home"
-                to="/"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollToTop();
+                }}
               />
-              <NavItem
-                label="Problem statements"
-                to="/"
-                onClick={() => setIsMenuOpen(false)}
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="About Event"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollIntoView(eventRef);
+                }}
               />
-              {/* Registration as NavItem */}
-              <NavItem
-                label="Registration"
-                to="/"
-                onClick={openForm} // Trigger the registration form on click
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Problem Statements"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollIntoView(problemStatementsRef);
+                }}
               />
-              <NavItem
-                label="Payment"
-                to="/"
-                onClick={() => setIsMenuOpen(false)}
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Mentors"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollIntoView(mentorsRef);
+                }}
+              />
+              <Button
+                className="text-[18px] font-normal hover:text-primary transition duration-300 block"
+                label="Contact"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollIntoView(contactRef);
+                }}
               />
             </ul>
           </div>
