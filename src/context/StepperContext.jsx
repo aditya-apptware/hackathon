@@ -103,6 +103,12 @@ export const StepperProvider = ({ children }) => {
               mobile: "Mobile is required.",
             }));
           }
+          if(!member?.graduationYear){
+            setErrors((prev) => ({
+              ...prev,
+              graduationYear: "Graduation Year is required.",
+            }));
+          }
           return false;
         }
         return true;

@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const AddMemberForm = ({ memberIndex }) => {
-  const { formData, updateFormData, errors, setErrors } = useStepperContext();
+  const inputRef = useRef(null);
+  const {
+    formData,
+    updateFormData,
+    errors,
+    setErrors,
+    currentStep,
+    steps,
+    setCurrentStep,
+    setAnimatingStep,
+  } = useStepperContext();
   const [member, setMember] = useState(formData.members[memberIndex] || {});
 
   useEffect(() => {
     // Initialize the member when the formData changes
     setMember(formData.members[memberIndex] || {});
   }, [formData.members, memberIndex]);
+
+  useEffect(() => {inputRef.current?.focus()}, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,9 +56,50 @@ const AddMemberForm = ({ memberIndex }) => {
       (!value.trim() || !/^\d{10}$/.test(value))
     ) {
       error = "A valid 10-digit mobile number is required.";
+    } else if (name === "graduationYear" && !value.trim()) {
+      error = "Select a graduation";
     }
-
     setErrors((prev) => ({ ...prev, [name]: error }));
+  };
+
+  const validateCurrentStep = () => {
+    const currentStepData = steps[currentStep];
+    if (currentStepData?.validate) {
+      // Validate the current step
+      return currentStepData.validate();
+    }
+    return true; // Default to true if no validation function is provided
+  };
+
+  const handleNext = () => {
+    if (validateCurrentStep()) {
+      if (
+        formData.teamName &&
+        formData.members.length &&
+        formData.collegeName
+      ) {
+        setCurrentStep(6);
+        setAnimatingStep(6);
+      } else {
+        setCurrentStep((prev) => prev + 1);
+        setAnimatingStep((prev) => prev + 1);
+      }
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission or default behavior
+      validateField("fullName", e.target.value) &&
+        validateField("email", e.target.value) &&
+        validateField("mobile", e.target.value) &&
+        validateField("graduationYear", e.target.value);
+
+      const isValid = Object.values(errors).every((each) => !each.length);
+      if (isValid) {
+        handleNext();
+      }
+    }
   };
 
   return (
@@ -64,10 +117,12 @@ const AddMemberForm = ({ memberIndex }) => {
             value={member.fullName || ""}
             onChange={handleChange}
             onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
             placeholder="Type your answer here"
             className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
             required
+            ref={inputRef}
           />
           {errors.fullName && (
             <span className="text-red-500 text-sm">{errors.fullName}</span>
@@ -82,6 +137,7 @@ const AddMemberForm = ({ memberIndex }) => {
             value={member.email || ""}
             onChange={handleChange}
             onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
             placeholder="Type your answer here"
             className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
@@ -100,6 +156,7 @@ const AddMemberForm = ({ memberIndex }) => {
             value={member.mobile || ""}
             onChange={handleChange}
             onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
             placeholder="Type your answer here"
             className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
@@ -124,12 +181,18 @@ const AddMemberForm = ({ memberIndex }) => {
                     handleChange(e);
                     handleBlur(e);
                   }}
+                  onKeyDown={handleKeyDown}
                   className="w-5 h-5 appearance-none border-2 border-black rounded-full checked:bg-black checked:border-transparent cursor-pointer"
                 />
                 <label className="ml-4">{year}</label>
               </div>
             ))}
           </div>
+          {errors.graduationYear && (
+            <span className="text-red-500 text-sm">
+              {errors.graduationYear}
+            </span>
+          )}
         </div>
       </form>
     </>
