@@ -1,6 +1,24 @@
 import "./styles.css";
 
 export const Participate = () => {
+
+  const handleDownload = () => {
+    const pdfUrl = "/Rulebook.pdf"; // Replace with the URL of the PDF file
+    const fileName = "Rulebook - CodeCraft 2025.pdf"; // Desired file name for the download
+
+    // Create an anchor element
+    const anchor = document.createElement("a");
+    anchor.href = pdfUrl;
+    anchor.download = fileName;
+
+    // Append anchor to the body and trigger the click
+    document.body.appendChild(anchor);
+    anchor.click();
+
+    // Remove anchor from the body after triggering the download
+    document.body.removeChild(anchor);
+  };
+
   return (
     <div className="px-6  md:px-[50px]lg:px-[100px] py-[80px] md:py-[100px] flex flex-col mx-auto md:flex-row gap-10 md:gap-[80px] bg-white font-spaceGrotesk max-w-[1296px]">
       <div className="min-w-[300px] w-[50%] md:w-[calc(50%-80px)] mx-auto">
@@ -40,7 +58,8 @@ export const Participate = () => {
           <div className="text-sm md:text-5 md:leading-5 lg:leading-8 capitalize">
             Stay updated on rules and regulations to excel in the competition.
           </div>
-          <button className="w-[160px] mt-3 px-4 py-2 md:py-3 text-xs md:text-4 font-bold bg-white hover:bg-default hover:border hover:border-black">
+          <button className="w-[160px] mt-3 px-4 py-2 md:py-3 text-xs md:text-4 font-bold bg-white hover:bg-default hover:border hover:border-black"
+          onClick={handleDownload}>
             Download Rulebook
           </button>
         </div>

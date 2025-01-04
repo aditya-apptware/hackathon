@@ -1,28 +1,59 @@
-import Mentor1 from "../assets/pics/mentor-1.jpg";
-import Mentor2 from "../assets/pics/mentor-2.jpg";
-import Mentor3 from "../assets/pics/mentor-3.jpg";
+import Mentor1 from "../assets/pics/mentor-1.png";
+import Mentor2 from "../assets/pics/mentor-2.png";
+import Mentor3 from "../assets/pics/mentor-3.png";
+import Mentor4 from "../assets/pics/mentor-4.png";
+import Mentor5 from "../assets/pics/mentor-5.png";
+import Mentor6 from "../assets/pics/mentor-6.png";
+import Mentor7 from "../assets/pics/mentor-7.png";
+import Mentor8 from "../assets/pics/mentor-8.png";
+import Mentor9 from "../assets/pics/mentor-9.png";
 import { useAppContext } from "../context/AppContext";
 
 const mentors = [
   {
-    name: "Davis George",
-    role: "Data Scientist",
+    name: "Nachiket Labade",
+    role: "Senior Mobile Developer",
     imageSource: Mentor1,
   },
   {
-    name: "Ryan Dias",
+    name: "Kaushal Phulgirkar",
     role: "Data Scientist",
+    imageSource: Mentor2,
+  },
+  {
+    name: "Keshavram Kuduwa",
+    role: "Technical Lead",
     imageSource: Mentor3,
   },
   {
-    name: "Mark Doe",
-    role: "Data Scientist",
-    imageSource: Mentor2,
+    name: "Shrutika Tatkare",
+    role: "Lead Mobile Developer",
+    imageSource: Mentor4,
   },
   {
-    name: "Mark Doe",
-    role: "Data Scientist",
-    imageSource: Mentor2,
+    name: "Vallabh Hake",
+    role: "Senior Data Scientist",
+    imageSource: Mentor5,
+  },
+  {
+    name: "Harshad Vele ",
+    role: "Java Devloper",
+    imageSource: Mentor6,
+  },
+  {
+    name: "Rahul Bhavsar",
+    role: "Senior Lead Developer",
+    imageSource: Mentor7,
+  },
+  {
+    name: "Santosh Zore",
+    role: "Senior Web Developer",
+    imageSource: Mentor8,
+  },
+  {
+    name: "Shashank Chhapanimohan",
+    role: "Senior Java Developer",
+    imageSource: Mentor9,
   },
 ];
 
@@ -45,7 +76,7 @@ export const Mentors = () => {
       <div className="flex flex-wrap justify-center md:justify-start lg:gap-5 md:gap-2 mt-10 mx-auto max-w-[1296px]">
         {mentors.map((mentor, mentorItemIndex) => {
           const { name, role, imageSource } = mentor;
-          const rotateValue = mentorItemIndex < 2 ? "7.3deg" : "-7.3deg";
+          const rotateValue = mentorItemIndex % 2 === 0 ? "7.3deg" : "-7.3deg";
           return (
             <div
               key={mentorItemIndex}
