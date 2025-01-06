@@ -48,7 +48,7 @@ export const Home = () => {
           <Participate />
         </div>
         <Questions />
-        <JoinUs />
+        {/* <JoinUs /> */}
       </main>
       <Foot />
     </div>
