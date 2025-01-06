@@ -149,6 +149,14 @@ export const Navbar = () => {
                   scrollIntoView(contactRef);
                 }}
               />
+              <Button
+                className="text-[18px] font-normal hover:text-default transition duration-300 block"
+                label="Register"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  openForm();
+                }}
+              />
             </ul>
           </div>
 
