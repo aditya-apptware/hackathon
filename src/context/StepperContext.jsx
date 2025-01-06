@@ -18,7 +18,7 @@ const googleScriptUrl =
   "https://script.google.com/macros/s/AKfycbyxCBzI4Zv_qs8Iqhq_NTHOBNuAdNE36fzUyRCgpuh9CuKOs14QBsB6WfUcqYfTBCsP/exec";
 
 export const StepperProvider = ({ children }) => {
-  const { closeForm } = useAppContext();
+  const { closeForm, setLoading } = useAppContext();
 
   const [formData, setFormData] = useState({ ...defaultFormData });
   const [direction, setDirection] = useState("up"); // Default direction
@@ -31,6 +31,7 @@ export const StepperProvider = ({ children }) => {
     setFormData((prev) => ({ ...prev, ...data }));
 
   const onConfirm = () => {
+    setLoading(true);
     fetch(googleScriptUrl, {
       method: "POST",
       body: JSON.stringify(formData),
@@ -43,13 +44,14 @@ export const StepperProvider = ({ children }) => {
       .catch((error) => {
         toast.error("Failed to send data. Please try again.");
         console.error(error);
-      });
+      })
+      .finally(() => setLoading(false));
   };
 
   const onCancel = () => {
     setFormData({ ...defaultFormData });
     setDirection("down");
-    setErrors({})
+    setErrors({});
     setTimeout(() => {
       setCurrentStep(0);
       setAnimatingStep(0);

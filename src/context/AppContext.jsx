@@ -4,6 +4,7 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false); // Registration Form
+  const [loading, setLoading] = useState(false);
 
   const eventRef = useRef(null); // Ref for the menu
   const problemStatementsRef = useRef(null); // Ref for the menu
@@ -29,6 +30,8 @@ export const AppProvider = ({ children }) => {
         problemStatementsRef,
         mentorsRef,
         contactRef,
+        loading,
+        setLoading,
       }}
     >
       {children}
