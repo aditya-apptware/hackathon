@@ -8,7 +8,7 @@ const Stepper = () => {
 
   return (
     <div
-      className={`overflow-auto w-full h-full z-10 py-16 relative flex flex-col justify-center ${
+      className={`overflow-y-auto overflow-x-hidden w-full h-full z-10 py-16 relative flex flex-col justify-center ${
         currentStep === 6 ? "mx-auto" : ""
       }`}
     >
@@ -19,7 +19,7 @@ const Stepper = () => {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: direction === "up" ? "-100vh" : "100vh" }}
           transition={{ duration: 0.5 }}
-          className="h-fit overflow-scroll flex flex-col justify-start"
+          className="h-fit overflow-y-scroll overflow-x-hidden flex flex-col justify-start"
         >
           {steps[animatingStep]?.component}
           <div className="mt-10">
