@@ -3,7 +3,6 @@ import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
 import { Countdown } from "../components/Countdown";
 import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
-import { JoinUs } from "../components/JoinUs";
 import { Mentors } from "../components/Mentors";
 import { Navbar } from "../components/Navbar";
 import { Participate } from "../components/Participate";

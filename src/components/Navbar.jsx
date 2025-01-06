@@ -4,7 +4,7 @@ import { useAppContext } from "../context/AppContext";
 import { Button } from "./Button";
 
 export const Navbar = () => {
-  const { openForm, eventRef, problemStatementsRef, mentorsRef, contactRef } =
+  const { openForm, eventRef, mentorsRef, contactRef } =
     useAppContext();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

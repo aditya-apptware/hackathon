@@ -4,7 +4,7 @@ import { useStepperContext } from "../context/StepperContext";
 import ButtonContainer from "./buttons/ButtonContainer";
 
 const Stepper = () => {
-  const { currentStep, steps, direction, animatingStep, formData:{members} } = useStepperContext();
+  const { currentStep, steps, direction, animatingStep } = useStepperContext();
 
   return (
     <div

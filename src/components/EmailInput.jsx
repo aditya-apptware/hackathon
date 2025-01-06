@@ -10,7 +10,7 @@ const EmailInput = () => {
         style={{ borderRadius: 0 }}
       >
         {/* Email Icon */}
-        <img src={EmailSVG} width={20} height={20} />
+        <img src={EmailSVG} width={20} height={20} alt="email icon in the input" />
 
         {/* Text Input */}
         <input

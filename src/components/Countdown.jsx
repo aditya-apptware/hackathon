@@ -86,6 +86,7 @@ export const Countdown = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=events@apptware.com"
             className="text-[#ABD40F] underline"
             target="_blank"
+            rel="noreferrer"
           >
             events@apptware.com
           </a>
