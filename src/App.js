@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { Navbar } from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
 import { AppProvider } from "./context/AppContext";
 import { Home } from "./pages/Home";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <AppProvider>
+      <ToastContainer />
       <Home />
     </AppProvider>
   );

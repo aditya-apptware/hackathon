@@ -35,7 +35,7 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
           Cancel
         </button>
         <button
-          className="bg-black text-white px-4 py-3 disabled:bg-gray-600"
+          className="bg-black text-white px-4 py-3 disabled:bg-gray-600 hover:bg-opacity-[0.8] disabled:hover:bg-opacity-[1]"
           onClick={onConfirm}
           disabled={!isFormValid}
         >

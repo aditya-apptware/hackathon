@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { toast } from "react-toastify";
 import AddMemberForm from "../components/forms/AddMemberForm";
 import CollegeNameForm from "../components/forms/CollegeNameForm";
 import ConfirmationPopup from "../components/forms/ConfirmationPopup";
@@ -36,11 +37,12 @@ export const StepperProvider = ({ children }) => {
     })
       .then((response) => response.text())
       .then((data) => {
-        console.log("Data sent to Google Sheets:", data);
+        toast.success("Data submitted successfully!");
         closeForm();
       })
       .catch((error) => {
-        console.error("Error sending data:", error);
+        toast.error("Failed to send data. Please try again.");
+        console.error(error);
       });
   };
 
