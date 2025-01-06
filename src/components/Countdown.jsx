@@ -64,11 +64,17 @@ export const Countdown = () => {
       <div className="max-w-[1022px] lg:w-[990px] md:w-[700px] w-[310px] mx-auto flex flex-wrap justify-center gap-[4px] md:gap-10 lg:gap-12 mt-5 font-karmatic text-[#ABD40F] text-3xl md:text-6xl lg:text-8xl border border-2 border-[#ABD40F] p-4 md:p-8">
         <span className="px-1">{padTwoDigits(timeRemaining.days)}</span>
         <span className="px-1">{padTwoDigits(timeRemaining.hours)}</span>
-        <span className="px-1"><span className="font-robotoMono">:</span>{padTwoDigits(timeRemaining.minutes)}</span>
+        <span className="px-1">
+          <span className="font-robotoMono">:</span>
+          {padTwoDigits(timeRemaining.minutes)}
+        </span>
         <span className="px-1">{padTwoDigits(timeRemaining.seconds)}</span>
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">
         Registration closes on 16th January 2024 ...
+      </div>
+      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">
+        for more queries reach us at events@apptware.com
       </div>
     </div>
   );
