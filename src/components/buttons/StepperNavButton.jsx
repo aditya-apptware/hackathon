@@ -121,7 +121,7 @@ export const StepperNavButton = () => {
   return (
     <div className="flex">
       <button
-        className="w-[55.17px] h-[44.45px] bg-black text-white z-10"
+        className="w-[55.17px] h-[44.45px] bg-black text-white z-10 disabled:hidden"
         onClick={handlePrevClick}
         aria-label="Previous Step"
         disabled={currentStep === 0}
