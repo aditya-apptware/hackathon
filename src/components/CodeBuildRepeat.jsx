@@ -50,11 +50,11 @@ export const CodeBuildRepeat = () => {
       </div>
 
       {/* Below Text for Smaller Screens */}
-      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative bg-[#00000050]">
+      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-full z-99 relative bg-[#00000050]">
         Code drives innovation — it's the language of creativity and
         transformation, shaping the future from ideation to execution.
       </div>
-      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-[407px] z-99 relative">
+      <div className="lg:hidden text-white text-center text-[18px] leading-6 capitalize mt-[20px] mx-auto max-w-[90%] sm:max-w-[378px] sm:max-w-full z-99 relative">
         Repetition refines. By testing and enhancing, we create robust solutions
         ready to make an impact.
       </div>

@@ -70,10 +70,10 @@ export const Countdown = () => {
         </span>
         <span className="px-1">{padTwoDigits(timeRemaining.seconds)}</span>
       </div>
-      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">
+      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
         Registration closes on 16th January 2024 ...
       </div>
-      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg">
+      <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
         for more queries reach us at events@apptware.com
       </div>
     </div>
