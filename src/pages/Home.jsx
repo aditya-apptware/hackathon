@@ -1,16 +1,15 @@
+import { useEffect } from "react";
 import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
-import { Container } from "../components/Container";
 import { Countdown } from "../components/Countdown";
 import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
+import { JoinUs } from "../components/JoinUs";
 import { Mentors } from "../components/Mentors";
 import { Navbar } from "../components/Navbar";
 import { Participate } from "../components/Participate";
-import { ProblemStatements } from "../components/ProblemStatements";
 import { Questions } from "../components/Questions";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
-import { useEffect } from "react";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
@@ -46,9 +45,10 @@ export const Home = () => {
         {/* <ProblemStatements /> */}
         {/* <Container /> */}
         <div className="w-full bg-white">
-        <Participate />
+          <Participate />
         </div>
         <Questions />
+        <JoinUs />
       </main>
       <Foot />
     </div>
