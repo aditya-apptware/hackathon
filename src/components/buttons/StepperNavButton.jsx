@@ -8,53 +8,37 @@ export const StepperNavButton = () => {
     setCurrentStep,
     setDirection,
     setAnimatingStep,
-    formData: { members },
+    formData: { teamName, members, collegeName },
     steps,
   } = useStepperContext();
 
   const isLastStep = currentStep === steps.length - 1;
 
-  const handleNextClick = () => {
-    setDirection("up");
-
-    if (currentStep === 2) {
-      // After College Name
-      if (members[0]?.fullName?.trim()) {
-        setTimeout(() => {
-          setAnimatingStep(3);
-          setCurrentStep(3); // Show Team Member 2
-        }, 0);
+  const handleNext = () => {
+    if (validateCurrentStep()) {
+      if (
+        teamName &&
+        members.length &&
+        collegeName &&
+        currentStep === members.length + 1
+      ) {
+        setCurrentStep(6);
+        setAnimatingStep(6);
       } else {
-        setTimeout(() => {
-          setAnimatingStep(steps.length - 1);
-          setCurrentStep(steps.length - 1); // Skip to Confirmation
-        }, 0);
+        setCurrentStep((prev) => prev + 1);
+        setAnimatingStep((prev) => prev + 1);
       }
-      return;
     }
+  };
 
-    if (currentStep > 2 && currentStep < steps.length - 1) {
-      // Optional Team Member Steps
-      const nextOptionalStep = currentStep + 1;
-      if (members[nextOptionalStep - 3]?.fullName?.trim()) {
-        setTimeout(() => {
-          setAnimatingStep(nextOptionalStep);
-          setCurrentStep(nextOptionalStep); // Show the next team member form
-        }, 0);
-      } else {
-        setTimeout(() => {
-          setAnimatingStep(steps.length - 1);
-          setCurrentStep(steps.length - 1); // Skip to Confirmation
-        }, 0);
-      }
-      return;
+  // Validate the fields for the current step
+  const validateCurrentStep = () => {
+    const currentStepData = steps[currentStep];
+    if (currentStepData?.validate) {
+      // Validate the current step
+      return currentStepData.validate();
     }
-
-    // Default navigation
-    setTimeout(() => {
-      setAnimatingStep(currentStep + 1);
-      setCurrentStep(currentStep + 1);
-    }, 0);
+    return true; // Default to true if no validation function is provided
   };
 
   const handlePrevClick = () => {
@@ -63,19 +47,19 @@ export const StepperNavButton = () => {
 
       if (currentStep === 6) {
         // If on confirmation step, check the last filled member
-        if (members[2]?.fullName) {
+        if (members.length === 4) {
           // If team member 3 is filled, go to team member 3 form
           setTimeout(() => {
             setCurrentStep(5);
             setAnimatingStep(5);
           }, 0);
-        } else if (members[1]?.fullName) {
+        } else if (members.length === 3) {
           // If team member 2 is filled, go to team member 2 form
           setTimeout(() => {
             setCurrentStep(4);
             setAnimatingStep(4);
           }, 0);
-        } else if (members[0]?.fullName) {
+        } else if (members.length === 2) {
           // If team member 1 is filled, go to team member 1 form
           setTimeout(() => {
             setCurrentStep(3);
@@ -146,7 +130,7 @@ export const StepperNavButton = () => {
       </button>
       <button
         className="w-[55.17px] h-[44.45px] border-2 border-black z-10 disabled:hidden"
-        onClick={handleNextClick}
+        onClick={handleNext}
         aria-label="Next Step"
         disabled={isLastStep}
       >
