@@ -65,16 +65,18 @@ export const Mentors = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollRef.current) {
-        scrollRef.current.scrollBy({
-          left: scrollRef.current.offsetWidth, // Scroll by visible width
-          behavior: "smooth",
-        });
+        const scrollableWidth =
+          scrollRef.current.scrollWidth - scrollRef.current.offsetWidth;
 
-        if (
-          scrollRef.current.scrollLeft + scrollRef.current.offsetWidth >=
-          scrollRef.current.scrollWidth
-        ) {
-          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" }); // Loop back to start
+        if (scrollRef.current.scrollLeft >= scrollableWidth) {
+          // Reset to start when reaching the end
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          // Continue scrolling forward
+          scrollRef.current.scrollBy({
+            left: scrollRef.current.offsetWidth,
+            behavior: "smooth",
+          });
         }
       }
     }, 3000); // Auto-scroll every 3 seconds
