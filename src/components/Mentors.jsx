@@ -110,7 +110,7 @@ export const Mentors = () => {
       </div>
       <div className="relative mt-10">
         <div
-          className="flex flex-nowrap overflow-x-auto scroll-smooth scrollbar-hide pointer-events-none md:h-[400px] md:gap-10" 
+          className="flex flex-nowrap overflow-x-auto scroll-smooth scrollbar-hide pointer-events-none md:h-[400px] md:gap-10"
           ref={scrollRef}
           onScroll={(e) => e.preventDefault()}
         >
@@ -123,12 +123,16 @@ export const Mentors = () => {
                 key={mentorItemIndex}
                 className="flex-shrink-0 flex flex-col p-8 md:p-4 items-center justify-center gap-10 md:gap-5 w-[100%] sm:w-[100%] md:w-[28%] lg:w-[22%] h-[350px] relative"
               >
- <img
-    src={imageSource}
-    alt={name}
-    style={{ transform: `rotate(${rotateValue})`, objectPosition: 'top' }}
-    className="w-full object-cover h-full bg-mentorBackground"
-  />                <div className="absolute left-0 bottom-[0] md:bottom-[-50px] p-4 text-start md:text-left bg-black bg-opacity-[0.3] w-full">
+                <img
+                  src={imageSource}
+                  alt={name}
+                  style={{
+                    transform: `rotate(${rotateValue})`,
+                    objectPosition: "top",
+                  }}
+                  className="w-full object-cover h-full bg-mentorBackground"
+                />{" "}
+                <div className="absolute left-0 bottom-[0] md:bottom-[-50px] p-4 text-start md:text-left bg-black bg-opacity-[0.3] w-full">
                   <div className="font-bold text-[14px] sm:text-[18px] md:text-[28px] leading-[20px] sm:leading-[26px] md:leading-[36px] text-textLight">
                     {name.split(" ").map((word, index) => (
                       <p key={index}>{word}</p>
