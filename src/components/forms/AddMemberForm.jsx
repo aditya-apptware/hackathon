@@ -40,6 +40,11 @@ const AddMemberForm = ({ memberIndex }) => {
   };
 
   const handleBlur = (e) => {
+    if (e.relatedTarget && e.relatedTarget.tagName === "BUTTON") {
+      return; // Don't validate if focus is shifting to a button
+    }
+  
+  
     const { name, value } = e.target;
     validateField(name, value);
   };
