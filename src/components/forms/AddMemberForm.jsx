@@ -25,6 +25,7 @@ const AddMemberForm = ({ memberIndex }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const updatedMember = { ...member, [name]: value };
+    if(!updatedMember.graduationYear) updatedMember.graduationYear = '2024'
     setMember(updatedMember);
 
     // Update formData immediately
@@ -93,7 +94,7 @@ const AddMemberForm = ({ memberIndex }) => {
       validateField("fullName", e.target.value) &&
         validateField("email", e.target.value) &&
         validateField("mobile", e.target.value) &&
-        validateField("graduationYear", e.target.value);
+        validateField("graduationYear", e.target.value ?? "2024");
 
       const isValid = Object.values(errors).every((each) => !each.length);
       if (isValid) {
@@ -105,7 +106,7 @@ const AddMemberForm = ({ memberIndex }) => {
   return (
     <>
       <h1 className="font-semibold text-[20px] md:text-[32px] leading-[18px] md:leading-[25.06px] mb-16">
-        Team Member {memberIndex + 1}
+        Team Member {memberIndex + 1}&nbsp;<span className="font-normal text-[14px]">(Rs. 250 per member)</span>
       </h1>
       <form className="flex flex-col gap-10">
         <div className="flex flex-col gap-2">
@@ -177,6 +178,7 @@ const AddMemberForm = ({ memberIndex }) => {
                   type="radio"
                   name="graduationYear"
                   value={year}
+                  defaultChecked={year==="2024"}
                   onChange={(e) => {
                     handleChange(e);
                     handleBlur(e);

@@ -10,10 +10,11 @@ const defaultFormData = {
   teamName: "",
   members: [],
   collegeName: "",
+  graduationYear: "2024"
 };
 
 const googleScriptUrl =
-  "https://script.google.com/macros/s/AKfycbwK3fV-fjjDLDd3vMs23TL4m0RsQnWXXfi6IYHRK-fbT35xxTuYuPruuKLPtNKhTvE4/exec";
+  "https://script.google.com/macros/s/AKfycbyxCBzI4Zv_qs8Iqhq_NTHOBNuAdNE36fzUyRCgpuh9CuKOs14QBsB6WfUcqYfTBCsP/exec";
 
 export const StepperProvider = ({ children }) => {
   const { closeForm } = useAppContext();

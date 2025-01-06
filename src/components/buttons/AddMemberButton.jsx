@@ -28,7 +28,7 @@ const AddMemberButton = () => {
 
   return (
       <button
-        className="bg-transparent border-black px-4 py-2"
+        className="bg-transparent border-black px-4 py-2 hover:underline"
         onClick={handleClick}
       >
         Add Member
