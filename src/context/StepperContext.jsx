@@ -11,7 +11,7 @@ const defaultFormData = {
   teamName: "",
   members: [],
   collegeName: "",
-  graduationYear: "2024"
+  graduationYear: "2024",
 };
 
 const googleScriptUrl =
@@ -49,6 +49,7 @@ export const StepperProvider = ({ children }) => {
   const onCancel = () => {
     setFormData({ ...defaultFormData });
     setDirection("down");
+    setErrors({})
     setTimeout(() => {
       setCurrentStep(0);
       setAnimatingStep(0);
@@ -88,31 +89,53 @@ export const StepperProvider = ({ children }) => {
       validate: () => {
         const member = formData.members[0];
         if (!member || !member.fullName || !member.email || !member.mobile) {
-          if(!member?.fullName){
+          if (!member?.fullName) {
             setErrors((prev) => ({
               ...prev,
               fullName: "Full Name is required.",
             }));
           }
-          if(!member?.email){
+          if (!member?.email) {
             setErrors((prev) => ({
               ...prev,
               email: "Email is required.",
             }));
           }
-          if(!member?.mobile){
+
+          if (!member?.mobile) {
             setErrors((prev) => ({
               ...prev,
               mobile: "Mobile is required.",
             }));
           }
-          if(!member?.graduationYear){
+
+          if (!member?.graduationYear) {
             setErrors((prev) => ({
               ...prev,
               graduationYear: "Graduation Year is required.",
             }));
           }
           return false;
+        } else {
+          if (
+            member?.email &&
+            !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+              member?.email
+            )
+          ) {
+            setErrors((prev) => ({
+              ...prev,
+              email: "Email pattern is wrong.",
+            }));
+            return false;
+          }
+          if (member?.mobile && !/^\d{10}$/.test(member?.mobile)) {
+            setErrors((prev) => ({
+              ...prev,
+              mobile: "Mobile number should be exactly 10 digits.",
+            }));
+            return false;
+          }
         }
         return true;
       },
@@ -151,7 +174,7 @@ export const StepperProvider = ({ children }) => {
         direction,
         setDirection,
         animatingStep,
-        setAnimatingStep
+        setAnimatingStep,
       }}
     >
       {children}

@@ -20,12 +20,14 @@ const AddMemberForm = ({ memberIndex }) => {
     setMember(formData.members[memberIndex] || {});
   }, [formData.members, memberIndex]);
 
-  useEffect(() => {inputRef.current?.focus()}, [])
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     const updatedMember = { ...member, [name]: value };
-    if(!updatedMember.graduationYear) updatedMember.graduationYear = '2024'
+    if (!updatedMember.graduationYear) updatedMember.graduationYear = "2024";
     setMember(updatedMember);
 
     // Update formData immediately
@@ -106,7 +108,8 @@ const AddMemberForm = ({ memberIndex }) => {
   return (
     <>
       <h1 className="font-semibold text-[20px] md:text-[32px] leading-[18px] md:leading-[25.06px] mb-16">
-        Team Member {memberIndex + 1}&nbsp;<span className="font-normal text-[14px]">(Rs. 250 per member)</span>
+        Team Member {memberIndex + 1}&nbsp;
+        <span className="font-bold text-[14px]">(Rs. 250 per member)</span>
       </h1>
       <form className="flex flex-col gap-10">
         <div className="flex flex-col gap-2">
@@ -157,7 +160,18 @@ const AddMemberForm = ({ memberIndex }) => {
             value={member.mobile || ""}
             onChange={handleChange}
             onBlur={handleBlur}
-            onKeyDown={handleKeyDown}
+            onKeyDown={(e) => {
+              // Prevent non-numeric input
+              if (
+                !/[0-9]/.test(e.key) &&
+                e.key !== "Backspace" &&
+                e.key !== "Tab"
+              ) {
+                e.preventDefault();
+              }
+            }}
+            type="tel"
+            maxLength={10}
             placeholder="Type your answer here"
             className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
@@ -167,6 +181,7 @@ const AddMemberForm = ({ memberIndex }) => {
             <span className="text-red-500 text-sm">{errors.mobile}</span>
           )}
         </div>
+
         <div className="flex flex-col gap-2">
           <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Graduation Year
@@ -178,7 +193,7 @@ const AddMemberForm = ({ memberIndex }) => {
                   type="radio"
                   name="graduationYear"
                   value={year}
-                  defaultChecked={year==="2024"}
+                  defaultChecked={year === "2024"}
                   onChange={(e) => {
                     handleChange(e);
                     handleBlur(e);
