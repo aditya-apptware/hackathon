@@ -27,6 +27,7 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
       <h2 className="font-bold mb-6 font-medium text-[18px] md:text-[32px] leading-[24px] md:leading-[45px]">
         Are you sure you want to submit the form?
       </h2>
+      <span>Note: Registraion fees for members will be collected after selection process!!</span>
       <div className="flex justify-center gap-2 md:gap-8 absolute right-4 md:right-10 bottom-4 md:bottom-10 font-medium text-[16px] md:text-[22px] leading-[12px] md:leading-[22px]">
         <button
           className="bg-[transparent] text-black px-4 py-2"

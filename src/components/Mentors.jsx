@@ -7,6 +7,8 @@ import Mentor6 from "../assets/pics/mentor-6.png";
 import Mentor7 from "../assets/pics/mentor-7.png";
 import Mentor8 from "../assets/pics/mentor-8.png";
 import Mentor9 from "../assets/pics/mentor-9.png";
+import Mentor10 from "../assets/pics/mentor-10.png";
+import Mentor11 from "../assets/pics/mentor-11.png";
 import { useAppContext } from "../context/AppContext";
 import { useEffect, useRef } from "react";
 
@@ -56,6 +58,17 @@ const mentors = [
     role: "Senior Java Developer",
     imageSource: Mentor9,
   },
+  {
+    name: "Tejas Acharekar",
+    role: "Senior DevOps Engineer",
+    imageSource: Mentor10,
+  },
+  {
+    name: "Prasad Ogale",
+    role: "UI/UX Designer",
+    imageSource: Mentor11,
+  },
+
 ];
 
 export const Mentors = () => {
