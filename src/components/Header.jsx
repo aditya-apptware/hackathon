@@ -17,15 +17,17 @@ export const Header = ({ navigateToRegisterationForm }) => {
     canvas.height = window.innerHeight;
 
     const letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const fontSize = 16;
+    const fontSize = 12;
     const columns = Math.floor(canvas.width / fontSize); // Number of columns
     const drops = Array(columns).fill(1); // Initial y positions for each column
 
     const draw = () => {
-      ctx.fillStyle = "rgba(50, 50, 50, 0.05)"; // Transparent dark background
+      // Set black background with a slight opacity for a fading trail effect
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#121212"; // Matrix green color
+      // Set text color and font
+      ctx.fillStyle = "#ABD40F"; // Matrix green color
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -40,9 +42,10 @@ export const Header = ({ navigateToRegisterationForm }) => {
         drops[i]++;
       }
 
+      // Slow down the animation by adding a delay
       setTimeout(() => {
-        requestAnimationFrame(draw); // Slow down the animation
-      }, 10); // Adjust the delay here (in milliseconds)
+        requestAnimationFrame(draw);
+      }, 10); // Adjust the delay (in milliseconds) for slower animation
     };
 
     draw();
@@ -75,8 +78,8 @@ export const Header = ({ navigateToRegisterationForm }) => {
         </div>
         <div className="subtitle w-[330px] text-center md:text-left md:w-full">
           <p className="max-w-[630px] text-[16px] md:text-[18px] lg:text-[22px] md:leading-[22px] lg:leading-[32px] font-normal text-white">
-            Gear up for an unforgettable coding experience.
-            Build. Innovate. Compete.
+            Gear up for an unforgettable coding experience. Build. Innovate.
+            Compete.
           </p>
         </div>
         <div className="w-full text-center md:text-left">

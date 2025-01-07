@@ -111,13 +111,13 @@ export const Mentors = () => {
 
   return (
     <div
-      className="flex flex-col gap-5 md:px-[50px] lg:px-[100px] py-[100px] md:py-[104px] mx-auto text-textLight px-[32px] max-w-[1296px]"
+      className="flex flex-col gap-5 md:px-[50px] lg:px-[100px] py-[100px md:py-[180px] mx-auto text-textLight px-[32px] max-w-[1296px]"
       ref={mentorsRef}
     >
       <div className="font-karmatic text-[38px] md:text-[58px] leading-[48px] md:leading-[77px] text-[#ABD40F] text-center md:text-left">
         Expert Guidance, Every Step of the Way
       </div>
-      <div className="subtitle w-[300px] mx-auto text-center md:text-left md:w-full">
+      <div className="font-robotoMono subtitle w-[300px] mx-auto text-center md:text-left md:w-full">
         <p className="max-w-[630px] text-[16px] md:text-[18px] lg:text-[22px] md:leading-[22px] lg:leading-[32px] font-normal text-white">
           Learn from the best! Apptware mentors will be there to guide, inspire,
           and help you turn your ideas into reality.

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
+import BackgroundImage from "../assets/images/countdown-bg.png";
 
 const targetDate = new Date("2025-01-17T00:00:00").getTime();
 
@@ -51,8 +52,13 @@ export const Countdown = () => {
 
   return (
     <div
-      className="font-robotoMono bg-black text-center px-4 py-8 md:py-20 relative"
-      style={{ backgroundImage: "url('../assets/images/countdownbg.svg')" }}
+      className="font-robotoMono bg-black text-center px-4 py-8 md:py-[180px] relative"
+      style={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
       ref={eventRef}
     >
       <div className="text-white text-4xl md:text-8xl font-bold tracking-wider w-full  mx-auto">

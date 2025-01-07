@@ -12,7 +12,7 @@ export const CodeBuildRepeat = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setVisibleIndex((prev) => (prev < totalLetters ? prev + 1 : 0)); // Reset to 0 for repetition
-    }, 500); // Adjust timing for animation speed
+    }, 300); // Adjust timing for animation speed
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [totalLetters]);

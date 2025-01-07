@@ -30,7 +30,7 @@ export const Questions = () => {
   };
 
   return (
-    <div className="text-[#abd40f] font-robotoMono py-[80px] px-[32px] md:px-[100px] bg-black max-w-[1200px] mx-auto">
+    <div className="text-[#abd40f] font-robotoMono py-[80px] px-[32px] md:px-[100px] md:py-[180px] bg-black max-w-[1200px] mx-auto">
       <div className="text-[48px] md:text-[128px] font-medium mb-10 text-center md:text-left">
         {"{/faq/]"}
       </div>

@@ -20,7 +20,7 @@ export const Participate = () => {
   };
 
   return (
-    <div className="px-6  md:px-[50px]lg:px-[100px] py-[80px] md:py-[100px] flex flex-col mx-auto md:flex-row gap-10 md:gap-[80px] bg-white font-spaceGrotesk max-w-[1296px]">
+    <div className="px-6  md:px-[50px]lg:px-[100px] py-[80px] md:py-[180px] flex flex-col mx-auto md:flex-row gap-10 md:gap-[80px] bg-white font-spaceGrotesk max-w-[1296px]">
       <div className="min-w-[300px] w-[50%] md:w-[calc(50%-80px)] mx-auto">
         <div className="my-[31px] md:my-0 w-[full] text-[36px] leading-[44px] md:h-[130px] lg:h-[200px] md:text-[3em] lg:text-[5em] md:leading-[60px] lg:leading-[100px] bg-black text-white">
           <span className="text-[#abd40f]">&gt;</span>Participate in teams

@@ -27,7 +27,7 @@ export const Foot = () => {
   const { contactRef } = useAppContext();
   return (
     <div
-      className="py-[80px] px-[32px] md:px-[96px] font-robotoMono text-[#f3f0e0] bg-black"
+      className="py-[80px] px-[32px] md:px-[96px] md:py-[180px] font-robotoMono text-[#f3f0e0] bg-black"
       ref={contactRef}
     >
       {/* Logo */}
