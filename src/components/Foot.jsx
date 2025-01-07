@@ -13,14 +13,14 @@ const footerItems = [
       { title: "Apptware Website", path: "https://apptware.com/" },
     ],
   },
-  {
-    title: "legal",
-    subs: [
-      { title: "Terms", path: "" },
-      { title: "Privacy", path: "" },
-      { title: "Brand Guidelines", path: "" },
-    ],
-  },
+  // {
+  //   title: "legal",
+  //   subs: [
+  //     { title: "Terms", path: "" },
+  //     { title: "Privacy", path: "" },
+  //     { title: "Brand Guidelines", path: "" },
+  //   ],
+  // },
 ];
 
 export const Foot = () => {
