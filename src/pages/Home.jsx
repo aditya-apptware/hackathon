@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Navbar } from "../components/Navbar";
 import { Participate } from "../components/Participate";
+import { ProblemStatements } from "../components/ProblemStatements";
 import { Questions } from "../components/Questions";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
@@ -41,7 +42,7 @@ export const Home = () => {
         <CodeBuildRepeat />
         <Countdown />
         <Mentors />
-        {/* <ProblemStatements /> */}
+        <ProblemStatements />
         {/* <Container /> */}
         <div className="w-full bg-white">
           <Participate />

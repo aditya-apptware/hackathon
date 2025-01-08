@@ -65,7 +65,7 @@ export const Countdown = () => {
         WHN - - WHR
       </div>
       <div className="text-white text-sm md:text-xl mt-2">
-        08:00 PM, 17th - 19th January
+        08:00 PM, 17th January - 12:00 PM, 19th January
       </div>
       <div className="max-w-[1022px] lg:w-[990px] md:w-[700px] w-[310px] mx-auto flex flex-wrap justify-center gap-[4px] md:gap-10 lg:gap-12 mt-5 font-karmatic text-[#ABD40F] text-2xl md:text-5xl lg:text-7xl border border-2 border-[#ABD40F] p-4 md:p-8">
         <span className="px-1">{padTwoDigits(timeRemaining.days)}</span>
@@ -83,7 +83,7 @@ export const Countdown = () => {
         </span>
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
-        Registration closes on 16th January 2024 ...
+        Registration closes on 16th January 2025 ...
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
         <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">

@@ -90,7 +90,7 @@ export const StepperProvider = ({ children }) => {
       component: <AddMemberForm memberIndex={0} />,
       validate: () => {
         const member = formData.members[0];
-        if (!member || !member.fullName || !member.email || !member.mobile) {
+        if (!member || !member.fullName || !member.email || !member.mobile || !member.expertise) {
           if (!member?.fullName) {
             setErrors((prev) => ({
               ...prev,
@@ -108,6 +108,13 @@ export const StepperProvider = ({ children }) => {
             setErrors((prev) => ({
               ...prev,
               mobile: "Mobile is required.",
+            }));
+          }
+
+          if (!member?.expertise) {
+            setErrors((prev) => ({
+              ...prev,
+              expertise: "Add few lines here.",
             }));
           }
 
@@ -148,7 +155,7 @@ export const StepperProvider = ({ children }) => {
         component: <AddMemberForm memberIndex={index + 1} />,
         validate: () => {
           const member = formData.members[index + 1];
-          if (!member || !member.fullName || !member.email || !member.mobile) {
+          if (!member || !member.fullName || !member.email || !member.mobile || !member.expertise) {
             // setError(`All fields for Team Member ${index + 2} are required.`);
             return false;
           }

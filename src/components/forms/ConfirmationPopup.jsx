@@ -11,8 +11,8 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
     if (members.length) {
       let hasError = false;
       members.forEach((member) => {
-        const { fullName, email, mobile, graduationYear } = member;
-        if (!fullName || !email || !mobile || !graduationYear) {
+        const { fullName, email, mobile, expertise, graduationYear } = member;
+        if (!fullName || !email || !mobile || !expertise || !graduationYear) {
           hasError = true;
         }
       });

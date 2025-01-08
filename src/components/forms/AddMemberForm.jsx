@@ -64,6 +64,8 @@ const AddMemberForm = ({ memberIndex }) => {
       (!value.trim() || !/^\d{10}$/.test(value))
     ) {
       error = "A valid 10-digit mobile number is required.";
+    } else if (name === "expertise" && !value.trim()) {
+      error = "Add few lines here.";
     } else if (name === "graduationYear" && !value.trim()) {
       error = "Select a graduation";
     }
@@ -101,6 +103,7 @@ const AddMemberForm = ({ memberIndex }) => {
       validateField("fullName", e.target.value) &&
         validateField("email", e.target.value) &&
         validateField("mobile", e.target.value) &&
+        validateField("expertise", e.target.value) &&
         validateField("graduationYear", e.target.value ?? "2024");
 
       const isValid = Object.values(errors).every((each) => !each.length);
@@ -184,6 +187,27 @@ const AddMemberForm = ({ memberIndex }) => {
           />
           {errors.mobile && (
             <span className="text-red-500 text-sm">{errors.mobile}</span>
+          )}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
+            Elaborate on Your Expertise and Achievements
+          </label>
+          <input
+            name="expertise"
+            value={member.expertise || ""}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
+            placeholder="Share your experiences and include your GitHub profile"
+            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            autoComplete="off"
+            required
+            ref={inputRef}
+          />
+          {errors.expertise && (
+            <span className="text-red-500 text-sm">{errors.expertise}</span>
           )}
         </div>
 

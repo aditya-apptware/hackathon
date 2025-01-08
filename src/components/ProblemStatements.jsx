@@ -46,7 +46,10 @@ export const ProblemStatements = () => {
       <div className="font-karmatic text-2xl md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8 md:mt-20">
         Problem Statements
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center md:self-start items-start">
+      <div className="text-[36px] leading-6">
+        Will be realesed on 16th Jan 2025!!!
+      </div>
+      {/* <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center md:self-start items-start">
         {statements.map((item, itemIndex) => {
           const bgColor = itemIndex % 2 === 0 ? "bg-black" : "bg-white";
           const textColor = itemIndex % 2 === 0 ? "text-white" : "text-black";
@@ -87,7 +90,7 @@ export const ProblemStatements = () => {
             <img src={ArrowRight} width={14} height={14} alt="arrow" />
           </span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
