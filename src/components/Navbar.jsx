@@ -4,7 +4,7 @@ import { useAppContext } from "../context/AppContext";
 import { Button } from "./Button";
 
 export const Navbar = () => {
-  const { openForm, eventRef, mentorsRef, contactRef } =
+  const { openForm, eventRef, mentorsRef, contactRef, problemStatementsRef } =
     useAppContext();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +13,7 @@ export const Navbar = () => {
 
   // Toggle the menu state when the hamburger icon is clicked
   const toggleMenu = () => {
+    console.log("i am clicked")
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -60,7 +61,7 @@ export const Navbar = () => {
           {/* Hamburger Icon for Mobile */}
           <div
             ref={menuButtonRef} // Add ref to hamburger button
-            className="md:hidden flex items-center cursor-pointer"
+            className="lg:hidden flex items-center cursor-pointer"
             onClick={toggleMenu}
           >
             <div className="space-y-2">
@@ -71,7 +72,7 @@ export const Navbar = () => {
           </div>
 
           {/* Navigation Menu for Large Screens */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ul className="flex lg:gap-[45px] md:gap-[20px] w-full">
               <Button
                 className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
@@ -88,11 +89,11 @@ export const Navbar = () => {
                 label="Mentors"
                 onClick={() => scrollIntoView(mentorsRef)}
               />
-              {/* <Button
+              <Button
                 className="text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Problem statements"
                 onClick={() => scrollIntoView(problemStatementsRef)}
-              /> */}
+              />
               <Button
                 className="lg:text-[18px] md:text-[16px] font-normal hover:text-default transition duration-300 block"
                 label="Contact"
@@ -106,7 +107,7 @@ export const Navbar = () => {
             ref={menuRef} // Add ref to menu container
             className={`${
               isMenuOpen ? "block" : "hidden"
-            } md:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
+            } lg:hidden absolute top-[58px] left-0 w-full bg-navbarBackground z-10`}
           >
             <ul className="flex flex-col gap-6 justify-around items-end py-4 px-4 w-full">
               <Button
@@ -133,14 +134,14 @@ export const Navbar = () => {
                   scrollIntoView(mentorsRef);
                 }}
               />
-              {/* <Button
+              <Button
                 className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Problem Statements"
                 onClick={() => {
                   setIsMenuOpen(false);
                   scrollIntoView(problemStatementsRef);
                 }}
-              /> */}
+              />
               <Button
                 className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Contact"
@@ -161,7 +162,7 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black lg:text-[18px] md:text-[16px]"
               label="Register Now"

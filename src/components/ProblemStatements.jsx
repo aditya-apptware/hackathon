@@ -40,13 +40,13 @@ export const ProblemStatements = () => {
   const { problemStatementsRef } = useAppContext();
   return (
     <div
-      className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-10 md:py-16 px-4 md:px-20"
+      className="relative flex flex-col gap-5 w-full bg-white font-robotoMono pt-10 pb-0 md:py-16 px-4 md:px-20"
       ref={problemStatementsRef}
     >
       <div className="font-karmatic text-2xl md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8 md:mt-20">
         Problem Statements
       </div>
-      <div className="text-[36px] leading-6">
+      <div className="text-[16px] lg:text-[36px] leading-6">
         Will be realesed on 16th Jan 2025!!!
       </div>
       {/* <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center md:self-start items-start">

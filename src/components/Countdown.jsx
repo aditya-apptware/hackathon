@@ -52,7 +52,7 @@ export const Countdown = () => {
 
   return (
     <div
-      className="font-robotoMono bg-black text-center px-4 py-8 md:py-[180px] relative"
+      className="font-robotoMono bg-black text-center px-4 py-[100px] md:py-[180px] relative"
       style={{
         backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: "cover",
