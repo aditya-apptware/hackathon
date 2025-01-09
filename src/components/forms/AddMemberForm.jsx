@@ -43,8 +43,7 @@ const AddMemberForm = ({ memberIndex }) => {
     if (e.relatedTarget && e.relatedTarget.tagName === "BUTTON") {
       return; // Don't validate if focus is shifting to a button
     }
-  
-  
+
     const { name, value } = e.target;
     validateField(name, value);
   };
@@ -194,16 +193,17 @@ const AddMemberForm = ({ memberIndex }) => {
           <label className="font-medium text-[18px] md:text-[25px] leading-[18px] md:leading-[25.06px]">
             Elaborate on Your Expertise and Achievements
           </label>
-          <input
+          <textarea
             name="expertise"
             value={member.expertise || ""}
             onChange={handleChange}
             onBlur={handleBlur}
             onKeyDown={handleKeyDown}
             placeholder="Share your experiences and include your GitHub profile"
-            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
+            className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent resize-none h-[60px]"
             autoComplete="off"
             required
+            rows="3"
           />
           {errors.expertise && (
             <span className="text-red-500 text-sm">{errors.expertise}</span>
@@ -233,11 +233,11 @@ const AddMemberForm = ({ memberIndex }) => {
               </div>
             ))}
           </div>
-          {errors.graduationYear && (
+          {/* {errors.graduationYear && (
             <span className="text-red-500 text-sm">
               {errors.graduationYear}
             </span>
-          )}
+          )} */}
         </div>
       </form>
     </>
