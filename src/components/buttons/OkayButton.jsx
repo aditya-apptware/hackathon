@@ -2,9 +2,12 @@ import React from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const OkButton = () => {
-  const { setCurrentStep } = useStepperContext();
+  const { setCurrentStep, setAnimatingStep } = useStepperContext();
 
-  const handleClick = () => setCurrentStep((prev) => prev + 1);
+  const handleClick = () => {
+    setCurrentStep((prev) => prev + 1);
+    setAnimatingStep((prev) => prev + 1);
+  };
 
   return (
     <button

@@ -1,8 +1,16 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useStepperContext } from "../../context/StepperContext";
 
 const ConfirmationPopup = ({ onCancel, onConfirm }) => {
   const { formData } = useStepperContext();
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const handleFormSubmission = () => {
+    setIsDisabled(true);
+    if (isFormValid) {
+      onConfirm();
+    }
+  };
 
   const isFormValid = useMemo(() => {
     const { teamName, collegeName, members } = formData;
@@ -40,8 +48,8 @@ const ConfirmationPopup = ({ onCancel, onConfirm }) => {
         </button>
         <button
           className="bg-black text-white px-4 py-3 disabled:bg-gray-600 hover:bg-opacity-[0.8] disabled:hover:bg-opacity-[1]"
-          onClick={onConfirm}
-          disabled={!isFormValid}
+          onClick={handleFormSubmission}
+          disabled={!isFormValid || isDisabled}
         >
           Yes
         </button>

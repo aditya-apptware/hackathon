@@ -15,7 +15,7 @@ const defaultFormData = {
 };
 
 const googleScriptUrl =
-  "https://script.google.com/macros/s/AKfycbyxCBzI4Zv_qs8Iqhq_NTHOBNuAdNE36fzUyRCgpuh9CuKOs14QBsB6WfUcqYfTBCsP/exec";
+  "https://script.google.com/macros/s/AKfycbz9KIGw_S-MHZbZrAQDEDkq2v4qZ6idMEvNMfEpbgNiXOX8lJMEfJZ9Ffb0VUc2kDa9/exec";
 
 export const StepperProvider = ({ children }) => {
   const { closeForm, setLoading } = useAppContext();

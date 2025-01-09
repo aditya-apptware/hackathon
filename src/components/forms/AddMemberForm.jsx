@@ -204,7 +204,6 @@ const AddMemberForm = ({ memberIndex }) => {
             className="md:w-[648.05px] placeholder-[#929090] border-b-[#313030] border-b p-2 outline-none bg-transparent focus:bg-transparent active:bg-transparent"
             autoComplete="off"
             required
-            ref={inputRef}
           />
           {errors.expertise && (
             <span className="text-red-500 text-sm">{errors.expertise}</span>
