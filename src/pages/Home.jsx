@@ -10,6 +10,7 @@ import { ProblemStatements } from "../components/ProblemStatements";
 import { Questions } from "../components/Questions";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
+import { About } from "../components/About";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
@@ -39,7 +40,8 @@ export const Home = () => {
         <Header />
       </div>
       <main className="bg-black">
-        <CodeBuildRepeat />
+        {/* <CodeBuildRepeat /> */}
+        <About />
         <Countdown />
         <Mentors />
         <ProblemStatements />
