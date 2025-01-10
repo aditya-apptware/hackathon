@@ -11,6 +11,7 @@ import { Questions } from "../components/Questions";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
 import { About } from "../components/About";
+import { Topics } from "../components/Topcis";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
@@ -47,7 +48,8 @@ export const Home = () => {
         <ProblemStatements />
         {/* <Container /> */}
         <div className="w-full bg-white">
-          <Participate />
+          <Topics />
+          {/* <Participate /> */}
         </div>
         <Questions />
         {/* <JoinUs /> */}
