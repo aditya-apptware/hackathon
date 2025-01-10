@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
-import { Button } from "./Button";
 import { useAppContext } from "../context/AppContext";
-import HeaderSVG from "../assets/images/header.svg";
+import { Button } from "./Button";
 
 export const Header = ({ navigateToRegisterationForm }) => {
   const { openForm } = useAppContext();

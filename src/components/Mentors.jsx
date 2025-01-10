@@ -1,9 +1,11 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import Mentor1 from "../assets/pics/mentor-1.png";
+import Mentor10 from "../assets/pics/mentor-10.png";
+import Mentor11 from "../assets/pics/mentor-11.png";
 import Mentor2 from "../assets/pics/mentor-2.png";
 import Mentor3 from "../assets/pics/mentor-3.png";
 import Mentor4 from "../assets/pics/mentor-4.png";
@@ -12,10 +14,7 @@ import Mentor6 from "../assets/pics/mentor-6.png";
 import Mentor7 from "../assets/pics/mentor-7.png";
 import Mentor8 from "../assets/pics/mentor-8.png";
 import Mentor9 from "../assets/pics/mentor-9.png";
-import Mentor10 from "../assets/pics/mentor-10.png";
-import Mentor11 from "../assets/pics/mentor-11.png";
 import { useAppContext } from "../context/AppContext";
-import { useEffect, useRef } from "react";
 
 const mentors = [
   {
@@ -77,7 +76,6 @@ const mentors = [
 
 export const Mentors = () => {
   const { mentorsRef } = useAppContext();
-  const scrollRef = useRef(null);
   return (
     <div
       className="flex flex-col gap-5 md:px-[50px] lg:px-[100px] py-[100px] md:py-[180px] mx-auto text-textLight px-[32px] max-w-[1296px]"

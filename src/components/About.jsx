@@ -5,10 +5,10 @@ export const About = () => {
   return (
     <div className="relative max-w-[988px] mx-auto mt-[-39px] md:mt-[-78px] lg:mt-[-103px] z-50 pb-[100px] md:pb-[200px]">
       <div className="max-w-[889px] mx-auto mb-[100px] lg:mb-[150px]">
-        <img src={AboutSVG} width={"100%"} height={103} />
+        <img src={AboutSVG} width={"100%"} height={103} alt="about svg" />
       </div>
       <div className="absolute bottom-0 right-0 w-[100px] md:w-[223px] md:max-w-[223px] max-h-[223px] absolute z-50">
-        <img src={PixelPNG} width={"100%"} />
+        <img src={PixelPNG} width={"100%"} alt="pixel svg" />
       </div>
       <div className="px-8 md:px-[50px] lg:px-[100px] font-robotoMono text-center md:text-left text-white font-normal text-[14px] leading-[20px] lg:text-[22px] lg:leading-[32px] capitalize">
       <div>Ab{"{}"}ut Hackathon</div>

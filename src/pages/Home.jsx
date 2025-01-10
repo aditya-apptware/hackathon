@@ -1,18 +1,16 @@
 import { useEffect } from "react";
-import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
+import { About } from "../components/About";
 import { Countdown } from "../components/Countdown";
 import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Navbar } from "../components/Navbar";
-import { Participate } from "../components/Participate";
-import { ProblemStatements } from "../components/ProblemStatements";
+import { PriceAndIncentives } from "../components/PriceAndIncentives";
 import { Questions } from "../components/Questions";
+import { Topics } from "../components/Topcis";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
-import { About } from "../components/About";
-import { Topics } from "../components/Topcis";
-import { PriceAndIncentives } from "../components/PriceAndIncentives";
+import { ProblemStatements } from "../components/ProblemStatements";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
