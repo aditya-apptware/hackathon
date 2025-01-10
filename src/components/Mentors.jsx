@@ -14,6 +14,11 @@ import Mentor6 from "../assets/pics/mentor-6.png";
 import Mentor7 from "../assets/pics/mentor-7.png";
 import Mentor8 from "../assets/pics/mentor-8.png";
 import Mentor9 from "../assets/pics/mentor-9.png";
+import Mentor10 from "../assets/pics/mentor-10.png";
+import Mentor11 from "../assets/pics/mentor-11.png";
+import Mentor12 from "../assets/pics/mentor-12.png";
+import Mentor13 from "../assets/pics/mentor-13.png";
+import Mentor14 from "../assets/pics/mentor-14.png";
 import { useAppContext } from "../context/AppContext";
 
 const mentors = [
@@ -71,6 +76,21 @@ const mentors = [
     name: "Prasad Ogale",
     role: "Product Designer",
     imageSource: Mentor11,
+  },
+  {
+    name: "Saurabh Thakur",
+    role: "Product Designer",
+    imageSource: Mentor12,
+  },
+  {
+    name: "Sanyogita Patwardhan",
+    role: "Visual Designer",
+    imageSource: Mentor13,
+  },
+  {
+    name: "Dipali Sunkersett",
+    role: "Head of Engineering",
+    imageSource: Mentor14,
   },
 ];
 
