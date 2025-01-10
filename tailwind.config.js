@@ -25,6 +25,10 @@ module.exports = {
         karmatic: ['"Karmatic Arcade"', "sans-serif"],
         spaceGrotesk: ["Space Grotesk", "sans-serif"],
       },
+      screens: {
+        "3xl": "1728px",
+        "4xl": "2560px",
+      },
     },
   },
   plugins: [],
