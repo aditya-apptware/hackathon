@@ -1,15 +1,17 @@
 import { useEffect } from "react";
-import { CodeBuildRepeat } from "../components/CodeBuildRepeat";
+import { About } from "../components/About";
 import { Countdown } from "../components/Countdown";
 import { Foot } from "../components/Foot";
 import { Header } from "../components/Header";
 import { Mentors } from "../components/Mentors";
 import { Navbar } from "../components/Navbar";
-import { Participate } from "../components/Participate";
-import { ProblemStatements } from "../components/ProblemStatements";
+import { PriceAndIncentives } from "../components/PriceAndIncentives";
 import { Questions } from "../components/Questions";
+import { Topics } from "../components/Topcis";
 import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
+import { ProblemStatements } from "../components/ProblemStatements";
+import { Schedule } from "../components/Schedule";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
@@ -39,14 +41,18 @@ export const Home = () => {
         <Header />
       </div>
       <main className="bg-black">
-        <CodeBuildRepeat />
+        {/* <CodeBuildRepeat /> */}
         <Countdown />
-        <Mentors />
-        <ProblemStatements />
-        {/* <Container /> */}
+        <About />
         <div className="w-full bg-white">
-          <Participate />
+          <Topics />
+          {/* <Participate /> */}
         </div>
+        <PriceAndIncentives />
+        <Schedule/>
+        <Mentors />
+        {/* <ProblemStatements /> */}
+        {/* <Container /> */}
         <Questions />
         {/* <JoinUs /> */}
       </main>
