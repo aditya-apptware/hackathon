@@ -69,7 +69,7 @@ const mentors = [
   },
   {
     name: "Prasad Ogale",
-    role: "UI/UX Designer",
+    role: "Product Designer",
     imageSource: Mentor11,
   },
 ];

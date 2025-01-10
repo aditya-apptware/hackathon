@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.c4e23c8e.css",
+    "main.js": "./static/js/main.ca144a2f.js",
+    "static/media/mentor-3.png": "./static/media/mentor-3.337452153900eceba11a.png",
+    "static/media/mentor-5.png": "./static/media/mentor-5.8a249fda13eb93131f1f.png",
+    "static/media/mentor-1.png": "./static/media/mentor-1.d8cf82ed1d92fee9ea2e.png",
+    "static/media/mentor-8.png": "./static/media/mentor-8.acd44df7a11269d727ff.png",
+    "static/media/mentor-9.png": "./static/media/mentor-9.9d58889b5576c0fe6055.png",
+    "static/media/countdown-bg.png": "./static/media/countdown-bg.75d77dacc2139da3f9af.png",
+    "static/media/mentor-6.png": "./static/media/mentor-6.7cd4c4884186ddd5bf39.png",
+    "static/media/mentor-2.png": "./static/media/mentor-2.98519ba381b010ceca3d.png",
+    "static/media/mentor-7.png": "./static/media/mentor-7.825ede2f694e4b60029c.png",
+    "static/media/mentor-11.png": "./static/media/mentor-11.10683520136f8b938445.png",
+    "static/media/mentor-10.png": "./static/media/mentor-10.3febc9e02f1f29f24561.png",
+    "static/media/mentor-4.png": "./static/media/mentor-4.352c901bc985497b8a97.png",
+    "static/media/formbg.png": "./static/media/formbg.b3fb8f0ae179005a9df5.png",
+    "static/media/ka1.ttf": "./static/media/ka1.5df8cd545dcd2db2bf8b.ttf",
+    "static/media/codecraft.svg": "./static/media/codecraft.3cfe41ed547d8c1b64aa0ee967170c0e.svg",
+    "static/media/logo.svg": "./static/media/logo.0859742c63c9e0d733e9acb4a8378660.svg",
+    "static/media/footer.svg": "./static/media/footer.de488f851d25cb7eebe5442dfd9ecdc5.svg",
+    "index.html": "./index.html",
+    "static/media/about.svg": "./static/media/about.71f1792e1cd2bcf1fdc1437cff9ba33b.svg",
+    "static/media/arrow-right.svg": "./static/media/arrow-right.65c460212f56d311db5ebeafaa912504.svg",
+    "static/media/closeRegisterPopup.svg": "./static/media/closeRegisterPopup.b7c07f688d60dfa752c0c08d06f0e5e3.svg",
+    "static/media/arrow_down.svg": "./static/media/arrow_down.cc6ad68f161b6c9aa18ef001932f21fa.svg",
+    "static/media/arrow_up.svg": "./static/media/arrow_up.584b198b837558a74c1c8b6148105b89.svg",
+    "static/media/topics-bottom-box.svg": "./static/media/topics-bottom-box.1b3b5520604590d040f08f16a0687059.svg",
+    "static/media/price-inventives-top-box.svg": "./static/media/price-inventives-top-box.1b65ef723ea9c754eb6a91092f0e1b58.svg",
+    "static/media/topics-top-box.svg": "./static/media/topics-top-box.0b33d6596b212f511d5269977989046a.svg",
+    "main.c4e23c8e.css.map": "./static/css/main.c4e23c8e.css.map",
+    "main.ca144a2f.js.map": "./static/js/main.ca144a2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4e23c8e.css",
+    "static/js/main.ca144a2f.js"
+  ]
+}

@@ -43,7 +43,7 @@ export const Navbar = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <div className="flex w-full mx-auto justify-center sticky top-0 z-[99] bg-black">
+    <div className="flex w-full mx-auto justify-center sticky top-0 z-[100] bg-black">
       <div className="relative bg-black py-3 px-4 lg:px-[80px] w-full mx-auto z-1">
         <div
           className={`font-robotoMono flex items-center justify-between h-[58px] w-full bg-black text-textLight rounded-xl`}

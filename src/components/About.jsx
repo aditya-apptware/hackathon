@@ -7,7 +7,7 @@ export const About = () => {
       <div className="max-w-[889px] mx-auto mb-[100px] lg:mb-[150px]">
         <img src={AboutSVG} width={"100%"} height={103} alt="about svg" />
       </div>
-      <div className="absolute bottom-0 right-0 w-[100px] md:w-[223px] md:max-w-[223px] max-h-[223px] absolute z-50">
+      <div className="absolute bottom-0 right-0 w-[100px] md:w-[223px] md:max-w-[223px] max-h-[223px] z-50">
         <img src={PixelPNG} width={"100%"} alt="pixel svg" />
       </div>
       <div className="px-8 md:px-[50px] lg:px-[100px] font-robotoMono text-center md:text-left text-white font-normal text-[14px] leading-[20px] lg:text-[22px] lg:leading-[32px] capitalize">

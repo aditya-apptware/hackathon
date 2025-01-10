@@ -58,6 +58,7 @@ export const Countdown = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment:"fixed"
       }}
       ref={eventRef}
     >
