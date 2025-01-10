@@ -4,8 +4,6 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Mentor1 from "../assets/pics/mentor-1.png";
-import Mentor10 from "../assets/pics/mentor-10.png";
-import Mentor11 from "../assets/pics/mentor-11.png";
 import Mentor2 from "../assets/pics/mentor-2.png";
 import Mentor3 from "../assets/pics/mentor-3.png";
 import Mentor4 from "../assets/pics/mentor-4.png";
