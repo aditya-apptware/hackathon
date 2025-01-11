@@ -2,9 +2,9 @@
 export const Schedule=()=>{
     return(
         <section className="flex justify-center bg-white">
-            <section className="flex md:flex-row flex-col-reverse xl:px-[150px] md:px-[74px] px-[20px] md:py-[100px] py-[50px] xl:w-[1280px] md:w-[768px] w-auto gap-[100px] md:gap-0">
+            <section className="flex md:flex-row flex-col-reverse xl:px-[150px] md:px-[74px] px-[20px] md:py-[100px] py-[50px] xl:w-[1280px] md:w-[768px] w-auto gap-[140px] md:gap-0">
             <div className="relative flex flex-col items-start xl:text-[20px] md:w-3/5 md:pl-[30px] pl-9 xl:gap-[67px] md:gap-[50px] gap-8">
-            <div className='absolute bg-black left-0 w-0.5 xl:h-[820px] h-[750px]'></div>
+            <div className='absolute bg-black left-0 w-0.5 xl:h-[820px] h-[790px]'></div>
                 <div className="relative flex flex-col gap-5">
                     <div className='size-3 bg-default absolute md:left-[-35px] left-[-41px] top-[8px]'></div>
                     <h2 className="font-karmatic">Day 1: January 17th, 2025</h2>
@@ -52,8 +52,8 @@ export const Schedule=()=>{
                     </div>
                 </div>
             </div>
-            <div className="bg-black font-robotoMono flex flex-col p-2 md:h-[147px] h-[100px] md:w-2/5 md:leading-10 gap-7">
-                <div className="text-default xl:text-[36px] text-[24px]">
+            <div className="bg-black font-robotoMono flex flex-col p-2 md:h-[147px] h-[130px] w-[288px] md:w-2/5 md:leading-10 gap-7">
+                <div className="text-default xl:text-[36px] text-[26px] w-[315px] md:w-auto">
                 &gt;event schedule: Apptware Hackathon 2025
                 </div>
                 <p className="md:leading-7">Prepare to innovate, collaborate, and bring your ideas to life. Let's make this hackathon extraordinary!</p>
