@@ -13,6 +13,13 @@ const footerItems = [
       { title: "Apptware Website", path: "https://apptware.com/" },
     ],
   },
+  {
+    title: "Contact us",
+    subs: [
+      { title: "events@apptware.com", path: "mailto:events@apptware.com" },
+      { title: "+91-9307473635", path: "tel:+91 9307473635" },
+    ],
+  },
   // {
   //   title: "legal",
   //   subs: [
