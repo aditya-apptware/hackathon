@@ -52,7 +52,7 @@ export const Schedule=()=>{
                     </div>
                 </div>
             </div>
-            <div className="bg-black font-robotoMono flex flex-col p-2 md:h-[147px] h-[130px] w-[288px] md:w-2/5 md:leading-10 gap-7">
+            <div className="bg-black font-robotoMono flex flex-col p-2 md:h-[147px] h-[130px] w-[300px] md:w-2/5 md:leading-10 gap-7">
                 <div className="text-default xl:text-[36px] text-[26px] w-[315px] md:w-auto">
                 &gt;event schedule: Apptware Hackathon 2025
                 </div>

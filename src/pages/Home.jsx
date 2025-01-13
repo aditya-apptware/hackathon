@@ -50,8 +50,8 @@ export const Home = () => {
         </div>
         <PriceAndIncentives />
         <Schedule/>
+        <ProblemStatements />
         <Mentors />
-        {/* <ProblemStatements /> */}
         {/* <Container /> */}
         <Questions />
         {/* <JoinUs /> */}
