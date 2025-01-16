@@ -163,11 +163,10 @@ export const Navbar = () => {
 
           {/* Desktop Button */}
           <div className="hidden lg:block">
-            {/* <Button
-              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black lg:text-[18px] md:text-[16px]"
-              label="Register Now"
-              onClick={openForm}
-            /> */}
+            <Button
+              className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none cursor-default opacity-50 lg:text-[18px] md:text-[16px]"
+              label="Registration Closed"
+            />
           </div>
         </div>
       </div>
