@@ -49,7 +49,7 @@ export const PriceAndIncentives = () => {
         </div>
         <div className="md:flex font-robotoMono text-center justify-center">
           {obj.map((each) => {
-            const { perks, amount, perAmount, place, plus, team } = each;
+            const { perks, amount, place, plus, team } = each;
 
             return (
               <div className="w-full md:w-[180px] lg:w-[241px] xl:w-[302px] xl:h-[308px] h-[250px] pb-5 text-white flex flex-col gap-[60px] md:gap-[14px] lg:gap-[13px] xl:gap-[10px] justify-center md:border-r border-b md:border-b-0 border-white border-opacity-[40%] md:last:border-none">
