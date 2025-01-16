@@ -1,5 +1,6 @@
 import FootLogo from "../assets/images/footer.svg";
 import { useAppContext } from "../context/AppContext";
+import ApptwareLogo from '../assets/images/apptwareLogo.svg';
 
 const footerItems = [
   {
@@ -44,6 +45,7 @@ export const Foot = () => {
 
       {/* Rights Section */}
       <div className="w-full text-center md:text-right mt-[50px] text-4 leading-[26px] uppercase">
+        <div className="flex md:justify-end justify-center mb-2"><img src={ApptwareLogo} alt="logo" width={180} height={100} className=""/></div>        
         <div>© 2024 Apptware Solutions LLP</div>
         <div>All Rights Reserved.</div>
       </div>

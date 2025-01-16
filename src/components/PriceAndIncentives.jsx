@@ -49,10 +49,10 @@ export const PriceAndIncentives = () => {
         </div>
         <div className="md:flex font-robotoMono text-center justify-center">
           {obj.map((each) => {
-            const { perks, amount, perAmount, place, plus, team } = each;
+            const { perks, amount, place, plus, team } = each;
 
             return (
-              <div className="w-full md:w-[180px] lg:w-[241px] xl:w-[302px] xl:h-[308px] h-[250px] pb-5 text-white flex flex-col gap-[60px] md:gap-[39px] lg:gap-[53px] xl:gap-[67px] justify-center md:border-r border-b md:border-b-0 border-white xl:border-opacity-[40%] md:last:border-none">
+              <div className="w-full md:w-[180px] lg:w-[241px] xl:w-[302px] xl:h-[308px] h-[250px] pb-5 text-white flex flex-col gap-[60px] md:gap-[14px] lg:gap-[13px] xl:gap-[10px] justify-center md:border-r border-b md:border-b-0 border-white border-opacity-[40%] md:last:border-none">
                 <div className="flex flex-col gap-[12px] md:gap-[15px] lg:gap-[20px] xl:gap-[25px] h-[30px] md:h-[67px] lg:h-[90px] xl:h-[113px]">
                   <div className="text-[30px] md:text-[12px] lg:text-[16px] xl:text-[20px] leading-[20px] md:leading-[12px] lg:leading-[16px] xl:leading-[20px]">
                     {place}
@@ -62,8 +62,8 @@ export const PriceAndIncentives = () => {
                   </div>
                   <div className="text-[16px] md:text-[12px] lg:text-[16px] xl:text-[20px] leading-[20px] md:leading-[12px] lg:leading-[16px] xl:leading-[20px]">{team}</div>
                 </div>
-                <div className="opacity-[60%] text-[17px] md:text-[12px] lg:text-[16px] xl:text-[20px] leading-[20px] md:leading-[12px] lg:leading-[16px] xl:leading-[20px] h-[16px] md:h-[36px] lg:h-[48px] xl:h-[61px]">
-                  <div>{perAmount}</div>
+                <div className="opacity-[60%] text-[17px] md:text-[12px] lg:text-[16px] xl:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[26px] xl:leading-[30px] h-[16px] md:h-[36px] lg:h-[48px] xl:h-[81px]">
+                  {/* <div>{perAmount}</div> */}
                   <div>{plus}</div>
                   <div>{perks}</div>
                 </div>
