@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAppContext } from "../context/AppContext";
+import { Button } from "./Button";
 
 export const Header = ({ navigateToRegisterationForm }) => {
   const { openForm } = useAppContext();
@@ -87,11 +88,11 @@ export const Header = ({ navigateToRegisterationForm }) => {
             Pune, Bharat
           </p>
         </div>
-        <div className="w-[167px] mx-auto text-center md:text-left">
+        <div className="w-auto mx-auto text-white font-karmatic text-[24px] text-center">
+          Registration Closed
           {/* <Button
-            className="bg-white text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold hover:bg-default"
-            label="Register Now"
-            onClick={openForm}
+            className=" text-black border-none px-[18px] py-3 rounded-none text-[18px] font-bold opacity-50 bg-default"
+            label="Registration Closed"
           /> */}
         </div>
       </div>
