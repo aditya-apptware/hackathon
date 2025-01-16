@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import BackgroundImage from "../assets/images/countdown-bg.png";
 
-const targetDate = new Date("2025-01-17T00:00:00").getTime();
+const targetDate = new Date("2025-01-17T20:00:00").getTime();
 
 function padTwoDigits(number) {
   return number.toString().padStart(2, "0");
@@ -84,7 +84,7 @@ export const Countdown = () => {
         </span>
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
-        Registration closes on 16th January 2025 ...
+        Registration closes 7:00 PM on 16th January 2025 ...
       </div>
       <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
         <div className="mt-6 text-[#ABD40F] text-sm md:text-lg px-10">
