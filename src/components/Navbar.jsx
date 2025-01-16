@@ -150,24 +150,24 @@ export const Navbar = () => {
                   scrollIntoView(contactRef);
                 }}
               />
-              <Button
+              {/* <Button
                 className="text-[18px] font-normal hover:text-default transition duration-300 block"
                 label="Register"
                 onClick={() => {
                   setIsMenuOpen(false);
                   openForm();
                 }}
-              />
+              /> */}
             </ul>
           </div>
 
           {/* Desktop Button */}
           <div className="hidden lg:block">
-            <Button
+            {/* <Button
               className="bg-transparent text-[#ABD40F] border border-[#ABD40F] px-[18px] py-3 rounded-none hover:bg-default hover:text-black lg:text-[18px] md:text-[16px]"
               label="Register Now"
               onClick={openForm}
-            />
+            /> */}
           </div>
         </div>
       </div>

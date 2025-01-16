@@ -169,7 +169,7 @@ export const ProblemStatements = () => {
         <div className="font-karmatic text-[38px] md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8">
           Problem Statements
         </div>
-        <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center md:self-start items-start">
+        <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-12 self-center  md:self-start items-start">
           {statements.map((item, itemIndex) => {
             const bgColor = itemIndex % 2 === 0 ? "bg-black" : "bg-white";
             const textColor = itemIndex % 2 === 0 ? "text-white" : "text-black";
@@ -177,7 +177,7 @@ export const ProblemStatements = () => {
             return (
               <div
                 key={itemIndex}
-                className={`${bgColor} ${textColor} min-w-[233px] md:max-w-[328px] max-h-[192px] cursor-pointer border border-black p-4 md:p-6 flex flex-col justify-between w-full md:w-[calc(50%-24px)]`}
+                className={`${bgColor} ${textColor} min-w-[233px] md:max-w-[328px] max-h-[192px] min-h-[118px] md:min-h-[192px] lg:min-h-[182px] cursor-pointer border border-black p-4 md:p-6 flex flex-col justify-between w-full md:w-[calc(50%-24px)]`}
                 style={{
                   transform: `rotate(${
                     window.innerWidth >= 768 ? rotateValue : 0
@@ -209,7 +209,9 @@ export const ProblemStatements = () => {
               className="absolute size-10 top-4 right-2 text-black"
               onClick={closePopup}
             >
-              ×
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
             </button>
             <EachProblemStatement statement={selectedStatement} />
           </div>
