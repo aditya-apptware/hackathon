@@ -11,11 +11,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop a virtual interviewer powered by Conversational AI. This AI agent will interact with candidates in real-time, analyzing their CVs and generating personalized interview questions. The system should assess candidate responses, providing insightful analytics at the end of the session. Participants will focus on creating an engaging, intelligent, and responsive AI interviewer that mimics a real interview experience.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -25,11 +21,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop a real-time monitoring application to assist in interviews by tracking user activity during the session. This application should capture and analyze various user behaviors, such as attention levels, engagement, and interaction patterns. The goal is to provide valuable insights into candidate behavior, enhancing the interview process for both interviewers and candidates.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -39,11 +31,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Design an application to enhance the safety of specially abled(deaf and mute) employees within the organization for those who have access to a smart phone. The application will provide managers with an overview of employee locations and enable communication through messages and notifications. Employees will have the ability to send emergency alerts to their team and managers. The system will ensure precise location tracking within company premises or while using company transportation, automatically ceasing tracking once the employee reaches home.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -53,11 +41,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop an algorithmic trading platform that allows users to create, customize, and execute their own trading algorithms. The platform should include a robust back-testing feature, enabling users to test their strategies on historical data to optimize performance before deploying them in real-time markets.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -67,11 +51,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Create an AI-powered automatic website builder that generates personalized websites based on user instructions. The AI will select themes, images, fonts, and other design elements tailored to user preferences. Users can either provide their own content or allow the AI to generate it automatically. The platform should also offer flexibility for users to modify AI-generated components to meet their specific needs and preferences.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+   
   },
   {
     statement:
@@ -81,11 +61,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop an AI-driven system that analyzes crop images and environmental data to predict potential disease outbreaks. This system will empower farmers by providing actionable insights and treatment recommendations, helping to mitigate risks and prevent significant yield losses. The solution should be accessible via both mobile and web-based applications, utilizing machine learning algorithms for accurate disease identification and management.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -95,11 +71,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop a multi-operating system (OS) daemon that tracks user activities every 15 seconds. This daemon should run seamlessly across various platforms (Windows, macOS, Linux) and collect data on user interactions. A centralized dashboard will display real-time analytics, offering insights into user behavior and system usage.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -109,11 +81,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop a platform that enables users to co-own real estate properties by making minimum investments. This platform will democratize real estate ownership, allowing users to pool resources and invest in properties they couldn't afford individually. The platform will provide features for property listing, investment tracking, and returns management, fostering transparency and ease of access to the real estate market.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -123,11 +91,7 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Develop a self time tracking system that allows users to track their daily tasks and productivity. The system should offer daily, monthly, and yearly summaries of tasks completed. A Chrome extension will be integrated to enable users to easily add tasks and mark them as complete directly from their browser, without needing to log into the web application. This system will help users monitor their time management, improve productivity, and generate reports for self-reflection. Additionally, the platform will allow users to share their tasks with others on a view-only basis, providing insight into what colleagues or friends are working on, but only if they are connected or granted access by the user.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
   {
     statement:
@@ -137,12 +101,18 @@ const statements = [
     rotate: 0,
     top: 0,
     description:"Create a web and mobile application that allows users to make small collaborative investments. The funds collected from these investments will be pooled together and given as loans to individuals or businesses in need. The interest generated from the loans will be distributed among the investors/contributors based on their share in the pool, while the app or a loan collection agent will retain a small share for managing the process.",
-    challenges:[
-      "Accurate CV parsing and information extraction.",
-      "Developing a conversational AI that can adapt dynamically to different candidates.",
-      "Ensuring the AI can provide meaningful and actionable feedback."
-    ]
+    
   },
+  {
+    statement:
+      "Automated Sales Outreach Platform with Personalized Email Generation",
+    abbr: "PS11",
+    title: "Problem Statement 11",
+    rotate: 0,
+    top: 0,
+    description:"Develop a platform that automates sales outreach by generating personalized email pitches for prospects. The platform will analyze LinkedIn profiles, company websites, and other available data to create tailored sales pitches. Users can upload a list of company names or prospect data via an Excel sheet. The system will extract relevant information about the companies and their key contacts, compare it with Apptware's services, and generate customized sales emails. Users can review, edit, or send these emails directly from the web app, streamlining the sales process and increasing engagement with prospects.",
+    
+  }
 ];
 
 export const ProblemStatements = () => {
@@ -163,7 +133,7 @@ export const ProblemStatements = () => {
   return (
     <>
       <div
-        className="relative flex flex-col gap-5 w-full bg-white font-robotoMono pt-10 md:py-16 px-4 md:px-20 md:text-left text-center"
+        className="relative flex flex-col gap-5 w-full bg-white font-robotoMono py-10 md:py-16 px-4 md:px-20 md:text-left text-center"
         ref={problemStatementsRef}
       >
         <div className="font-karmatic text-[38px] md:text-4xl leading-tight md:leading-[77px] text-[#abd40f] mt-8">
