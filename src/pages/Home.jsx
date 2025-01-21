@@ -12,6 +12,7 @@ import { useAppContext } from "../context/AppContext";
 import { Register } from "./Register";
 import { ProblemStatements } from "../components/ProblemStatements";
 import { Schedule } from "../components/Schedule";
+import { Winners } from "../components/Winners";
 
 export const Home = () => {
   const { isOpen } = useAppContext();
@@ -42,6 +43,7 @@ export const Home = () => {
       </div>
       <main className="bg-black">
         {/* <CodeBuildRepeat /> */}
+        <Winners/>
         <Countdown />
         <About />
         <div className="w-full bg-white">
