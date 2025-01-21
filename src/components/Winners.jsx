@@ -6,21 +6,21 @@ export const Winners=()=>{
             id:'01',
             team:"Dummy Coders",
             names:[
-                'Manglesh Nimbalkar ','Pranav Vijay Kolhe ','Karan Pradeep Gulve ','Prathamesh Iranna Dhanashri '
+                'Manglesh Nimbalkar ','Pranav Kolhe ','Karan Gulve ','Prathamesh Dhanashri '
             ]
         },
         {
             id:'02',
             team:"SUdo rm rf",
             names:[
-                'Tejas ','Shantanu ','Krishna ','Mustafa '
+                'Tejas Thorat','Shantanu Wable','Krishna Patil','Mustafa Trunkwala'
             ]
         },
         {
             id:'03',
             team:"Tech Titans",
             names:[
-                'Rutuja Bagad ','Swaraj Waykar','Yashini Pardeshi ','Pranav'
+                'Rutuja Bagad ','Swaraj Waykar','Yashini Pardeshi ','Pranav Kumbhojkar'
             ]
         }
 
@@ -39,7 +39,7 @@ export const Winners=()=>{
             <div key={index} className="relative bg-black flex md:flex-row flex-col-reverse md:pt-[60px] pt-5 md:pr-5 pr-2 pb-10 gap-3 md:max-h-[220px] max-h-[170px] lg:min-w-[420px] md:max-w-[440px] w-full max-w-[328px] md:justify-start justify-end overflow-hidden">
                 <span className=" text-default font-robotoMono font-light md:text-[170px] md:block hidden">{item.id}</span>
                 <span className="absolute -bottom-[50px] text-default font-robotoMono font-light text-[100px] md:hidden block">{item.id}</span>
-                <div className="flex flex-col md:gap-[15px] gap-2 pl-[110px] md:pl-0">
+                <div className="flex flex-col md:gap-[15px] gap-2 pl-[112px] md:pl-0">
                     <h3 className="uppercase font-karmatic text-white md:text-[18px] text-[17px]">{item.team}</h3>
                     <ul className="list-disc text-[14px] text-white pl-5 brightness-75">
                         {item.names.map((nameItem)=>(
